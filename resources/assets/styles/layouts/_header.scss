@@ -1,0 +1,91 @@
+.nav-top {
+  padding-bottom: 0;
+}
+
+.top-projects-tools-data a {
+  margin-top: 14px;
+  background-color: $grijs-50;
+  border-color: $grijs-50;
+
+  &::after {
+    font-family: "Font Awesome 5 Free", serif;
+    content: "\f7d9";
+    font-weight: 900;
+    display: none;
+  }
+}
+
+.top-donate {
+  margin-bottom: 8px;
+
+  a::after {
+    font-family: "Font Awesome 5 Free", serif;
+    content: "\f4b9";
+    font-weight: 900;
+    display: none;
+  }
+}
+
+.top-projects-tools-data svg,
+.top-donate svg {
+  float: right;
+}
+
+.breadcrumbs-parent {
+  font-size: 0;
+  height: 0;
+}
+
+.breadcrumbs {
+  position: relative;
+  display: inline-block;
+  top: 18px;
+  margin-top: -18px;
+  background-color: $zwart;
+  color: $yellow;
+  font-weight: 900;
+  font-size: 16px;
+  padding: 0 6px;
+
+  a {
+    color: $yellow;
+  }
+}
+
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+#menu-top-menu {
+  li {
+    max-width: 300px;
+  }
+}
+
+body {
+  padding-top: 118px;
+}
+
+.navbar-brand-img {
+  height: 92px;
+}
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.menu-text {
+  color: $donkerblauw;
+  font-weight: 900;
+}
+
+#navbarSupportedContent {
+  background-color: $grijsblauw;
+  margin-left: -16px;
+  margin-right: -16px;
+}

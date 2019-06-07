@@ -1,0 +1,46 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+@import "node_modules/@ibm/plex/scss/ibm-plex.scss";
+
+/* Open State Foundation huisstijlkleuren */
+// Primair
+$lichtblauw: #8fd9e8;
+$blauw: #0992a7;
+$donkerblauw: #035c6e;
+$paars: #a62689;
+
+// Secondair
+$grijsblauw: #8fb7d1;
+$donkerpaars: #732475;
+
+// Accent
+$yellow: #ffe94d;
+$mintgroen: #93d0d2;
+
+// Grijzen
+$zwart: #2e1e3d;
+$grijs-50: #5b4864;
+$grijs-30: #a8c4d9;
+$grijs-10: #e9eef1;
+$grijs-5: #f0f3f5;
+
+// default body text color
+$body-color: $zwart;
+
+// primary is the default link color
+$theme-colors: (
+  primary: $paars
+);
+
+@font-face {
+  font-family: "IBM Plex Sans Condensed", "Helvetica Neue", Arial, sans-serif;
+}
+//src: url('../fonts/opensans.woff2') format('woff2');
+//font-weight: normal;
+//font-style: normal;
+
+$font-family-text: "IBM Plex Sans Condensed";
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
