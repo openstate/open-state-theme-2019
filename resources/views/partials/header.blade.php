@@ -18,8 +18,11 @@
           <span class="menu-text">MENU</a>
         </button>
 
+        <div id="qtranslate_dropdown">
+          {!! qts_language_menu('text'); // qTranslate Slug plugin !!}
+        </div>
         @if (has_nav_menu('primary_navigation'))
-          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'container' => 'div', 'container_id' => 'navbarSupportedContent', 'container_class' => 'collapse navbar-collapse', 'walker' => new App\wp_bootstrap4_navwalker()]) !!}
+          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'link_after' => '<i class="fas fa-arrow-right"></i>', 'container' => 'div', 'container_id' => 'navbarSupportedContent', 'container_class' => 'collapse navbar-collapse', 'walker' => new App\wp_bootstrap4_navwalker()]) !!}
         @endif
         <div class="breadcrumbs-parent col-12">
           {!! App\breadcrumbs(); !!}

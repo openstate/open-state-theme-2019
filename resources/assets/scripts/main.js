@@ -14,12 +14,13 @@ import aboutUs from './routes/about';
 import { config, library, dom } from '@fortawesome/fontawesome-svg-core';
 // import required icons
 import { faDonate, faTools, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faCommentDots, faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 // allow usage in pseudo elements
 config.searchPseudoElements=true;
 
 // add the imported icons to the library
-library.add(faDonate, faTools, faArrowRight);
+library.add(faDonate, faTools, faArrowRight, faCommentDots, faEnvelope);
 
 // tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
 dom.watch();

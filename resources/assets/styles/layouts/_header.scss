@@ -5,7 +5,13 @@
 .top-projects-tools-data a {
   margin-top: 14px;
   background-color: $grijs-50;
-  border-color: $grijs-50;
+  border: 2px solid $grijs-50;
+
+  /* stylelint-disable */
+  &:hover {
+    background-color: white;
+    color: $grijs-50;
+  }
 
   &::after {
     font-family: "Font Awesome 5 Free", serif;
@@ -13,17 +19,29 @@
     font-weight: 900;
     display: none;
   }
+  /* stylelint-enable */
 }
 
 .top-donate {
   margin-bottom: 8px;
 
-  a::after {
-    font-family: "Font Awesome 5 Free", serif;
-    content: "\f4b9";
-    font-weight: 900;
-    display: none;
+  /* stylelint-disable */
+  a {
+    border: 2px solid $paars;
+
+    &:hover {
+      background-color: white;
+      color: $paars;
+    }
+
+    &::after {
+      font-family: "Font Awesome 5 Free", serif;
+      content: "\f4b9";
+      font-weight: 900;
+      display: none;
+    }
   }
+  /* stylelint-enable */
 }
 
 .top-projects-tools-data svg,
@@ -47,9 +65,11 @@
   font-size: 16px;
   padding: 0 6px;
 
+  /* stylelint-disable */
   a {
     color: $yellow;
   }
+  /* stylelint-enable */
 }
 
 .banner .nav li {
@@ -88,4 +108,162 @@ body {
   background-color: $grijsblauw;
   margin-left: -16px;
   margin-right: -16px;
+  padding: 40px 80px;
+
+  ul {
+    padding: 10px 40px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 80px;
+    line-height: 106px;
+    font-weight: 900;
+    font-style: italic;
+
+    a {
+      color: $zwart;
+
+      &:hover {
+        color: $paars;
+      }
+    }
+
+    .menu-button {
+      font-size: 24px;
+      line-height: 24px;
+      min-width: 300px;
+      background-color: white;
+      padding: 0 !important;
+
+      svg {
+        float: right;
+      }
+
+      a:hover {
+        color: white;
+      }
+    }
+
+    // Target the 'normal' menu items instead of the button menu items
+    li:not(.menu-button) {
+      max-width: 70%;
+
+      // Don't show the right arrow font awesome icon which is added to all menu items
+      svg {
+        display: none;
+      }
+
+      a::before {
+        content: "> ";
+      }
+    }
+
+    .menu-button-contact {
+      margin-top: -75px;
+      border: 2px solid $blauw;
+
+      /* stylelint-disable */
+      a {
+        color: $blauw;
+
+        &::after {
+          font-family: "Font Awesome 5 Free", serif;
+          content: "\f4ad";
+          font-weight: 400;
+          display: none;
+        }
+
+        &:hover {
+          background-color: $blauw;
+        }
+      }
+      /* stylelint-enable */
+    }
+
+    .menu-button-donate {
+      border: 2px solid $paars;
+
+      /* stylelint-disable */
+      a {
+        color: $paars;
+
+        &::after {
+          font-family: "Font Awesome 5 Free", serif;
+          content: "\f4b9";
+          font-weight: 900;
+          display: none;
+        }
+
+        &:hover {
+          background-color: $paars;
+        }
+      }
+      /* stylelint-enable */
+    }
+
+    .menu-button-newsletter {
+      border: 2px solid $donkerpaars;
+
+      /* stylelint-disable */
+      a {
+        color: $donkerpaars;
+
+        &::after {
+          font-family: "Font Awesome 5 Free", serif;
+          content: "\f0e0";
+          font-weight: 400;
+          display: none;
+        }
+
+        &:hover {
+          background-color: $donkerpaars;
+        }
+      }
+      /* stylelint-enable */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #navbarSupportedContent {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 10px 20px;
+
+    ul {
+      padding: 0 10px;
+      font-size: 40px;
+      line-height: 55px;
+    }
+  }
+}
+
+// Language selector
+.qts-lang-menu {
+  list-style-type: none;
+
+  // Hide the current language
+  .current-menu-item {
+    display: none;
+  }
+
+  /* stylelint-disable */
+  // Remove the default text and display "NL/EN"
+  .qts_lang_item {
+    border-bottom: 2px solid $grijs-50;
+    border-radius: 4px;
+    width: 45px;
+
+    a {
+      color: $grijs-50;
+      font-weight: 900;
+      visibility: hidden;
+
+      &::after {
+        visibility: visible;
+        display: block;
+        content: "NL/EN";
+      }
+    }
+  }
+  /* stylelint-enable */
 }
