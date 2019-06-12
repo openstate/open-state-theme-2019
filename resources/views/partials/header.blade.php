@@ -18,11 +18,38 @@
           <span class="menu-text">MENU</a>
         </button>
 
-        <div id="qtranslate_dropdown">
-          {!! qts_language_menu('text'); // qTranslate Slug plugin !!}
-        </div>
+        <?
+          global $qtranslate_slug;
+          $lang = 'nl';
+          if (get_bloginfo("language") == 'nl') {
+            $lang = 'en';
+          }
+        ?>
+
         @if (has_nav_menu('primary_navigation'))
-          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'link_after' => '<i class="fas fa-arrow-right"></i>', 'container' => 'div', 'container_id' => 'navbarSupportedContent', 'container_class' => 'collapse navbar-collapse', 'walker' => new App\wp_bootstrap4_navwalker()]) !!}
+          {!! wp_nav_menu(
+            [
+              'theme_location' => 'primary_navigation',
+              'menu_class' => 'nav navbar-nav',
+              'link_after' => '<i class="fas fa-arrow-right"></i>',
+              'items_wrap' => '
+                <div class="outer-menu row">
+                  <div class="col-11">
+                    <ul id="%1$s" class="%2$s">%3$s</ul>
+                  </div>
+                  <div class="col-1 menu-icons">
+                    <div class="language">
+                      <a href="' . $qtranslate_slug->get_current_url($lang) . '">NL/EN</a>
+                    </div>
+                  </div>
+                  <br>
+                </div>',
+              'container' => 'div',
+              'container_id' => 'navbarSupportedContent',
+              'container_class' => 'collapse navbar-collapse',
+              'walker' => new App\wp_bootstrap4_navwalker()
+            ]
+          ) !!}
         @endif
         <div class="breadcrumbs-parent col-12">
           {!! App\breadcrumbs(); !!}

@@ -104,11 +104,11 @@ body {
   font-weight: 900;
 }
 
-#navbarSupportedContent {
+.outer-menu {
   background-color: $grijsblauw;
   margin-left: -16px;
   margin-right: -16px;
-  padding: 40px 80px;
+  padding: 40px 15px 40px 87px;
 
   ul {
     padding: 10px 40px;
@@ -119,6 +119,7 @@ body {
     font-weight: 900;
     font-style: italic;
 
+    /* stylelint-disable */
     a {
       color: $zwart;
 
@@ -126,6 +127,7 @@ body {
         color: $paars;
       }
     }
+    /* stylelint-enable */
 
     .menu-button {
       font-size: 24px;
@@ -143,6 +145,7 @@ body {
       }
     }
 
+    /* stylelint-disable */
     // Target the 'normal' menu items instead of the button menu items
     li:not(.menu-button) {
       max-width: 70%;
@@ -156,6 +159,7 @@ body {
         content: "> ";
       }
     }
+    /* stylelint-enable */
 
     .menu-button-contact {
       margin-top: -75px;
@@ -224,7 +228,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  #navbarSupportedContent {
+  .outer-menu {
     margin-left: -16px;
     margin-right: -16px;
     padding: 10px 20px;
@@ -237,32 +241,24 @@ body {
   }
 }
 
-// Language selector
-.qts-lang-menu {
-  list-style-type: none;
+// Remove the default text and display "NL/EN"
+.menu-icons {
+  margin-top: -35px;
+}
 
-  // Hide the current language
-  .current-menu-item {
-    display: none;
-  }
+.language {
+  border-bottom: 2px solid $grijs-50;
+  border-radius: 4px;
+  width: 45px;
 
   /* stylelint-disable */
-  // Remove the default text and display "NL/EN"
-  .qts_lang_item {
-    border-bottom: 2px solid $grijs-50;
-    border-radius: 4px;
-    width: 45px;
+  a {
+    color: $grijs-50;
+    font-weight: 900;
 
-    a {
-      color: $grijs-50;
-      font-weight: 900;
-      visibility: hidden;
-
-      &::after {
-        visibility: visible;
-        display: block;
-        content: "NL/EN";
-      }
+    &:hover {
+      color: $paars;
+      text-decoration: none;
     }
   }
   /* stylelint-enable */
