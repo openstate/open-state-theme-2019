@@ -14,9 +14,11 @@
           </a>
         </div>
 
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="menu-text">MENU</a>
-        </button>
+        <div class="col-sm-1 offset-3 text-center rm-gutter">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="menu-text">MENU</a>
+          </button>
+        </div>
 
         <?
           global $qtranslate_slug;

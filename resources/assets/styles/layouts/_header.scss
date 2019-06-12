@@ -100,6 +100,11 @@ body {
   padding-bottom: 0;
 }
 
+.navbar-toggler {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .menu-text {
   color: $donkerblauw;
   font-weight: 900;
@@ -270,4 +275,9 @@ body {
   top: 18px;
   margin-top: -18px;
   height: 0;
+}
+
+.rm-gutter {
+  padding-left: 0;
+  padding-right: 0;
 }
