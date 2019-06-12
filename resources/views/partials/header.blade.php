@@ -34,11 +34,11 @@
               'link_after' => '<i class="fas fa-arrow-right"></i>',
               'items_wrap' => '
                 <div class="outer-menu row">
-                  <div class="col-11">
+                  <div class="col-10 offset-1">
                     <ul id="%1$s" class="%2$s">%3$s</ul>
                   </div>
                   <div class="col-1 menu-icons">
-                    <div class="language">
+                    <div class="language mx-auto">
                       <a href="' . $qtranslate_slug->get_current_url($lang) . '">NL/EN</a>
                     </div>
                   </div>
@@ -51,8 +51,15 @@
             ]
           ) !!}
         @endif
-        <div class="breadcrumbs-parent col-12">
+        <div class="breadcrumbs-parent col-11">
           {!! App\breadcrumbs(); !!}
+        </div>
+        <div class="col-1">
+          <div class="language-parent">
+            <div class="language mx-auto">
+              <a href="' . $qtranslate_slug->get_current_url($lang) . '">NL/EN</a>
+            </div>
+          </div>
         </div>
       </nav>
     </div>

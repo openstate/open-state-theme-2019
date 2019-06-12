@@ -1,4 +1,5 @@
 .nav-top {
+  padding-top: 4px;
   padding-bottom: 0;
 }
 
@@ -108,7 +109,7 @@ body {
   background-color: $grijsblauw;
   margin-left: -16px;
   margin-right: -16px;
-  padding: 40px 15px 40px 87px;
+  padding: 40px 15px 40px 15px;
 
   ul {
     padding: 10px 40px;
@@ -262,4 +263,11 @@ body {
     }
   }
   /* stylelint-enable */
+}
+
+.language-parent {
+  position: relative;
+  top: 18px;
+  margin-top: -18px;
+  height: 0;
 }
