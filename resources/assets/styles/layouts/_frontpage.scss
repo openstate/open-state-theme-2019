@@ -1,0 +1,31 @@
+.home-banner {
+  margin-top: -8px;
+  height: 437px;
+  background-image: url("../images/OSF-background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.home-banner-text {
+  font-size: 60px;
+  line-height: 80px;
+  font-style: italic;
+  font-weight: 900;
+  padding-top: 100px;
+}
+
+.row-full {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+}
+
+.osf-schema {
+  color: $grijs-50;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 900;
+}

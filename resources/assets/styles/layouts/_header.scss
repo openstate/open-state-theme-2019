@@ -6,12 +6,13 @@
 .top-projects-tools-data a {
   margin-top: 14px;
   background-color: $grijs-50;
-  border: 2px solid $grijs-50;
+  border-color: $grijs-50;
 
   /* stylelint-disable */
   &:hover {
     background-color: white;
     color: $grijs-50;
+    border-color: $grijs-50;
   }
 
   &::after {
@@ -28,11 +29,12 @@
 
   /* stylelint-disable */
   a {
-    border: 2px solid $paars;
+    border-color: $paars;
 
     &:hover {
       background-color: white;
       color: $paars;
+      border-color: $paars;
     }
 
     &::after {
@@ -171,7 +173,7 @@ body {
 
     .menu-button-contact {
       margin-top: -75px;
-      border: 2px solid $blauw;
+      border-color: $blauw;
 
       /* stylelint-disable */
       a {
@@ -192,7 +194,7 @@ body {
     }
 
     .menu-button-donate {
-      border: 2px solid $paars;
+      border-color: $paars;
 
       /* stylelint-disable */
       a {
@@ -213,7 +215,7 @@ body {
     }
 
     .menu-button-newsletter {
-      border: 2px solid $donkerpaars;
+      border-color: $donkerpaars;
 
       /* stylelint-disable */
       a {
