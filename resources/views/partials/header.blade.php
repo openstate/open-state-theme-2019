@@ -66,7 +66,7 @@
         <div class="col-sm-1 d-none d-sm-block">
           <div class="language-parent">
             <div class="language mx-auto">
-              <a href="' . $qtranslate_slug->get_current_url($lang) . '">NL/EN</a>
+              <a href={!! $qtranslate_slug->get_current_url($lang) !!}>NL/EN</a>
             </div>
           </div>
         </div>
