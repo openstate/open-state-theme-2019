@@ -30,8 +30,10 @@
         <?
           global $qtranslate_slug;
           $lang = 'nl';
+          $lang_text = 'NL/<b>EN</b>';
           if (get_bloginfo("language") == 'nl') {
             $lang = 'en';
+            $lang_text = '<b>NL</b>/EN';
           }
         ?>
 
@@ -48,7 +50,7 @@
                   </div>
                   <div class="col-2 col-sm-1 menu-icons rm-gutter">
                     <div class="language mx-auto">
-                      <a href="' . $qtranslate_slug->get_current_url($lang) . '">NL/EN</a>
+                      <a href="' . $qtranslate_slug->get_current_url($lang) . '">' . $lang_text . '</a>
                     </div>
                   </div>
                   <br>
@@ -66,7 +68,17 @@
         <div class="col-sm-1 d-none d-sm-block">
           <div class="language-parent">
             <div class="language mx-auto">
-              <a href={!! $qtranslate_slug->get_current_url($lang) !!}>NL/EN</a>
+              <a href={!! $qtranslate_slug->get_current_url($lang) !!}>
+                <?
+                  _e("
+                    <!--:nl-->
+                      <b>NL</b>/EN
+                    <!--:--><!--:en-->
+                      NL/<b>EN</b>
+                    <!--:-->
+                  ")
+                ?>
+              </a>
             </div>
           </div>
         </div>
