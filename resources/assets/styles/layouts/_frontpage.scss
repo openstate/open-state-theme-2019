@@ -16,6 +16,17 @@
   padding-top: 100px;
 }
 
+@media (max-width: 768px) {
+  .home-banner {
+    margin-top: -8px;
+    height: 950px;
+  }
+
+  .home-banner-text {
+    padding-top: 40px;
+  }
+}
+
 .row-full {
   width: 100vw;
   position: relative;
@@ -28,4 +39,45 @@
   font-size: 14px;
   font-style: italic;
   font-weight: 900;
+  padding-top: 20px;
+}
+
+.osf-schema-row-up {
+  margin-top: -14px;
+}
+
+.osf-schema-top-left {
+  width: 28.95%;
+}
+
+.osf-schema-top {
+  width: 27.63%;
+}
+
+.osf-schema-top-right {
+  width: 23.68%;
+}
+
+.osf-schema-center-left {
+  width: 40%;
+}
+
+.osf-schema-center {
+  width: 24.71%;
+}
+
+.osf-schema-center-right {
+  width: 35.29%;
+}
+
+.osf-schema-bottom-left {
+  width: 28.95%;
+}
+
+.osf-schema-bottom {
+  width: 27.63%;
+}
+
+.osf-schema-bottom-right {
+  width: 21.05%;
 }
