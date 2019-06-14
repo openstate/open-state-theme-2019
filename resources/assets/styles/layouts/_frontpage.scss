@@ -16,14 +16,26 @@
   padding-top: 100px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .home-banner {
     margin-top: -8px;
+  }
+
+  .home-banner-text {
+    font-size: 50px;
+    line-height: 68px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-banner {
     height: 950px;
   }
 
   .home-banner-text {
-    padding-top: 40px;
+    font-size: 60px;
+    line-height: 80px;
   }
 }
 

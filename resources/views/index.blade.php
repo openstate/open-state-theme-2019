@@ -9,7 +9,7 @@
         <div class="col-md-6 col-lg-8 home-banner-text">
           <? _e("
             <!--:nl-->
-              OPEN DATA VOOR <span class='text-paars'>DIGITALE</span> TRANSPARENTIE
+              OPEN DATA VOOR <span class='text-paars'>DIGITALE</span> TRANSPARANTIE
             <!--:--><!--:en-->
               OPEN DATA FOR <span class='text-paars'>DIGITAL</span> TRANSPARENCY
             <!--:-->
