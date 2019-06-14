@@ -4,8 +4,20 @@
   @include('partials.page-header')
 
   @if (!have_posts())
+    <?
+      $lang = 'nl';
+      if (get_bloginfo("language") == 'en-US') {
+          $lang = 'en';
+      }
+    ?>
+
     <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
+      <? if ($lang == 'nl') {
+        echo 'Geen resultaten gevonden.';
+      } elseif ($lang == 'en') {
+        echo 'No results were found.';
+      } ?>
+      {{ __('', 'sage') }}
     </div>
     {!! get_search_form(false) !!}
   @endif

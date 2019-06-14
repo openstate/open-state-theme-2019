@@ -87,9 +87,31 @@
     </div>
   </div>
 
-  @while (have_posts()) @php the_post() @endphp
-    @include('partials.content-'.get_post_type())
-  @endwhile
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="row">
+          <div class="col-12 nieuws-agenda">
+            NIEUWS
+          </div>
+        </div>
+        <div class="row">
+          @while (have_posts()) @php the_post() @endphp
+            <div class="col-12">
+              @include('partials.content-'.get_post_type())
+            </div>
+          @endwhile
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="row">
+          <div class="col-12 nieuws-agenda text-donkerpaars bg-grijs-10">
+            AGENDA
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   {!! get_the_posts_navigation() !!}
 @endsection

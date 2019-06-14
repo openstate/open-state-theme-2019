@@ -13,6 +13,11 @@ class App extends Controller
 
     public static function title()
     {
+        $lang = 'nl';
+        if (get_bloginfo("language") == 'en-US') {
+            $lang = 'en';
+        }
+
         if (is_home()) {
             return;
         }
@@ -20,10 +25,18 @@ class App extends Controller
             return get_the_archive_title();
         }
         if (is_search()) {
-            return sprintf(__('Search Results for %s', 'sage'), get_search_query());
+            if ($lang == 'nl') {
+              return sprintf('Zoekresultaten voor %s', get_search_query());
+            } elseif ($lang == 'en') {
+              return sprintf('Search results for %s', get_search_query());
+            }
         }
         if (is_404()) {
-            return __('Not Found', 'sage');
+            if ($lang == 'nl') {
+              return 'Pagina niet gevonden';
+            } elseif ($lang == 'en') {
+              return 'Page not found';
+            }
         }
         return get_the_title();
     }
