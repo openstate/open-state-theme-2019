@@ -144,6 +144,10 @@ body:not(.home) .wrap {
   background-color: $grijs-10;
 }
 
+.bg-roze {
+  background-color: $roze;
+}
+
 .image-cover {
   object-fit: cover;
   width: 100%;
@@ -151,8 +155,26 @@ body:not(.home) .wrap {
   z-index: 200;
 }
 
-.header-image {
-  background: rgba(39, 62, 84, 0.82);
-  overflow: hidden;
-  z-index: 2000000;
+.overlay-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  clear: float;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($blauw, 0.5);
+  transition: 0.5s;
+}
+
+a:hover .overlay {
+  background-color: rgba($blauw, 0);
+  transition: 0.5s;
+
+  time {
+    color: $yellow;
+  }
 }

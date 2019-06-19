@@ -289,9 +289,18 @@ body {
   #menu-top-menu {
     max-width: 180px;
   }
+
+  // Also drop the osf-schema a bit
+  .osf-schema {
+    padding-top: 70px;
+  }
 }
 
 @media (max-width: 768px) {
+  .nav-top {
+    padding-top: 0;
+  }
+
   .outer-menu {
     margin-left: -16px;
     margin-right: -16px;
@@ -317,10 +326,20 @@ body {
   .menu-icons {
     margin-top: 0;
   }
+
+  .osf-schema {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 576px) {
-  .outer-menu ul .menu-button-contact {
-    margin-top: 0;
+  .outer-menu ul {
+    .menu-button-contact {
+      margin-top: 0;
+    }
+
+    .last-menu-item {
+      max-width: 100%;
+    }
   }
 }

@@ -1,5 +1,8 @@
+.home {
+  overflow-x: hidden;
+}
+
 .home-banner {
-  margin-top: -8px;
   height: 437px;
   background-image: url("../images/OSF-background.svg");
   background-position: center;
@@ -13,37 +16,51 @@
   line-height: 80px;
   font-style: italic;
   font-weight: 900;
-  padding-top: 100px;
 }
 
 @media (max-width: 992px) {
   .home-banner {
-    margin-top: -8px;
+    margin-top: -26px;
   }
 
   .home-banner-text {
     font-size: 50px;
     line-height: 68px;
-    padding-top: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .home-banner {
-    height: 950px;
+    height: 820px;
   }
 
   .home-banner-text {
-    font-size: 60px;
-    line-height: 80px;
+    padding-top: 70px;
+    font-size: 40px;
+    line-height: 58px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-banner-text {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .osf-schema {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .home-banner-text {
+    padding-bottom: 60px;
   }
 }
 
 .row-full {
   width: 100vw;
-  position: relative;
-  margin-left: -50vw;
-  left: 50%;
 }
 
 .osf-schema {
@@ -51,7 +68,6 @@
   font-size: 14px;
   font-style: italic;
   font-weight: 900;
-  padding-top: 20px;
 }
 
 .osf-schema-row-up {
@@ -102,4 +118,28 @@
   letter-spacing: 0.1em;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.entry-title {
+  margin-bottom: 0;
+  padding: 18px 25px;
+
+  a {
+    color: $zwart;
+  }
+}
+
+.entry-summary {
+  margin-bottom: 25px;
+  padding: 0 25px 9px 25px;
+}
+
+.updated {
+  margin-left: 25px;
+  background-color: $zwart;
+  color: white;
+  padding: 1px 8px;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
 }

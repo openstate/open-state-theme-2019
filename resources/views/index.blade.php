@@ -1,12 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
-
   <div class="home-banner row-full text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-8 home-banner-text">
+    <div class="container d-flex h-100">
+      <div class="row align-self-center">
+        <div class="col-md-7 col-lg-8 home-banner-text my-auto">
           <? _e("
             <!--:nl-->
               OPEN DATA VOOR <span class='text-paars'>DIGITALE</span> TRANSPARANTIE
@@ -27,8 +25,7 @@
           </div>
         </div>
 
-
-        <div class="col-md-6 col-lg-4 osf-schema">
+        <div class="col-md-5 col-lg-4 osf-schema my-auto">
           <div class="row justify-content-center">
             <img class="osf-schema-top-left" src="@asset('images/OSF-Icon-pijl-links-boven.svg')">
             <div class="osf-schema-top text-center">
@@ -113,5 +110,4 @@
     </div>
   </div>
 
-  {!! get_the_posts_navigation() !!}
 @endsection
