@@ -89,7 +89,13 @@
       <div class="col-sm-8">
         <div class="row">
           <div class="col-12 nieuws-agenda">
-            NIEUWS
+            <? _e("
+              <!--:nl-->
+                NIEUWS
+              <!--:--><!--:en-->
+                NEWS
+              <!--:-->
+            ") ?>
           </div>
         </div>
         <div class="row">
@@ -103,7 +109,13 @@
       <div class="col-sm-4">
         <div class="row">
           <div class="col-12 nieuws-agenda text-donkerpaars bg-grijs-10">
-            AGENDA
+            <? _e("
+              <!--:nl-->
+                AGENDA
+              <!--:--><!--:en-->
+                AGENDA
+              <!--:-->
+            ") ?>
           </div>
         </div>
       </div>
