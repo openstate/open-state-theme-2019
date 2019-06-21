@@ -122,4 +122,11 @@
     </div>
   </div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        {!! get_the_posts_navigation() !!}
+      </div>
+    </div>
+  </div>
 @endsection

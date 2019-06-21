@@ -1,0 +1,39 @@
+.footer-bar {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-form {
+  font-size: 30px;
+  line-height: 40px;
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+#search-input {
+  border: none;
+  font-size: 30px;
+  line-height: 40px;
+  padding-left: 80px;
+  background-image: url("../images/OSF-Icon-zoeken-grijsblauw.svg");
+  background-position: 20px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
+#mce-EMAIL {
+  border-radius: 4px;
+  border: none;
+  font-size: 30px;
+  line-height: 40px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.donate-button {
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}

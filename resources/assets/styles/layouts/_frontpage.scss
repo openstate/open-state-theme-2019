@@ -143,3 +143,26 @@
   font-style: italic;
   text-transform: uppercase;
 }
+
+.posts-navigation {
+  background-color: $roze;
+  margin-top: 25px;
+  padding: 25px;
+}
+
+.nav-links {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  a {
+    color: $zwart;
+
+    &::after {
+      content: " >";
+    }
+  }
+}
