@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row footer-bar">
         <div class="col-12">
-          <form role="search" method="get" action="">
+          <form role="search" method="get" action="/">
             <label for="search-input" class="footer-form">
               <? _e("
                 <!--:nl-->
