@@ -106,8 +106,7 @@ h6 {
   }
 }
 
-body:not(.home) .wrap {
-  padding-top: 30px;
+body:not(.home):not(.search):not(.paged) .wrap {
   padding-bottom: 34px;
 }
 
