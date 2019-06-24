@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60c55059b19c75c45654948591591f83",
+    "content-hash": "0dbf602ad15fbbc5a472a05c4d5b0d74",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -585,6 +585,52 @@
             "time": "2018-10-02T13:27:20+00:00"
         },
         {
+            "name": "log1x/blade-svg-sage",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/blade-svg-sage.git",
+                "reference": "fb6f7e72d6a89a06960820f45397be319476ed42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/blade-svg-sage/zipball/fb6f7e72d6a89a06960820f45397be319476ed42",
+                "reference": "fb6f7e72d6a89a06960820f45397be319476ed42",
+                "shasum": ""
+            },
+            "require": {
+                "nothingworks/blade-svg": "^0.3.0",
+                "php": ">=7.0"
+            },
+            "type": "package",
+            "autoload": {
+                "files": [
+                    "src/BladeSvgSage.php",
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Nifong",
+                    "email": "brandon@tendency.me"
+                }
+            ],
+            "description": "Composer package to add support for Blade SVG by Adam Wathan to Roots Sage.",
+            "homepage": "https://github.com/log1x/blade-svg-sage",
+            "keywords": [
+                "blade",
+                "roots",
+                "sage",
+                "svg",
+                "wordpress"
+            ],
+            "time": "2019-02-07T22:45:02+00:00"
+        },
+        {
             "name": "mwdelaney/sage-bootstrap4-navwalker",
             "version": "1.3",
             "source": {
@@ -679,6 +725,56 @@
                 "time"
             ],
             "time": "2018-03-19T15:50:49+00:00"
+        },
+        {
+            "name": "nothingworks/blade-svg",
+            "version": "v0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adamwathan/blade-svg.git",
+                "reference": "c4b450d946172e30533c51ed99c74f3d3f4089a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adamwathan/blade-svg/zipball/c4b450d946172e30533c51ed99c74f3d3f4089a1",
+                "reference": "c4b450d946172e30533c51ed99c74f3d3f4089a1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^5.3",
+                "illuminate/support": "^5.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^5.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BladeSvg\\BladeSvgServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BladeSvg\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Wathan",
+                    "email": "adam.wathan@gmail.com"
+                }
+            ],
+            "time": "2018-10-21T21:02:25+00:00"
         },
         {
             "name": "psr/container",

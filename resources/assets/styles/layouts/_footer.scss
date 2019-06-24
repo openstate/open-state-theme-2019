@@ -1,6 +1,33 @@
 .footer-bar {
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-right: 15px;
+}
+
+.footer-icons {
+  padding-top: 0;
+  padding-bottom: 50px;
+
+  a {
+    color: $grijsblauw;
+    margin: 20px;
+
+    &:hover {
+      color: $paars;
+    }
+  }
+
+  .ckan svg {
+    width: 48px;
+    height: 48px;
+    fill: $grijsblauw;
+    stroke: $grijsblauw;
+
+    &:hover {
+      fill: $paars;
+      stroke: $paars;
+    }
+  }
 }
 
 .footer-form {
