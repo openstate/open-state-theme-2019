@@ -1,0 +1,14 @@
+.post-header-title {
+  min-height: 350px;
+
+  .updated {
+    margin-left: 0;
+  }
+}
+
+.image-cover-post {
+  object-fit: cover;
+  width: 100%;
+  height: 350px;
+  z-index: 200;
+}

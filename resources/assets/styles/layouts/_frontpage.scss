@@ -120,13 +120,15 @@
   padding-bottom: 20px;
 }
 
-.entry-title {
+.entry-title.bg-roze {
   margin-bottom: 0;
   padding: 18px 25px;
 
+  /* stylelint-disable */
   a {
     color: $zwart;
   }
+  /* stylelint-enable */
 }
 
 .entry-summary {
@@ -158,6 +160,7 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
 
+  /* stylelint-disable */
   a {
     color: $zwart;
 
@@ -165,4 +168,12 @@
       content: " >";
     }
   }
+  /* stylelint-enable */
+}
+
+.image-cover-frontpage {
+  object-fit: cover;
+  width: 100%;
+  height: 260px;
+  z-index: 200;
 }

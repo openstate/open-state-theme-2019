@@ -4,7 +4,7 @@
       <header>
         <a href="{!! the_permalink() !!}">
           <div class="overlay-container">
-            {!! the_post_thumbnail('thumbnail', array('class' => 'img-fluid image-cover')) !!}
+            {!! the_post_thumbnail('thumbnail', array('class' => 'img-fluid image-cover-frontpage')) !!}
             <div class="overlay d-flex">@include('partials/entry-meta')</div>
           </div>
         </a>
