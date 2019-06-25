@@ -11,13 +11,13 @@
           <div class="col-12">
             <h1 class="entry-title">{!! get_the_title() !!}</h1>
           </div>
-          <div class="col-12 mt-auto align-items-end">
+          <div class="col-12 mt-auto">
             @include('partials/entry-meta')
             <hr class="m-0">
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 my-auto">
         {!! the_post_thumbnail('thumbnail', array('class' => 'img-fluid image-cover-post')) !!}
       </div>
     </div>
