@@ -2,9 +2,7 @@ body {
   font-family: $font-family-text;
   color: $zwart;
   word-wrap: break-word;
-}
-
-p {
+  overflow-x: hidden;
   font-size: 22px;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -70,8 +68,8 @@ h6 {
   line-height: 40px;
 }
 
-@media (max-width: 768px) {
-  p {
+@media (max-width: 767px) {
+  body {
     font-size: 18px;
     line-height: 28px;
   }
@@ -114,6 +112,7 @@ body:not(.home):not(.search):not(.paged) .wrap {
 
 .btn {
   color: #fff;
+  font-size: 19px;
   font-style: italic;
   font-weight: bold;
   letter-spacing: 0.05em;
@@ -140,6 +139,10 @@ body:not(.home):not(.search):not(.paged) .wrap {
 
 .text-donkerpaars {
   color: $donkerpaars;
+}
+
+.text-donkerblauw {
+  color: $donkerblauw;
 }
 
 .bg-grijs-10 {

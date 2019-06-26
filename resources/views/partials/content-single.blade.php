@@ -1,8 +1,17 @@
 <article @php post_class() @endphp>
   <header class="mb-5">
+    <div class="text-center">
+    <? _e("
+      <!--:nl-->
+        <h6>NIEUWS</h6>
+      <!--:--><!--:en-->
+        <h6>NEWS</h6>
+      <!--:-->
+    ") ?>
+    </div>
     <div class="row">
       <div class="col-12">
-        <hr class="my-5">
+        <hr class="mb-md-5">
       </div>
     </div>
     <div class="row">
@@ -17,13 +26,15 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 my-auto">
-        {!! the_post_thumbnail('thumbnail', array('class' => 'img-fluid image-cover-post')) !!}
+      <div class="col-md-6 my-auto text-center">
+        {!! the_post_thumbnail('col-6-thumbnail', array('class' => 'img-fluid image-cover-post')) !!}
       </div>
     </div>
   </header>
-  <div class="entry-content">
-    @php the_content() @endphp
+  <div class="row entry-content">
+    <div class="col-lg-8 offset-lg-2">
+      @php the_content() @endphp
+    </div>
   </div>
   <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}

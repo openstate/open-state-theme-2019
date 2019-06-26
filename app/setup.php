@@ -131,3 +131,7 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+add_image_size('col-8-thumbnail', 730, 260, 'true');
+add_image_size('col-6-thumbnail', 540, 375, 'true');
+add_image_size('col-4-thumbnail', 360, 260, 'true');
