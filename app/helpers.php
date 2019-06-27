@@ -142,11 +142,16 @@ function display_sidebar()
  * @return breadcrumb HTML
  */
 function breadcrumbs() {
+    global $post;
+
     echo '<div class="breadcrumbs font-italic text-uppercase">';
-    echo '<a href="'.home_url().'" rel="nofollow">Home</a>';
+    echo '<a href="' . home_url() . '" rel="nofollow">Home</a>';
     if (is_category() || is_single()) {
         echo "&nbsp;&nbsp;>&nbsp;&nbsp;";
-        the_category(' &bull; ');
+        the_category('&bull;');
+    } elseif(is_page() && $post->post_parent) {
+        echo "&nbsp;&nbsp;>&nbsp;&nbsp;";
+        echo '<a href="' . get_permalink($post->post_parent) . '">' . get_the_title($post->post_parent) . '</a>';
     }
     echo '</div>';
 }
