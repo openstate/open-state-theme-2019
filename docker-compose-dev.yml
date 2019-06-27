@@ -2,3 +2,5 @@ version: '3.1'
 services:
   node:
     restart: "no"
+    volumes:
+      - ./../../../../nginx-load-balancer/docker/mkcert/openstate.eu/:/certs/
