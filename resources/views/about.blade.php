@@ -8,11 +8,6 @@
   <div class="container">
     @while(have_posts()) @php the_post() @endphp
       @include('partials.page-header')
-      <div class="row">
-        <div class="col-12">
-          <hr class="mb-md-5">
-        </div>
-      </div>
       <div class="row mb-5">
         <div class="col-md-6">
           @if (has_nav_menu('about_navigation'))
