@@ -1,6 +1,6 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
-@import "node_modules/@ibm/plex/scss/ibm-plex.scss";
+$font-prefix: "~@ibm/plex";
 
 /* Open State Foundation huisstijlkleuren */
 // Primair
@@ -34,14 +34,7 @@ $theme-colors: (
   primary: $paars
 );
 
-@font-face {
-  font-family: "IBM Plex Sans Condensed", "Helvetica Neue", Arial, sans-serif;
-}
-//src: url('../fonts/opensans.woff2') format('woff2');
-//font-weight: normal;
-//font-style: normal;
-
-$font-family-text: "IBM Plex Sans Condensed";
+$font-family-text: "IBM Plex Sans Condensed", "Helvetica Neue", Arial, sans-serif;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
