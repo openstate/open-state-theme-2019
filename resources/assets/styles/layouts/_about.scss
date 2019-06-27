@@ -1,0 +1,20 @@
+#menu-over-ons {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+
+    a {
+      color: $zwart;
+      padding: 0;
+
+      &:hover {
+        color: $paars !important;
+      }
+    }
+
+    &.active a {
+      color: $donkerpaars;
+    }
+  }
+}

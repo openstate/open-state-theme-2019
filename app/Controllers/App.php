@@ -26,9 +26,9 @@ class App extends Controller
         }
         if (is_search()) {
             if ($lang == 'nl') {
-              return sprintf('Zoekresultaten voor %s', get_search_query());
+              return sprintf('Zoekresultaten voor "%s"', get_search_query());
             } elseif ($lang == 'en') {
-              return sprintf('Search results for %s', get_search_query());
+              return sprintf('Search results for "%s"', get_search_query());
             }
         }
         if (is_404()) {

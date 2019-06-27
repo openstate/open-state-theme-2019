@@ -1,6 +1,5 @@
 <article @php post_class() @endphp>
   <header class="mb-5">
-    <div class="text-center">
     <? _e("
       <!--:nl-->
         <h6>NIEUWS</h6>
@@ -8,7 +7,6 @@
         <h6>NEWS</h6>
       <!--:-->
     ") ?>
-    </div>
     <div class="row">
       <div class="col-12">
         <hr class="mb-md-5">
