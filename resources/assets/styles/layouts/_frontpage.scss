@@ -117,6 +117,28 @@
   padding-bottom: 20px;
 }
 
+.agenda {
+  margin-bottom: 25px;
+}
+
+.sidebar {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.uitgelicht-item {
+  padding: 10px 25px 25px 25px;
+  margin-bottom: 25px;
+
+  a {
+    color: black;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
 .entry-title.bg-roze {
   margin-bottom: 0;
   padding: 18px 25px;

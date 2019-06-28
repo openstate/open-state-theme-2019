@@ -21,6 +21,7 @@ $mintgroen: #93d0d2;
 $zwart: #2e1e3d;
 $grijs-50: #5b4864;
 $grijs-30: #a8c4d9;
+$grijs-15: #e4e6ed;
 $grijs-10: #e9eef1;
 $grijs-5: #f0f3f5;
 
@@ -35,6 +36,7 @@ $theme-colors: (
 );
 
 $font-family-text: "IBM Plex Sans Condensed", "Helvetica Neue", Arial, sans-serif;
+$font-family-text-light: "IBM Plex Sans Condensed Light", "Helvetica Neue", Arial, sans-serif;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;

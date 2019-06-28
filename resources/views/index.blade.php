@@ -107,8 +107,8 @@
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="row">
-          <div class="col-12 nieuws-agenda text-donkerpaars bg-grijs-10">
+        <div class="row agenda">
+          <div class="col-12 nieuws-agenda sidebar text-donkerpaars bg-grijs-10">
             <? _e("
               <!--:nl-->
                 AGENDA
@@ -118,6 +118,50 @@
             ") ?>
           </div>
         </div>
+        <div class="row">
+          <div class="col-12 nieuws-agenda sidebar text-paars bg-grijs-5">
+            <? _e("
+              <!--:nl-->
+                UITGELICHT
+              <!--:--><!--:en-->
+                HIGHLIGHTS
+              <!--:-->
+            ") ?>
+          </div>
+        </div>
+        <?=
+          wp_reset_query();
+          $args = array(
+            'numberposts' => -1,
+            'post_type' => array('post', 'page'),
+            'posts_per_page' => 5,
+            'meta_query' => array(
+              array(
+                'key' => 'uitgelicht',
+                'compare' => '=',
+                'value' => '1'
+              )
+            ),
+            'meta_key' => 'uitgelicht_volgorde',
+            'orderby' => 'meta_value',
+            'order' => 'asc'
+          );
+          $the_query = new WP_Query($args);
+
+          if($the_query->have_posts()):
+            while($the_query->have_posts()) : $the_query->the_post(); ?>
+              <div class="row">
+                <div class="col-12 sidebar bg-grijs-5">
+                  <a href="<? the_permalink(); ?>"><? the_post_thumbnail('col-4-thumbnail', array('class' => 'img-fluid image-cover-frontpage')); ?></a>
+                  <div class="bg-grijs-15 uitgelicht-item">
+                    <a href="<? the_permalink(); ?>"><h5><? the_title(); ?></h5></a>
+                  </div>
+                </div>
+              </div>
+            <? endwhile;
+          endif;
+          wp_reset_query();
+        ?>
       </div>
     </div>
   </div>
