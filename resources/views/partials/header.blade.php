@@ -45,7 +45,7 @@
               'link_after' => '<i class="fas fa-arrow-right"></i>',
               'items_wrap' => '
                 <div class="outer-menu row">
-                  <div class="col-10 col-sm-10 offset-sm-1">
+                  <div class="col-10 col-sm-10 offset-sm-1 inner-menu">
                     <ul id="%1$s" class="%2$s">%3$s</ul>
                   </div>
                   <div class="col-2 col-sm-1 menu-icons rm-gutter">
