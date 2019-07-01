@@ -86,7 +86,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-lg-8">
         <div class="row">
           <div class="col-12 nieuws-agenda">
             <? _e("
@@ -106,7 +106,7 @@
           @endwhile
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-4">
         <div class="row agenda">
           <div class="col-12 nieuws-agenda sidebar text-donkerpaars bg-grijs-10">
             <? _e("
@@ -118,7 +118,50 @@
             ") ?>
           </div>
         </div>
-        <div class="row">
+        <?=
+          wp_reset_query();
+          $args = array(
+            'numberposts' => -1,
+            'post_type' => array('post'),
+            'posts_per_page' => 5,
+            'meta_query' => array(
+              array(
+                'key' => 'agenda_uitgelicht',
+                'compare' => '=',
+                'value' => '1'
+              )
+            ),
+            'meta_key' => 'agenda_uitgelicht_volgorde',
+            'orderby' => 'meta_value',
+            'order' => 'asc'
+          );
+          $the_query = new WP_Query($args);
+
+          if($the_query->have_posts()):
+            while($the_query->have_posts()) : $the_query->the_post(); ?>
+              <div class="row">
+                <div class="col-12 sidebar bg-grijs-10">
+                  <a href="<? the_permalink(); ?>">
+                    <div class="overlay-container agenda-image">
+                      <? the_post_thumbnail('col-4-thumbnail', array('class' => 'img-fluid image-cover agenda-image')); ?>
+                      <div class="overlay overlay-donkerpaars d-flex agenda-image"></div>
+                    </div>
+                  </a>
+                  <div class="agenda-item">
+                    <h5 class="text-donkerpaars font-weight-bold">{{ $agenda_tijdstip }}</h5>
+                    <a href="<? the_permalink(); ?>"><h5 class="font-weight-bol"><? the_title(); ?></h5></a>
+                  </div>
+                  <div class="agenda-locatie bg-white">
+                    {{ $agenda_locatie }}
+                  </div>
+                </div>
+              </div>
+            <? endwhile;
+          endif;
+          wp_reset_query();
+        ?>
+
+        <div class="row highlights">
           <div class="col-12 nieuws-agenda sidebar text-paars bg-grijs-5">
             <? _e("
               <!--:nl-->

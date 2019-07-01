@@ -107,6 +107,10 @@
   width: 21.05%;
 }
 
+.agenda-locatie {
+  padding: 18px 25px;
+}
+
 .nieuws-agenda {
   font-size: 30px;
   line-height: 40px;
@@ -117,13 +121,18 @@
   padding-bottom: 20px;
 }
 
-.agenda {
-  margin-bottom: 25px;
+.highlights {
+  margin-top: 25px;
 }
 
 .sidebar {
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.agenda-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .uitgelicht-item {
@@ -193,4 +202,8 @@
 
 .home .image-cover {
   height: 260px;
+}
+
+.home .image-cover.agenda-image {
+  height: 130px;
 }

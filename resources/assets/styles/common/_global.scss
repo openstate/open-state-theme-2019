@@ -187,6 +187,10 @@ body:not(.home):not(.paged) .wrap {
     background-color: rgba($blauw, 0.5);
   }
 
+  &.overlay-donkerpaars {
+    background-color: rgba($donkerpaars, 0.5);
+  }
+
   &.overlay-paars {
     background-color: rgba($paars, 0.5);
   }
@@ -199,6 +203,11 @@ a:hover .overlay-blauw {
   time {
     color: $yellow;
   }
+}
+
+a:hover .overlay-donkerpaars {
+  background-color: rgba($donkerpaars, 0);
+  transition: 0.5s;
 }
 
 a:hover .overlay-paars {

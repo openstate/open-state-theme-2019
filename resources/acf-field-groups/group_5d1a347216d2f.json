@@ -1,0 +1,167 @@
+{
+    "key": "group_5d1a347216d2f",
+    "title": "Agenda",
+    "fields": [
+        {
+            "key": "field_5d1a34f9f10c9",
+            "label": "Evenement?",
+            "name": "agenda_evenement",
+            "type": "true_false",
+            "instructions": "Is dit een post over een aankondiging van een evenement?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d1a3481f10c8",
+            "label": "Tijdstip",
+            "name": "agenda_tijdstip",
+            "type": "date_time_picker",
+            "instructions": "Begin tijdstip van het evenement",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1a34f9f10c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "Y-m-d H:i:s",
+            "return_format": "j F H:i",
+            "first_day": 1
+        },
+        {
+            "key": "field_5d1a39dfd47dd",
+            "label": "Locatie",
+            "name": "agenda_locatie",
+            "type": "text",
+            "instructions": "Locatie van het evenement, bijvoorbeeld: Auditorium Ministerie van Binnenlandse Zaken, Turfmarkt 147, Den Haag",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1a34f9f10c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d1a3b7bf8f22",
+            "label": "Inschrijfformulier URL",
+            "name": "agenda_inschrijfformulier_url",
+            "type": "url",
+            "instructions": "Als je je kan aanmelden voor een evenement, plaats dan hier de link naar bijvoorbeeld Eventbrite of Google Forms.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1a34f9f10c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d1a3f4de4e1d",
+            "label": "Uitgelicht",
+            "name": "agenda_uitgelicht",
+            "type": "true_false",
+            "instructions": "Toon dit evenement op de frontpage in de Agenda box.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d1a9c15f1fea",
+            "label": "Uitgelicht volgorde",
+            "name": "agenda_uitgelicht_volgorde",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1a34f9f10c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 5,
+            "step": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1562025030
+}
