@@ -4,8 +4,8 @@
       <header>
         <a href="{!! the_permalink() !!}">
           <div class="overlay-container">
-            {!! the_post_thumbnail('col-8-thumbnail', array('class' => 'img-fluid image-cover-frontpage')) !!}
-            <div class="overlay d-flex">@include('partials/entry-meta')</div>
+            {!! the_post_thumbnail('col-8-thumbnail', array('class' => 'img-fluid image-cover')) !!}
+            <div class="overlay overlay-blauw d-flex">@include('partials/entry-meta')</div>
           </div>
         </a>
         <h5 class="entry-title bg-roze"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>

@@ -152,7 +152,12 @@
             while($the_query->have_posts()) : $the_query->the_post(); ?>
               <div class="row">
                 <div class="col-12 sidebar bg-grijs-5">
-                  <a href="<? the_permalink(); ?>"><? the_post_thumbnail('col-4-thumbnail', array('class' => 'img-fluid image-cover-frontpage')); ?></a>
+                  <a href="<? the_permalink(); ?>">
+                    <div class="overlay-container">
+                      <? the_post_thumbnail('col-4-thumbnail', array('class' => 'img-fluid image-cover')); ?>
+                      <div class="overlay overlay-paars d-flex"></div>
+                    </div>
+                  </a>
                   <div class="bg-grijs-15 uitgelicht-item">
                     <a href="<? the_permalink(); ?>"><h5><? the_title(); ?></h5></a>
                   </div>
@@ -162,6 +167,33 @@
           endif;
           wp_reset_query();
         ?>
+        <div class="row">
+          <div class="col-12 sidebar bg-grijs-5">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/265160064" allowfullscreen></iframe>
+            </div>
+            <div class="bg-grijs-15 uitgelicht-item">
+              <h5>
+                <? _e("
+                  <!--:nl-->
+                    Wat doen we? Bekijk ons filmpje
+                  <!--:--><!--:en-->
+                    What do we do? Check out our movie
+                  <!--:-->
+                ") ?>
+                <a href="/over-ons/">
+                  <? _e("
+                    <!--:nl-->
+                      of lees meer over ons
+                    <!--:--><!--:en-->
+                      or read more about us
+                    <!--:-->
+                  ") ?>
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -191,9 +191,6 @@
   /* stylelint-enable */
 }
 
-.image-cover-frontpage {
-  object-fit: cover;
-  width: 100%;
+.home .image-cover {
   height: 260px;
-  z-index: 200;
 }

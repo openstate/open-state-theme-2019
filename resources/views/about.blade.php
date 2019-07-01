@@ -25,7 +25,7 @@
         </div>
         <div class="col-md-6 my-md-auto my-xl-0 mt-xl-auto">
           @if (has_post_thumbnail())
-             {!! the_post_thumbnail('col-8-thumbnail', array('class' => 'img-fluid image-cover-frontpage')) !!}
+             {!! the_post_thumbnail('col-6-thumbnail', array('class' => 'img-fluid image-cover')) !!}
           @else
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/265160064" allowfullscreen></iframe>
@@ -33,11 +33,7 @@
           @endif
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          @include('partials.content-page')
-        </div>
-      </div>
+      @include('partials.content-page')
     @endwhile
   </div>
 @endsection
