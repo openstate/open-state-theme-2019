@@ -148,12 +148,38 @@
                     </div>
                   </a>
                   <div class="agenda-item">
-                    <h5 class="text-donkerpaars font-weight-bold">{{ $agenda_tijdstip }}</h5>
-                    <a href="<? the_permalink(); ?>"><h5 class="font-weight-bol"><? the_title(); ?></h5></a>
+                    <?
+                      $unixtimestamp = strtotime($agenda_tijdstip);
+                      $formatted_date = date_i18n('j F, H:i', $unixtimestamp);
+                    ?>
+                    <h5 class="text-donkerpaars font-weight-bold">{{ $formatted_date }}</h5>
+                    <a href="<? the_permalink(); ?>"><h5 class="font-weight-bold"><? the_title(); ?></h5></a>
                   </div>
-                  <div class="agenda-locatie bg-white">
-                    {{ $agenda_locatie }}
+                  <div class="row agenda-locatie bg-white mx-0">
+                    <div class="col-3 my-auto rm-gutter">
+                      <span class="fa-stack text-donkerpaars">
+                        <i class="far fa-circle fa-stack-2x icon-background"></i>
+                        <i class="fas fa-map-marker-alt fa-stack-1x"></i>
+                      </span>
+                    </div>
+                    <div class="col-9">
+                      {{ $agenda_locatie }}
+                    </div>
                   </div>
+                  @if ($agenda_inschrijfformulier_url)
+                    <div class="inschrijven text-right">
+                      <a href="{{ $agenda_inschrijfformulier_url }}"><i><b>
+                        <? _e("
+                          <!--:nl-->
+                            INSCHRIJVEN >
+                          <!--:--><!--:en-->
+                            REGISTER >
+                          <!--:-->
+                        ") ?>
+                      </b></i></a>
+                      <hr class="mt-0">
+                    </div>
+                  @endif
                 </div>
               </div>
             <? endwhile;

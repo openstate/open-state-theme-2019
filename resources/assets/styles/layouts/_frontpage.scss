@@ -107,10 +107,6 @@
   width: 21.05%;
 }
 
-.agenda-locatie {
-  padding: 18px 25px;
-}
-
 .nieuws-agenda {
   font-size: 30px;
   line-height: 40px;
@@ -133,12 +129,37 @@
 .agenda-item {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  /* stylelint-disable */
+  a:hover {
+    color: black;
+  }
+  /* stylelint-enable */
+}
+
+.agenda-locatie {
+  color: black;
+  padding: 18px 25px;
+  margin-bottom: 25px;
+}
+
+.inschrijven {
+  margin-bottom: 25px;
+
+  /* stylelint-disable */
+  a {
+    padding: 5px 8px;
+    background-color: $zwart;
+    color: $yellow;
+  }
+  /* stylelint-enable */
 }
 
 .uitgelicht-item {
   padding: 10px 25px 25px 25px;
   margin-bottom: 25px;
 
+  /* stylelint-disable */
   a {
     color: black;
 
@@ -146,6 +167,7 @@
       color: black;
     }
   }
+  /* stylelint-enable */
 }
 
 .entry-title.bg-roze {

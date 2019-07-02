@@ -27,7 +27,7 @@
             "name": "agenda_tijdstip",
             "type": "date_time_picker",
             "instructions": "Begin tijdstip van het evenement",
-            "required": 0,
+            "required": 1,
             "conditional_logic": [
                 [
                     {
@@ -43,7 +43,7 @@
                 "id": ""
             },
             "display_format": "Y-m-d H:i:s",
-            "return_format": "j F H:i",
+            "return_format": "Y-m-d H:i:s",
             "first_day": 1
         },
         {
@@ -52,7 +52,7 @@
             "name": "agenda_locatie",
             "type": "text",
             "instructions": "Locatie van het evenement, bijvoorbeeld: Auditorium Ministerie van Binnenlandse Zaken, Turfmarkt 147, Den Haag",
-            "required": 0,
+            "required": 1,
             "conditional_logic": [
                 [
                     {
@@ -163,5 +163,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1562025030
+    "modified": 1562071013
 }
