@@ -168,7 +168,7 @@
                   </div>
                   @if ($agenda_inschrijfformulier_url)
                     <div class="inschrijven text-right">
-                      <a href="{{ $agenda_inschrijfformulier_url }}"><i><b>
+                      <a href="{{ $agenda_inschrijfformulier_url }}" target="_blank" rel="noopener"><i><b>
                         <? _e("
                           <!--:nl-->
                             INSCHRIJVEN >
