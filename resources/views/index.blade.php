@@ -86,7 +86,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-lg-8 order-md-last">
         <div class="row">
           <div class="col-12 nieuws-agenda">
             <? _e("
