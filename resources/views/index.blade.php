@@ -99,11 +99,30 @@
           </div>
         </div>
         <div class="row">
-          @while (have_posts()) @php the_post() @endphp
-            <div class="col-12">
-              @include('partials.content-'.get_post_type())
-            </div>
-          @endwhile
+          <?
+          wp_reset_query();
+          $args = array(
+            'numberposts' => -1,
+            'post_type' => 'post',
+            'posts_per_page' => 3,
+            'meta_query' => array(
+              array(
+                'key' => 'agenda_evenement',
+                'compare' => 'NOT EXISTS'
+              )
+            )
+          );
+          $the_query = new WP_Query($args);
+
+          if($the_query->have_posts()):
+            while($the_query->have_posts()) : $the_query->the_post(); ?>
+              <div class="col-12">
+                @include('partials.content-'.get_post_type())
+              </div>
+            <? endwhile;
+          endif;
+          wp_reset_query();
+        ?>
         </div>
       </div>
       <div class="col-lg-4">
