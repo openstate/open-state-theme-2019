@@ -138,6 +138,18 @@ function display_sidebar()
 }
 
 /**
+ * Recursive function to get all parents for the breadcrumb
+ */
+function get_parent_recursive($post_id) {
+    $post = get_post($post_id);
+    if ($post->post_parent) {
+        get_parent_recursive($post->post_parent);
+        echo "&nbsp;&nbsp;>&nbsp;&nbsp;";
+        echo '<a href="' . get_permalink($post->post_parent) . '">' . get_the_title($post->post_parent) . '</a>';
+    }
+}
+
+/**
  * Generate breadcrumbs
  * @return breadcrumb HTML
  */
@@ -149,9 +161,8 @@ function breadcrumbs() {
     if (is_category() || is_single()) {
         echo "&nbsp;&nbsp;>&nbsp;&nbsp;";
         the_category('&bull;');
-    } elseif(is_page() && $post->post_parent) {
-        echo "&nbsp;&nbsp;>&nbsp;&nbsp;";
-        echo '<a href="' . get_permalink($post->post_parent) . '">' . get_the_title($post->post_parent) . '</a>';
+    } elseif(is_page()) {
+        get_parent_recursive($post->ID);
     }
     echo '</div>';
 }
