@@ -42,6 +42,9 @@
   <div class="row entry-content">
     <div class="col-lg-8 offset-lg-2">
       @php the_content() @endphp
+
+      @include('partials.action-boxes')
+
       @if ($agenda_evenement)
       <a class="btn btn-paars inschrijf-button" href="{{ $agenda_inschrijfformulier_url }}">
         <? _e("

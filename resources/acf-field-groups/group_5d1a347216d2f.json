@@ -50,7 +50,7 @@
             "key": "field_5d1a39dfd47dd",
             "label": "Locatie",
             "name": "agenda_locatie",
-            "type": "text",
+            "type": "qtranslate_text",
             "instructions": "Locatie van het evenement, bijvoorbeeld: Auditorium Ministerie van Binnenlandse Zaken, Turfmarkt 147, Den Haag",
             "required": 1,
             "conditional_logic": [
@@ -69,9 +69,9 @@
             },
             "default_value": "",
             "placeholder": "",
+            "maxlength": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_5d1a3b7bf8f22",
@@ -104,7 +104,15 @@
             "type": "true_false",
             "instructions": "Toon dit evenement op de frontpage in de Agenda box.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1a34f9f10c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -163,5 +171,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1562071013
+    "modified": 1562195311
 }

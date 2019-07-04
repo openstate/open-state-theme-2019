@@ -25,4 +25,14 @@ class Index extends Controller
     {
         return get_field('agenda_inschrijfformulier_url');
     }
+
+    public function action_box_vraagteken()
+    {
+        return get_field('action_box_vraagteken');
+    }
+
+    public function action_box_download()
+    {
+        return get_field('action_box_download');
+    }
 }
