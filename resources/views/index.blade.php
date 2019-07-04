@@ -86,7 +86,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 order-md-last">
+      <div class="col-lg-8 order-12 order-lg-1">
         <div class="row">
           <div class="col-12 nieuws-agenda">
             <? _e("
@@ -125,7 +125,7 @@
         ?>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 order-1 order-lg-12">
         <div class="row agenda">
           <div class="col-12 nieuws-agenda sidebar text-donkerpaars bg-grijs-10">
             <? _e("
