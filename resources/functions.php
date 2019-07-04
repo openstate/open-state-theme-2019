@@ -101,3 +101,10 @@ function add_specific_menu_location_atts( $atts, $item, $args ) {
     return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
+
+// Add categories to pages
+function add_taxonomies_to_pages() {
+  register_taxonomy_for_object_type('post_tag', 'page');
+  register_taxonomy_for_object_type('category', 'page');
+}
+add_action('init', 'add_taxonomies_to_pages');
