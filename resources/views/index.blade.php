@@ -13,15 +13,17 @@
             <!--:-->
           ") ?>
           <div>
-            <button class="btn btn-paars">
               <? _e("
                 <!--:nl-->
-                  MEER OVER THEMA'S
+                  <a href='over-ons/' class='btn btn-paars'>
+                    MEER OVER ONS
+                  </a>
                 <!--:--><!--:en-->
-                  MORE ABOUT THEMES
+                  <a href='about/' class='btn btn-paars'>
+                    MORE ABOUT US
+                  </a>
                 <!--:-->
               ") ?>
-            </button>
           </div>
         </div>
 
@@ -100,29 +102,29 @@
         </div>
         <div class="row">
           <?
-          wp_reset_query();
-          $args = array(
-            'numberposts' => -1,
-            'post_type' => 'post',
-            'posts_per_page' => 3,
-            'meta_query' => array(
-              array(
-                'key' => 'agenda_evenement',
-                'compare' => 'NOT EXISTS'
+            wp_reset_query();
+            $args = array(
+              'numberposts' => -1,
+              'post_type' => 'post',
+              'posts_per_page' => 3,
+              'meta_query' => array(
+                array(
+                  'key' => 'agenda_evenement',
+                  'compare' => 'NOT EXISTS'
+                )
               )
-            )
-          );
-          $the_query = new WP_Query($args);
+            );
+            $the_query = new WP_Query($args);
 
-          if($the_query->have_posts()):
-            while($the_query->have_posts()) : $the_query->the_post(); ?>
-              <div class="col-12">
-                @include('partials.content-'.get_post_type())
-              </div>
-            <? endwhile;
-          endif;
-          wp_reset_query();
-        ?>
+            if($the_query->have_posts()):
+              while($the_query->have_posts()) : $the_query->the_post(); ?>
+                <div class="col-12">
+                  @include('partials.content-'.get_post_type())
+                </div>
+              <? endwhile;
+            endif;
+            wp_reset_query();
+          ?>
         </div>
       </div>
       <div class="col-lg-4 order-1 order-lg-12">
@@ -264,19 +266,11 @@
               <h5>
                 <? _e("
                   <!--:nl-->
-                    Wat doen we? Bekijk ons filmpje
+                    Wat doen we? Bekijk ons filmpje <a href='over-ons/'>of lees meer over ons</a>
                   <!--:--><!--:en-->
-                    What do we do? Check out our movie
+                    What do we do? Check out our movie <a href='about/'>or read more about us</a>
                   <!--:-->
                 ") ?>
-                <a href="/over-ons/">
-                  <? _e("
-                    <!--:nl-->
-                      of lees meer over ons
-                    <!--:--><!--:en-->
-                      or read more about us
-                    <!--:-->
-                  ") ?>
                 </a>
               </h5>
             </div>
