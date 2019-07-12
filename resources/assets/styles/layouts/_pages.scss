@@ -2,3 +2,143 @@
   height: 260px;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.carousel-control-prev-icon::before {
+  content: "<";
+}
+
+.carousel-control-next-icon::before {
+  content: ">";
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+
+  &::before {
+    color: $blauw;
+    font-size: 90px;
+    font-weight: bold;
+  }
+}
+
+//.carousel-indicators {
+//  top: 350px;
+//}
+//.box {
+//  perspective: 270px;
+//  perspective-origin: 0 90%;
+//}
+//
+//.box .cube {
+//  transform: rotateY(12deg);
+//}
+//
+//.box .cube .tester {
+//  position: relative;
+//  top: -2px;
+//  left: -51px;
+//  transform: scale(0.58, 0.58);
+//}
+//
+//.notebook {
+//  position: absolute;
+//  z-index: 10;
+//}
+
+.box {
+  perspective: 170px;
+}
+
+.box .cube {
+  transform: rotateY(10deg);
+}
+
+.box .cube .screenshot-big {
+  transform: scale(0.7, 0.7);
+  box-shadow: -4px 4px 8px 0 rgba(0, 0, 0, 0.2), -6px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.carousel-indicators {
+  top: 400px;
+  list-style: none;
+}
+
+.lol {
+  flex-direction: column;
+}
+
+.carousel-indicators li {
+  width: 35%;
+  height: 0;
+  background-color: #fff;
+  transition: width 0.5s, height 0.5s, opacity 0.5s;
+
+  &.active {
+    img {
+      width: 192px;
+      height: 120px;
+      opacity: 1;
+      transition: width 0.5s, height 0.5s, opacity 0.5s;
+    }
+  }
+
+  &:not(.active) {
+    img {
+      width: 160px;
+      height: 100px;
+      opacity: 0.5;
+      transition: width 0.5s, height 0.5s, opacity 0.5s;
+    }
+  }
+}
+
+.project-blauw-balk {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.lower {
+  position: relative;
+  top: 80px;
+}
+
+.open-site {
+  position: relative;
+  top: -150px;
+  left: 150px;
+}
+
+.open-site-small {
+  display: flex;
+}
+
+.inverse-paars-button {
+  top: -60px;
+}
+
+/* stylelint-disable */
+.inverse-paars-button a,
+.inverse-paars-button button {
+  color: $paars;
+  background-color: white;
+
+  &:hover {
+    color: white;
+    background-color: $paars;
+  }
+}
+
+.carousel-indicators li div,
+.carousel-indicators li div button {
+  position: relative;
+}
+/* stylelint-enable */

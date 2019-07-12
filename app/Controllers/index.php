@@ -35,4 +35,66 @@ class Index extends Controller
     {
         return get_field('action_box_download');
     }
+
+    public function project()
+    {
+        return get_field('action_box_download');
+    }
+
+    public function project_websites() {
+      $return = '';
+
+      // Get the appropriate projects
+      $project_websites = get_field('project_websites');
+
+      if(is_array($project_websites)) {
+
+        $active = 'active';
+        foreach($project_websites as $p) {
+          $return .= \App\template('partials.project-website', [
+            'project_url' => $p['project_url'],
+            'project_url_trimmed' => rtrim(ltrim($p['project_url'], 'https?://'), '/'),
+            'project_plaatje' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid screenshot-big")),
+            'active' => $active,
+          ]);
+
+          // Only add the 'active' class to the first website
+          if ($active) {
+            $active = '';
+          }
+        }
+      }
+
+      // Always return
+      return $return;
+    }
+
+    public function project_websites_controls() {
+      $return = '';
+
+      // Get the appropriate projects
+      $project_websites = get_field('project_websites');
+
+      if(is_array($project_websites)) {
+        $counter = 0;
+        $active = 'active';
+        foreach($project_websites as $p) {
+          $return .= \App\template('partials.project-website-small-screenshot', [
+            'counter' => $counter,
+            'active' => $active,
+            'project_url_trimmed' => rtrim(ltrim($p['project_url'], 'https?://'), '/'),
+            'project_screenshot_small' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid screenshot-small mx-auto"))
+          ]);
+          $counter++;
+
+          // Only add the 'active' class to the first website
+          if ($active) {
+            $active = '';
+          }
+        }
+      }
+
+      // Always return
+      return $return;
+    }
 }

@@ -25,14 +25,13 @@ h1 {
 h2 {
   color: $paars;
   font-size: 30px;
-  font-style: bold;
-  font-weight: 400;
+  font-weight: bold;
   letter-spacing: 0.01em;
   line-height: 40px;
 }
 
 h3 {
-  font-family: $font-family-text-light;
+  font-family: $font-family-text;
   font-size: 30px;
   font-style: italic;
   font-weight: 300;
@@ -55,7 +54,7 @@ h4 {
 }
 
 h5 {
-  font-family: $font-family-text-light;
+  font-family: $font-family-text;
   color: #000;
   font-size: 33px;
   font-weight: 300;
@@ -163,6 +162,10 @@ body:not(.home):not(.paged) .wrap {
 
 .bg-roze {
   background-color: $roze;
+}
+
+.bg-grijsblauw {
+  background-color: $grijsblauw;
 }
 
 .bg-lichtblauw {
