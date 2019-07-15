@@ -51,10 +51,15 @@ class Index extends Controller
 
         $active = 'active';
         foreach($project_websites as $p) {
+          $project_title = $p['project_title'];
+          if (!$project_title) {
+            $project_title = rtrim(ltrim($p['project_url'], 'https?://'), '/');
+          }
+
           $return .= \App\template('partials.project-website-big-screenshot', [
-            'project_url' => $p['project_url'],
-            'project_url_trimmed' => rtrim(ltrim($p['project_url'], 'https?://'), '/'),
             'project_plaatje' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid screenshot-big")),
+            'project_url' => $p['project_url'],
+            'project_title' => $project_title,
             'active' => $active,
           ]);
 
@@ -79,11 +84,16 @@ class Index extends Controller
         $counter = 0;
         $active = 'active';
         foreach($project_websites as $p) {
+          $project_title = $p['project_title'];
+          if (!$project_title) {
+            $project_title = rtrim(ltrim($p['project_url'], 'https?://'), '/');
+          }
+
           $return .= \App\template('partials.project-website-small-screenshot', [
-            'counter' => $counter,
+            'project_screenshot_small' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid screenshot-small mx-auto")),
+            'project_title' => $project_title,
             'active' => $active,
-            'project_url_trimmed' => rtrim(ltrim($p['project_url'], 'https?://'), '/'),
-            'project_screenshot_small' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid screenshot-small mx-auto"))
+            'counter' => $counter,
           ]);
           $counter++;
 

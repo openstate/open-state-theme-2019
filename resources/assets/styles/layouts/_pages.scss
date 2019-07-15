@@ -43,6 +43,10 @@
   }
 }
 
+.website-title-button {
+  display: flex;
+}
+
 .carousel-indicators {
   position: relative;
   list-style: none;
@@ -55,6 +59,8 @@
     transition: width 0.5s, height 0.5s, opacity 0.5s;
 
     &.active {
+      z-index: 100;
+
       img {
         width: 192px;
         height: 120px;
@@ -64,6 +70,11 @@
     }
 
     &:not(.active) {
+      .website-title-button {
+        color: $blauw;
+        border-color: $blauw;
+      }
+
       img {
         width: 160px;
         height: 100px;
@@ -106,10 +117,6 @@
   top: -150px;
   left: 150px;
   margin: 0;
-}
-
-.open-site-small {
-  display: flex;
 }
 
 .inverse-paars-button {

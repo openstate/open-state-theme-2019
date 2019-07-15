@@ -2,7 +2,7 @@
   <div class="small-screenshot d-flex mx-auto">
     {!!$project_screenshot_small !!}
     <div class="inverse-paars-button">
-      <button class="open-site-small btn btn-paars mx-auto">{{ $project_url_trimmed }}</button>
+      <button class="website-title-button btn btn-paars mx-auto">{{ $project_title }}</button>
     </div>
   </div>
 </li>

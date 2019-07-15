@@ -22,28 +22,12 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5d2359240726a",
-                    "label": "URL",
-                    "name": "project_url",
-                    "type": "url",
-                    "instructions": "Vul de URL van een van de websites die bij dit project horen in.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
                     "key": "field_5d2359700726b",
                     "label": "Plaatje",
                     "name": "project_plaatje",
                     "type": "image",
                     "instructions": "Plaatje van de website",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -60,6 +44,41 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_5d2359240726a",
+                    "label": "URL",
+                    "name": "project_url",
+                    "type": "url",
+                    "instructions": "Vul de URL van een van de websites die bij dit project horen in.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5d2c91dd069c3",
+                    "label": "Title",
+                    "name": "project_title",
+                    "type": "text",
+                    "instructions": "Dit veld is niet verplicht. Als  je het niet invult dan wordt de URL als text gebruikt. Als je dus niet de URL wilt tonen vul in dit veld dan een titel in die beschrijft waar de URL naar linkt toe. Bijvoorbeeld 'Data' of 'API'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         }
@@ -86,5 +105,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1562625089
+    "modified": 1563202269
 }
