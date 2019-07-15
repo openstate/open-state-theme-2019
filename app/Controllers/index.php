@@ -51,7 +51,7 @@ class Index extends Controller
 
         $active = 'active';
         foreach($project_websites as $p) {
-          $return .= \App\template('partials.project-website', [
+          $return .= \App\template('partials.project-website-big-screenshot', [
             'project_url' => $p['project_url'],
             'project_url_trimmed' => rtrim(ltrim($p['project_url'], 'https?://'), '/'),
             'project_plaatje' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid screenshot-big")),
