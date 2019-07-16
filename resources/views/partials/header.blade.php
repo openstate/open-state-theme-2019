@@ -15,8 +15,8 @@
           @endif
         </div>
 
-        <div class="col-9 col-sm-6 col-lg-4 text-lg-center">
-          <a class="navbar-brand" href="{{ home_url('/') }}">
+        <div class="col-9 col-sm-6 col-lg-4 text-lg-center pr-0 pl-md-0">
+          <a class="navbar-brand mr-0" href="{{ home_url('/') }}">
             @if (!is_front_page())
               @if (get_bloginfo("language") == 'en-US')
                 <img class="navbar-brand-img img-fluid" src="@asset('images/Open-state-foundation-logo-tagline-en.svg')">
