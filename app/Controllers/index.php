@@ -90,7 +90,7 @@ class Index extends Controller
           }
 
           $return .= \App\template('partials.project-website-small-screenshot', [
-            'project_screenshot_small' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid screenshot-small mx-auto")),
+            'project_screenshot_small' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid d-none d-lg-flex screenshot-small mx-auto")),
             'project_title' => $project_title,
             'active' => $active,
             'counter' => $counter,

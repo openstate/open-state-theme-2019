@@ -2,6 +2,20 @@
   height: 260px;
 }
 
+.bg-grijs-blauw {
+  background: linear-gradient($grijs-5 55%, $lichtblauw 45%);
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  padding: 0;
+}
+
+.carousel-control-next {
+  right: 28px;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   opacity: 1;
@@ -32,6 +46,7 @@
 
 .box {
   perspective: 170px;
+  position: relative;
 
   .cube {
     transform: rotateY(10deg);
@@ -44,7 +59,10 @@
 }
 
 .website-title-button {
-  display: flex;
+  display: block;
+  margin-bottom: 0;
+  top: -60px;
+  width: 230px;
 }
 
 .carousel-indicators {
@@ -54,9 +72,11 @@
 
   li {
     width: 25%;
-    height: 0;
-    background-color: #fff;
+    // Set height of original carousel indicator lines to auto
+    height: auto;
+    background-color: inherit;
     transition: width 0.5s, height 0.5s, opacity 0.5s;
+    border: none;
 
     &.active {
       z-index: 100;
@@ -73,6 +93,11 @@
       .website-title-button {
         color: $blauw;
         border-color: $blauw;
+
+        &:hover {
+          color: white;
+          background-color: $blauw;
+        }
       }
 
       img {
@@ -90,38 +115,32 @@
   }
 }
 
-.carousel-item h2 {
-  font-size: 29px;
-}
+.carousel-item {
+  h2 {
+    font-size: 29px;
+  }
 
-#carouselControls {
-  height: 320px;
+  header {
+    // make sure that the transformed .cube plane falls below the link
+    position: relative;
+    z-index: 100;
+  }
 }
 
 .small-screenshot {
   flex-direction: column;
-}
-
-.project-balk-blauw {
-  padding-top: 100px;
-  padding-bottom: 80px;
-}
-
-.move-carousel-lower {
-  position: relative;
-  top: 50px;
+  height: 120px;
+  margin-bottom: 20px;
 }
 
 .open-site {
-  position: relative;
-  top: -150px;
-  left: 150px;
+  position: absolute;
+  top: 50%;
+  left: 20%;
   margin: 0;
 }
 
 .inverse-paars-button {
-  top: -60px;
-
   /* stylelint-disable */
   a,
   button {
@@ -134,4 +153,44 @@
     }
   }
   /* stylelint-enable */
+}
+
+@media (max-width: 1199px) {
+  .website-title-button {
+    width: 190px;
+  }
+}
+
+@media (max-width: 991px) {
+  .carousel-indicators {
+    top: 60px;
+
+    li {
+      width: auto;
+    }
+  }
+
+  .carousel-item {
+    h2 {
+      font-size: 26px;
+    }
+  }
+
+  .small-screenshot {
+    height: auto;
+  }
+
+  .carousel-controls {
+    top: 67%;
+  }
+
+  .website-title-button {
+    width: 300px;
+  }
+}
+
+@media (max-width: 575px) {
+  .website-title-button {
+    width: 230px;
+  }
 }
