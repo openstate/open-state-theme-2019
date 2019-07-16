@@ -123,14 +123,8 @@ email address
   <div class="row-full bg-grijs-10">
     <div class="container">
       <div class="row footer-bar">
-        <div class="col-md-6 offset-md-3 text-center">
-          <?
-          $footer_logo = 'images/Open-state-foundation-logo-tagline-nl.svg';
-          if (get_bloginfo("language") == 'en-US') {
-            $footer_logo = 'images/Open-state-foundation-logo-tagline-en.svg';
-          }
-          ?>
-          <img class="img-fluid" src="@asset($footer_logo)" alt="Open State Foundation logo">
+        <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center">
+          <img class="img-fluid" src="@asset('images/Open-state-foundation-logo.svg')" alt="Open State Foundation logo">
         </div>
       </div>
       <div class="row footer-icons d-flex justify-content-center">
