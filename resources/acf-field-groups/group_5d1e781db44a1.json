@@ -3,6 +3,25 @@
     "title": "Project",
     "fields": [
         {
+            "key": "field_5d37293c2fdf0",
+            "label": "Project samenvatting",
+            "name": "project_samenvatting",
+            "type": "text",
+            "instructions": "Zorg dat de tekst maximaal 3 regels (circa 75 karakters) inneemt als je de samenvatting op de projectenoverzicht-pagina op een groot scherm bekijkt.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d2358b507269",
             "label": "Project websites",
             "name": "project_websites",
@@ -105,5 +124,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1563202475
+    "modified": 1563900246
 }

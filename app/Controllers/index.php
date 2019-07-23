@@ -36,11 +36,6 @@ class Index extends Controller
         return get_field('action_box_download');
     }
 
-    public function project()
-    {
-        return get_field('action_box_download');
-    }
-
     public function project_websites() {
         $return = '';
 

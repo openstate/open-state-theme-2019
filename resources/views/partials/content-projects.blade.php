@@ -13,7 +13,10 @@
             @endif
           </div>
         </a>
-        <h5 class="entry-title bg-roze"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
+        <div class="entry-title bg-roze">
+          <h5><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h5>
+          <p class="mb-0"><? echo get_field('project_samenvatting', get_the_id()) ?></p>
+        </div>
       </header>
     </div>
   </div>
