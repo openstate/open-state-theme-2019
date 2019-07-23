@@ -63,8 +63,8 @@
                 },
                 {
                     "key": "field_5d2c91dd069c3",
-                    "label": "Title",
-                    "name": "project_title",
+                    "label": "Titel",
+                    "name": "project_titel",
                     "type": "text",
                     "instructions": "Dit veld is niet verplicht. Als  je het niet invult dan wordt de URL als text gebruikt. Als je dus niet de URL wilt tonen vul in dit veld dan een titel in die beschrijft waar de URL naar linkt toe. Bijvoorbeeld 'Data' of 'API'.",
                     "required": 0,
@@ -105,5 +105,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1563202269
+    "modified": 1563202475
 }

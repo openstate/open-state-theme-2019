@@ -1,6 +1,6 @@
 {
     "key": "group_5d162fc3081d3",
-    "title": "[:en]Highlights[:nl]Uitgelicht[:]",
+    "title": "Uitgelichte post",
     "fields": [
         {
             "key": "field_5d162fd128952",
@@ -28,7 +28,15 @@
             "type": "number",
             "instructions": "Vul hier '1' in op deze post\/page als eerste te tonen. Vul hier '2' in om deze als tweede te tonen. Etc. Maximaal 5 posts\/pages. NB: zorg er voor dat er geen andere posts\/pages zijn met hetzelfde getal!",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d162fd128952",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -67,5 +75,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1562195343
+    "modified": 1563815939
 }
