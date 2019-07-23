@@ -42,69 +42,82 @@ class Index extends Controller
     }
 
     public function project_websites() {
-      $return = '';
+        $return = '';
 
-      // Get the appropriate projects
-      $project_websites = get_field('project_websites');
+        // Get the appropriate projects
+        $project_websites = get_field('project_websites');
 
-      if(is_array($project_websites)) {
+        if(is_array($project_websites)) {
 
-        $active = 'active';
-        foreach($project_websites as $p) {
-          $project_title = $p['project_title'];
-          if (!$project_title) {
-            $project_title = rtrim(ltrim($p['project_url'], 'https?://'), '/');
-          }
+            $active = 'active';
+            foreach($project_websites as $p) {
+                $project_title = $p['project_title'];
+                if (!$project_title) {
+                    $project_title = rtrim(ltrim($p['project_url'], 'https?://'), '/');
+                }
 
-          $return .= \App\template('partials.project-website-big-screenshot', [
-            'project_plaatje' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid screenshot-big")),
-            'project_url' => $p['project_url'],
-            'project_title' => $project_title,
-            'active' => $active,
-          ]);
+                $return .= \App\template('partials.project-website-big-screenshot', [
+                    'project_plaatje' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid screenshot-big")),
+                    'project_url' => $p['project_url'],
+                    'project_title' => $project_title,
+                    'active' => $active,
+                ]);
 
-          // Only add the 'active' class to the first website
-          if ($active) {
-            $active = '';
-          }
+                // Only add the 'active' class to the first website
+                if ($active) {
+                    $active = '';
+                }
+            }
         }
-      }
 
-      // Always return
-      return $return;
+        return $return;
     }
 
     public function project_websites_controls() {
-      $return = '';
+        $return = '';
 
-      // Get the appropriate projects
-      $project_websites = get_field('project_websites');
+        // Get the appropriate projects
+        $project_websites = get_field('project_websites');
 
-      if(is_array($project_websites)) {
-        $counter = 0;
-        $active = 'active';
-        foreach($project_websites as $p) {
-          $project_title = $p['project_title'];
-          if (!$project_title) {
-            $project_title = rtrim(ltrim($p['project_url'], 'https?://'), '/');
-          }
+        if(is_array($project_websites) && count($project_websites) > 1) {
+            $counter = 0;
+            $active = 'active';
+            $return .= '<ol class="carousel-indicators d-block d-lg-flex">';
+            foreach($project_websites as $p) {
+                $project_title = $p['project_title'];
+                if (!$project_title) {
+                    $project_title = rtrim(ltrim($p['project_url'], 'https?://'), '/');
+                }
 
-          $return .= \App\template('partials.project-website-small-screenshot', [
-            'project_screenshot_small' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid d-none d-lg-flex screenshot-small mx-auto")),
-            'project_title' => $project_title,
-            'active' => $active,
-            'counter' => $counter,
-          ]);
-          $counter++;
+                $return .= \App\template('partials.project-website-small-screenshot', [
+                    'project_screenshot_small' => wp_get_attachment_image($p['project_plaatje'], 'medium', '', array("class" => "img-fluid d-none d-lg-flex screenshot-small mx-auto")),
+                    'project_title' => $project_title,
+                    'active' => $active,
+                    'counter' => $counter,
+                ]);
+                $counter++;
 
-          // Only add the 'active' class to the first website
-          if ($active) {
-            $active = '';
-          }
+                // Only add the 'active' class to the first website
+                if ($active) {
+                    $active = '';
+                }
+            }
+            $return .= '</ol>';
         }
-      }
 
-      // Always return
-      return $return;
+        return $return;
+    }
+
+    public function project_websites_count() {
+        $return = 0;
+
+        // Get the appropriate projects
+        $project_websites = get_field('project_websites');
+
+        if(is_array($project_websites)) {
+            $return = count($project_websites);
+        }
+
+        return $return;
     }
 }

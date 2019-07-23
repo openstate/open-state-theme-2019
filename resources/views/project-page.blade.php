@@ -27,10 +27,9 @@
                       </div>
                     </div>
                   </div>
-                  <ol class="carousel-indicators d-block d-lg-flex">
-                    {!! $project_websites_controls !!}
-                  </ol>
+                  {!! $project_websites_controls !!}
                 </div>
+                @if ($project_websites_count > 1)
                 <div class="col-12 carousel-controls">
                   <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon mr-auto" aria-hidden="true"></span>
@@ -57,6 +56,7 @@
                     </span>
                   </a>
                 </div>
+                @endif
               </div>
             </div>
           </div>
