@@ -108,3 +108,21 @@ function add_taxonomies_to_pages() {
   register_taxonomy_for_object_type('category', 'page');
 }
 add_action('init', 'add_taxonomies_to_pages');
+
+// Add excerpt character counter to excerpt box when creating a post
+function excerpt_count_js(){
+    echo '
+        <script>
+            $(document).ready(function(){
+                if ($("#excerpt").length) {
+                    $("#postexcerpt .handlediv").after("<div style=\"position:absolute;top:5px;right:50px;color:#666;\"><small>Samenvatting lengte (max. 200 karakters!): </small><input type=\"text\" value=\"0\" maxlength=\"3\" size=\"3\" id=\"excerpt_counter\" readonly=\"\" style=\"background:#fff;\"> <small>karakter(s).</small></div>");
+                    $("#excerpt_counter").val($("#excerpt").val().length);
+                    $("#excerpt").keyup( function() {
+                      $("#excerpt_counter").val($("#excerpt").val().length);
+                    });
+                };
+            });
+        </script>';
+}
+add_action('admin_head-post.php', 'excerpt_count_js');
+add_action('admin_head-post-new.php', 'excerpt_count_js');
