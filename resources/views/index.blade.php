@@ -110,7 +110,8 @@
               'meta_query' => array(
                 array(
                   'key' => 'agenda_evenement',
-                  'compare' => 'NOT EXISTS'
+                  'compare' => '!=',
+                  'value' => '1'
                 )
               )
             );
