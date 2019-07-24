@@ -103,15 +103,21 @@
         <div class="row">
           <?
             wp_reset_query();
+            $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
             $args = array(
-              'numberposts' => -1,
               'post_type' => 'post',
               'posts_per_page' => 3,
+              'paged' => $paged,
               'meta_query' => array(
+                'relation' => 'OR',
                 array(
                   'key' => 'agenda_evenement',
+                  'value' => '1',
                   'compare' => '!=',
-                  'value' => '1'
+                ),
+                array(
+                  'key' => 'agenda_evenement',
+                  'compare' => 'not exists',
                 )
               )
             );
