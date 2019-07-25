@@ -290,7 +290,17 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        {!! get_the_posts_navigation() !!}
+        <? _e("
+          <!--:nl-->
+            <a class='btn-block meer-nieuws' href='nieuwsarchief/'>
+              MEER NIEUWS >
+            </a>
+          <!--:--><!--:en-->
+            <a class='btn-block meer-nieuws' href='news-archive/'>
+              MORE NEWS >
+            </a>
+          <!--:-->
+        ") ?>
       </div>
     </div>
   </div>

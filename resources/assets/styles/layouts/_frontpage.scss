@@ -196,13 +196,13 @@
   text-transform: uppercase;
 }
 
-.posts-navigation {
+.meer-nieuws {
   background-color: $roze;
+  color: $zwart;
+  border: none;
+  border-radius: 0;
   margin-top: 25px;
   padding: 25px;
-}
-
-.nav-links {
   font-size: 30px;
   line-height: 40px;
   font-weight: bold;
@@ -213,12 +213,14 @@
   /* stylelint-disable */
   a {
     color: $zwart;
-
-    &::after {
-      content: " >";
-    }
   }
   /* stylelint-enable */
+
+  &:hover {
+    background-color: $yellow;
+    color: $zwart;
+    text-decoration: none;
+  }
 }
 
 .home .image-cover {
