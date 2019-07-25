@@ -34,6 +34,9 @@
         $post_min = $posts_per_page * ($paged - 1) + 1;
         $post_max = $posts_per_page * ($paged - 1) + $the_query->post_count;
         $pagination_string = '<br><div class="pagination-string">nieuwsberichten ' .  $post_min  . '-' . $post_max . ' van in totaal ' . $the_query->found_posts . '</div>';
+        if (get_bloginfo("language") == 'en-US') {
+            $pagination_string = '<br><div class="pagination-string">news posts ' .  $post_min  . '-' . $post_max . ' of ' . $the_query->found_posts . ' total' . '</div>';
+        }
         echo $pagination_string;
         ?>
         </div>
