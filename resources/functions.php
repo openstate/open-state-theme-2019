@@ -126,3 +126,13 @@ function excerpt_count_js(){
 }
 add_action('admin_head-post.php', 'excerpt_count_js');
 add_action('admin_head-post-new.php', 'excerpt_count_js');
+
+// Set the number of results to return on the search page to 50
+function set_posts_per_page($query) {
+  if (is_search()) {
+    $query->set('posts_per_page', 50);
+  }
+
+  return $query;
+}
+add_action('pre_get_posts', 'set_posts_per_page');
