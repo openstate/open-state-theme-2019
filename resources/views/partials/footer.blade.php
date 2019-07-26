@@ -13,7 +13,11 @@
                 <!--:-->
               ") ?>
             </label>
-            <input type="search" class="form-control" id="search-input" value="" name="s">
+            @if (is_search())
+              <input type="search" class="form-control" id="search-input" value="{!! get_search_query() !!}" name="s">
+            @else
+              <input type="search" class="form-control" id="search-input" value="" name="s">
+            @endif
           </form>
         </div>
       </div>
