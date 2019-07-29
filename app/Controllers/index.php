@@ -43,7 +43,6 @@ class Index extends Controller
         $project_websites = get_field('project_websites');
 
         if(is_array($project_websites)) {
-
             $active = 'active';
             foreach($project_websites as $p) {
                 $project_title = $p['project_title'];

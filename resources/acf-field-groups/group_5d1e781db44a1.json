@@ -22,6 +22,201 @@
             "maxlength": ""
         },
         {
+            "key": "field_5d3b0dac7b971",
+            "label": "Project status lobby score",
+            "name": "project_status_lobby_score",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b00807b96f",
+            "label": "Project status lobby tekst",
+            "name": "project_status_lobby_tekst",
+            "type": "text",
+            "instructions": "Hoe staat het met de lobby? Wat is er gedaan (met wie?) of staat er te gebeuren op dit vlak?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d3b0f077b974",
+            "label": "Project status data beschikbaar score",
+            "name": "project_status_data_beschikbaar_score",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b0efd7b973",
+            "label": "Project status data beschikbaar tekst",
+            "name": "project_status_data_beschikbaar_tekst",
+            "type": "text",
+            "instructions": "Is er data beschikbaar, zo ja welke en hoeveel?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d3b14412b830",
+            "label": "Project status ontsluiten en hulpmiddelen score",
+            "name": "project_status_ontsluiten_en_hulpmiddelen_score",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b143f2b82f",
+            "label": "Project status ontsluiten en hulpmiddelen tekst",
+            "name": "project_status_ontsluiten_en_hulpmiddelen_tekst",
+            "type": "text",
+            "instructions": "Op welke manier(en) wordt de data ontsloten? Zijn er andere hulpmiddelen\/tools beschikbaar om de data te gebruiken?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d3b145e5ed4f",
+            "label": "Project status duurzame ontsluiting score",
+            "name": "project_status_duurzame_ontsluiting_score",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3b146e5ed50",
+            "label": "Project status duurzame ontsluiting tekst",
+            "name": "project_status_duurzame_ontsluiting_tekst",
+            "type": "text",
+            "instructions": "Wordt de data regelmatig bijgewerkt? Hoe vaak? Gebeurt dit op een professionele manier door een betrouwbare partij?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d3b02b57b970",
+            "label": "Project status hergebruik score",
+            "name": "project_status_hergebruik_score",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d3af4257b96e",
+            "label": "Project status hergebruik tekst",
+            "name": "project_status_hergebruik_tekst",
+            "type": "text",
+            "instructions": "Beschrijf de status van het hergebruik. Weten hergebruikers de data te vinden, zijn er nog drempels die het hergebruik tegenhouden?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d2358b507269",
             "label": "Project websites",
             "name": "project_websites",
@@ -124,5 +319,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1563900246
+    "modified": 1564154839
 }

@@ -148,6 +148,10 @@ body:not(.home):not(.paged) .wrap {
   color: $donkerblauw;
 }
 
+.bg-grijs-30 {
+  background-color: $grijs-30;
+}
+
 .bg-grijs-15 {
   background-color: $grijs-15;
 }
@@ -234,4 +238,25 @@ article {
 
 .margin-top-50 {
   margin-top: 50px;
+}
+
+.padding-50 {
+  padding: 50px;
+}
+
+.padding-bottom-40 {
+  padding-bottom: 40px;
+}
+
+.rm-gutter {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.rm-gutter-left {
+  padding-left: 0;
+}
+
+.rm-gutter-right {
+  padding-right: 0;
 }

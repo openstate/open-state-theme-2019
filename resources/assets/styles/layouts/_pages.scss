@@ -155,6 +155,69 @@
   /* stylelint-enable */
 }
 
+.status {
+  font-size: 30px;
+  line-height: 40px;
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 0.04em;
+}
+
+.status-big {
+  font-size: 30px;
+  line-height: 40px;
+  font-style: italic;
+  font-weight: 700;
+  color: $zwart;
+}
+
+.status-wijzer {
+  position: absolute;
+  width: 24%;
+  top: -28%;
+  left: 38%;
+}
+
+.status-wijzer-1 {
+  transform: rotate(-80deg);
+  transform-origin: 50% 78%;
+}
+
+.status-wijzer-2 {
+  transform: rotate(-40deg);
+  transform-origin: 50% 78%;
+}
+
+.status-wijzer-3 {
+  transform: rotate(0deg);
+  transform-origin: 50% 78%;
+}
+
+.status-wijzer-4 {
+  transform: rotate(40deg);
+  transform-origin: 50% 78%;
+}
+
+.status-wijzer-5 {
+  transform: rotate(80deg);
+  transform-origin: 50% 78%;
+}
+
+.left-corners {
+  border: 1px solid $grijs-15;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.right-corners {
+  border: 1px solid white;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 100%;
+}
+
 .search-bar {
   padding: 25px;
   margin-bottom: 50px;
