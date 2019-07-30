@@ -72,15 +72,14 @@
           <div class="container">
             <div class="row position-relative">
               <div class="col-12 text-center status">STATUS</div>
-              <div id="carouselControls" class="col-12 carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    @include('partials.status-carousel')
-                  </div>
+              <div id="carouselStatusControls" class="col-12 carousel slide" data-ride="carousel">
+                @include('partials.status-carousel-controls')
+                <div class="carousel-inner mt-4">
+                  @include('partials.status-carousel')
                 </div>
-                {!! $project_websites_controls !!}
               </div>
               <div class="col-12 carousel-controls">
-                <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselStatusControls" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon mr-auto" aria-hidden="true"></span>
                   <span class="sr-only">
                     <? _e("
@@ -92,7 +91,7 @@
                     ") ?>
                   </span>
                 </a>
-                <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselStatusControls" role="button" data-slide="next">
                   <span class="carousel-control-next-icon ml-auto" aria-hidden="true"></span>
                   <span class="sr-only">
                     <? _e("

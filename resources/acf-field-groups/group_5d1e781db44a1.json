@@ -22,6 +22,86 @@
             "maxlength": ""
         },
         {
+            "key": "field_5d2358b507269",
+            "label": "Project websites",
+            "name": "project_websites",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5d2359700726b",
+                    "label": "Plaatje",
+                    "name": "project_plaatje",
+                    "type": "image",
+                    "instructions": "Plaatje van de website",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "col-4-thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5d2359240726a",
+                    "label": "URL",
+                    "name": "project_url",
+                    "type": "url",
+                    "instructions": "Vul de URL van een van de websites die bij dit project horen in.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5d2c91dd069c3",
+                    "label": "Titel",
+                    "name": "project_titel",
+                    "type": "text",
+                    "instructions": "Dit veld is niet verplicht. Als  je het niet invult dan wordt de URL als text gebruikt. Als je dus niet de URL wilt tonen vul in dit veld dan een titel in die beschrijft waar de URL naar linkt toe. Bijvoorbeeld 'Data' of 'API'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
             "key": "field_5d3b0dac7b971",
             "label": "Project status lobby score",
             "name": "project_status_lobby_score",
@@ -215,86 +295,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_5d2358b507269",
-            "label": "Project websites",
-            "name": "project_websites",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_5d2359700726b",
-                    "label": "Plaatje",
-                    "name": "project_plaatje",
-                    "type": "image",
-                    "instructions": "Plaatje van de website",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "col-4-thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_5d2359240726a",
-                    "label": "URL",
-                    "name": "project_url",
-                    "type": "url",
-                    "instructions": "Vul de URL van een van de websites die bij dit project horen in.",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_5d2c91dd069c3",
-                    "label": "Titel",
-                    "name": "project_titel",
-                    "type": "text",
-                    "instructions": "Dit veld is niet verplicht. Als  je het niet invult dan wordt de URL als text gebruikt. Als je dus niet de URL wilt tonen vul in dit veld dan een titel in die beschrijft waar de URL naar linkt toe. Bijvoorbeeld 'Data' of 'API'.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
         }
     ],
     "location": [
@@ -319,5 +319,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564154839
+    "modified": 1564494054
 }

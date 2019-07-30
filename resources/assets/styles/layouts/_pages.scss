@@ -165,6 +165,53 @@
   letter-spacing: 0.04em;
 }
 
+.status-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#carouselStatusControls .carousel-indicators {
+  li,
+  img {
+    opacity: 1;
+  }
+}
+
+.status-indicator {
+  background-color: white;
+  border-radius: 6px;
+  font-style: italic;
+  font-weight: 700;
+  padding-top: 15px;
+  cursor: pointer;
+  text-indent: 0;
+
+  &:hover {
+    background-color: $grijs-5;
+  }
+}
+
+.active .status-indicator {
+  background-color: $grijs-15;
+}
+
+#carouselStatusControls .status-indicator {
+  img {
+    height: auto;
+    width: auto;
+  }
+}
+
+.status-carousel {
+  .carousel-control-prev {
+    left: -40px;
+  }
+
+  .carousel-control-next {
+    right: -12px;
+  }
+}
+
 .status-big {
   font-size: 30px;
   line-height: 40px;
