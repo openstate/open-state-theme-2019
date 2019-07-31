@@ -260,3 +260,9 @@ article {
 .rm-gutter-right {
   padding-right: 0;
 }
+
+@media (min-width: 1200px) {
+  .rm-gutter-xl-left {
+    padding-left: 0;
+  }
+}

@@ -65,7 +65,7 @@
   width: 230px;
 }
 
-.carousel-indicators {
+#carouselControls .carousel-indicators {
   position: relative;
   list-style: none;
   margin: 0;
@@ -168,21 +168,41 @@
 .status-list {
   list-style: none;
   padding-left: 0;
+
+  /* stylelint-disable */
+  li {
+    background-color: #ffffff00;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  /* stylelint-enable */
 }
 
 #carouselStatusControls .carousel-indicators {
-  li,
+  position: relative;
+  margin: 0;
+  top: 0;
+
+  /* stylelint-disable */
+  li {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
   img {
     opacity: 1;
   }
+  /* stylelint-enable */
 }
 
 .status-indicator {
   background-color: white;
-  border-radius: 6px;
   font-style: italic;
   font-weight: 700;
   padding-top: 15px;
+  border-radius: 6px;
   cursor: pointer;
   text-indent: 0;
 
@@ -196,10 +216,12 @@
 }
 
 #carouselStatusControls .status-indicator {
+  /* stylelint-disable */
   img {
     height: auto;
     width: auto;
   }
+  /* stylelint-enable */
 }
 
 .status-carousel {
@@ -210,6 +232,10 @@
   .carousel-control-next {
     right: -12px;
   }
+}
+
+.status-box {
+  padding: 50px;
 }
 
 .status-big {
@@ -252,6 +278,10 @@
   transform-origin: 50% 78%;
 }
 
+.small-status-icon {
+  width: 100px;
+}
+
 .left-corners {
   border: 1px solid $grijs-15;
   border-top-left-radius: 6px;
@@ -274,10 +304,25 @@
   .website-title-button {
     width: 190px;
   }
+
+  .status-indicator {
+    padding-top: 0;
+
+    img {
+      width: 50px !important;
+    }
+  }
+
+  // On smaller screens we remove the left image box, so make the right box also have corners on the left
+  .right-corners {
+    border: 1px solid white;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
 }
 
 @media (max-width: 991px) {
-  .carousel-indicators {
+  #carouselControls .carousel-indicators {
     top: 60px;
 
     li {
@@ -299,6 +344,14 @@
     top: 67%;
   }
 
+  .status-box {
+    padding: 25px;
+  }
+
+  .status-big {
+    font-size: 28px;
+  }
+
   .website-title-button {
     width: 300px;
   }
@@ -307,6 +360,16 @@
 @media (max-width: 575px) {
   .website-title-button {
     width: 230px;
+  }
+
+  .status-carousel {
+    .carousel-control-prev {
+      left: -5px;
+    }
+
+    .carousel-control-next {
+      right: 23px;
+    }
   }
 }
 
