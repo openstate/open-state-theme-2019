@@ -282,6 +282,40 @@
   width: 100px;
 }
 
+.status-meter-icon-wrapper {
+  line-height: 14px;
+}
+
+.status-meter-icon {
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+  background-color: white;
+  border: 2px solid $grijs-10;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.status-score-1 {
+  background-color: $grijs-5;
+}
+
+.status-score-2 {
+  background-color: $donkerpaars;
+}
+
+.status-score-3 {
+  background-color: $yellow;
+}
+
+.status-score-4 {
+  background-color: $blauw;
+}
+
+.status-score-5 {
+  background-color: $donkerblauw;
+}
+
 .left-corners {
   border: 1px solid $grijs-15;
   border-top-left-radius: 6px;
@@ -311,6 +345,10 @@
     img {
       width: 50px !important;
     }
+  }
+
+  .status-meter-icon {
+    margin: 0;
   }
 
   // On smaller screens we remove the left image box, so make the right box also have corners on the left
