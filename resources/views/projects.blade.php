@@ -11,7 +11,7 @@
       'numberposts' => -1,
       'post_type' => 'page',
       'posts_per_page' => -1,
-      'post_parent__in' => Array(9113, 9116, 9118, 9120)
+      'post_parent__in' => Array(9113, 9116, 9118, 9120, 9122)
     );
     $the_query = new WP_Query($args);
   ?>
