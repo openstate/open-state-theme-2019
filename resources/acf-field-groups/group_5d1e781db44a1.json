@@ -6,7 +6,7 @@
             "key": "field_5d37293c2fdf0",
             "label": "Project samenvatting",
             "name": "project_samenvatting",
-            "type": "text",
+            "type": "qtranslate_text",
             "instructions": "Zorg dat de tekst maximaal 3 regels (circa 75 karakters) inneemt als je de samenvatting op de projectenoverzicht-pagina op een groot scherm bekijkt.",
             "required": 1,
             "conditional_logic": 0,
@@ -17,9 +17,9 @@
             },
             "default_value": "",
             "placeholder": "",
+            "maxlength": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_5d2358b507269",
@@ -84,7 +84,7 @@
                     "key": "field_5d2c91dd069c3",
                     "label": "Titel",
                     "name": "project_titel",
-                    "type": "text",
+                    "type": "qtranslate_text",
                     "instructions": "Dit veld is niet verplicht. Als  je het niet invult dan wordt de URL als text gebruikt. Als je dus niet de URL wilt tonen vul in dit veld dan een titel in die beschrijft waar de URL naar linkt toe. Bijvoorbeeld 'Data' of 'API'.",
                     "required": 0,
                     "conditional_logic": 0,
@@ -95,9 +95,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
+                    "maxlength": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 }
             ]
         },
@@ -125,7 +125,7 @@
             "key": "field_5d3b00807b96f",
             "label": "Project status lobby tekst",
             "name": "project_status_lobby_tekst",
-            "type": "text",
+            "type": "qtranslate_text",
             "instructions": "Hoe staat het met de lobby? Wat is er gedaan (met wie?) of staat er te gebeuren op dit vlak?",
             "required": 0,
             "conditional_logic": 0,
@@ -136,9 +136,9 @@
             },
             "default_value": "",
             "placeholder": "",
+            "maxlength": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_5d3b0f077b974",
@@ -164,7 +164,7 @@
             "key": "field_5d3b0efd7b973",
             "label": "Project status data beschikbaar tekst",
             "name": "project_status_data_beschikbaar_tekst",
-            "type": "text",
+            "type": "qtranslate_text",
             "instructions": "Is er data beschikbaar, zo ja welke en hoeveel?",
             "required": 0,
             "conditional_logic": 0,
@@ -175,9 +175,9 @@
             },
             "default_value": "",
             "placeholder": "",
+            "maxlength": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_5d3b14412b830",
@@ -203,7 +203,7 @@
             "key": "field_5d3b143f2b82f",
             "label": "Project status ontsluiten en hulpmiddelen tekst",
             "name": "project_status_ontsluiten_en_hulpmiddelen_tekst",
-            "type": "text",
+            "type": "qtranslate_text",
             "instructions": "Op welke manier(en) wordt de data ontsloten? Zijn er andere hulpmiddelen\/tools beschikbaar om de data te gebruiken?",
             "required": 0,
             "conditional_logic": 0,
@@ -214,9 +214,9 @@
             },
             "default_value": "",
             "placeholder": "",
+            "maxlength": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_5d3b145e5ed4f",
@@ -242,7 +242,7 @@
             "key": "field_5d3b146e5ed50",
             "label": "Project status duurzame ontsluiting tekst",
             "name": "project_status_duurzame_ontsluiting_tekst",
-            "type": "text",
+            "type": "qtranslate_text",
             "instructions": "Wordt de data regelmatig bijgewerkt? Hoe vaak? Gebeurt dit op een professionele manier door een betrouwbare partij?",
             "required": 0,
             "conditional_logic": 0,
@@ -253,9 +253,9 @@
             },
             "default_value": "",
             "placeholder": "",
+            "maxlength": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_5d3b02b57b970",
@@ -281,7 +281,7 @@
             "key": "field_5d3af4257b96e",
             "label": "Project status hergebruik tekst",
             "name": "project_status_hergebruik_tekst",
-            "type": "text",
+            "type": "qtranslate_text",
             "instructions": "Beschrijf de status van het hergebruik. Weten hergebruikers de data te vinden, zijn er nog drempels die het hergebruik tegenhouden?",
             "required": 0,
             "conditional_logic": 0,
@@ -292,9 +292,9 @@
             },
             "default_value": "",
             "placeholder": "",
+            "maxlength": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         }
     ],
     "location": [
@@ -319,5 +319,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564494054
+    "modified": 1564494085
 }
