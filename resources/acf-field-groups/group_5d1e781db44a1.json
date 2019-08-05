@@ -115,7 +115,7 @@
                 "id": ""
             },
             "default_value": "",
-            "min": 1,
+            "min": 0,
             "max": 5,
             "step": "",
             "prepend": "",
@@ -154,7 +154,7 @@
                 "id": ""
             },
             "default_value": "",
-            "min": 1,
+            "min": 0,
             "max": 5,
             "step": "",
             "prepend": "",
@@ -193,7 +193,7 @@
                 "id": ""
             },
             "default_value": "",
-            "min": 1,
+            "min": 0,
             "max": 5,
             "step": "",
             "prepend": "",
@@ -232,7 +232,7 @@
                 "id": ""
             },
             "default_value": "",
-            "min": 1,
+            "min": 0,
             "max": 5,
             "step": "",
             "prepend": "",
@@ -271,7 +271,7 @@
                 "id": ""
             },
             "default_value": "",
-            "min": 1,
+            "min": 0,
             "max": 5,
             "step": "",
             "prepend": "",
@@ -319,5 +319,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564494085
+    "modified": 1565013391
 }
