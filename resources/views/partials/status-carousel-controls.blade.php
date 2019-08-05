@@ -1,4 +1,5 @@
 <ol class="carousel-indicators row status-list">
+  @if (get_field('project_status_lobby_score'))
   <li class="col-12 col-xl-2 offset-1 active" data-target="#carouselStatusControls" data-slide-to="0">
     <div class="status-indicator text-xl-center">
       <div class="d-none d-xl-block">
@@ -35,6 +36,8 @@
       </div>
     </div>
   </li>
+  @endif
+  @if (get_field('project_status_data_beschikbaar_score'))
   <li class="col-12 col-xl-2" data-target="#carouselStatusControls" data-slide-to="1">
     <div class="status-indicator text-xl-center">
       <div class="d-none d-xl-block">
@@ -71,6 +74,8 @@
       </div>
     </div>
   </li>
+  @endif
+  @if (get_field('project_status_ontsluiten_en_hulpmiddelen_score'))
   <li class="col-12 col-xl-2" data-target="#carouselStatusControls" data-slide-to="2">
     <div class="status-indicator text-xl-center">
       <div class="d-none d-xl-block">
@@ -107,6 +112,8 @@
       </div>
     </div>
   </li>
+  @endif
+  @if (get_field('project_status_duurzame_ontsluiting_score'))
   <li class="col-12 col-xl-2" data-target="#carouselStatusControls" data-slide-to="3">
     <div class="status-indicator text-xl-center">
       <div class="d-none d-xl-block">
@@ -143,6 +150,8 @@
       </div>
     </div>
   </li>
+  @endif
+  @if (get_field('project_status_hergebruik_score'))
   <li class="col-12 col-xl-2" data-target="#carouselStatusControls" data-slide-to="4">
     <div class="status-indicator text-xl-center">
       <div class="d-none d-xl-block">
@@ -179,4 +188,5 @@
       </div>
     </div>
   </li>
+  @endif
 </ol>

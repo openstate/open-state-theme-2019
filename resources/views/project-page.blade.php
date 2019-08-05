@@ -73,47 +73,53 @@
         @include('partials.content-page')
       </div>
 
-      <div class="container-fluid bg-grijs-30 status-carousel">
-        <div class="row padding-bottom-40">
-          <div class="container">
-            <div class="row position-relative">
-              <div class="col-12 text-center status">STATUS</div>
-              <div id="carouselStatusControls" class="col-12 carousel slide" data-ride="carousel">
-                @include('partials.status-carousel-controls')
-                <div class="carousel-inner mt-4">
-                  @include('partials.status-carousel')
+      @if (count(array_filter(array(get_field('project_status_lobby_score'), get_field('project_status_data_beschikbaar_score'), get_field('project_status_ontsluiten_en_hulpmiddelen_score'), get_field('project_status_duurzame_ontsluiting_score'), get_field('project_status_hergebruik_score')))) > 0)
+        <div class="container-fluid bg-grijs-30 status-carousel">
+          <div class="row padding-bottom-40">
+            <div class="container">
+              <div class="row position-relative">
+                <div class="col-12 text-center status">STATUS</div>
+                <div id="carouselStatusControls" class="col-12 carousel slide" data-ride="carousel">
+                  @if (count(array_filter(array(get_field('project_status_lobby_score'), get_field('project_status_data_beschikbaar_score'), get_field('project_status_ontsluiten_en_hulpmiddelen_score'), get_field('project_status_duurzame_ontsluiting_score'), get_field('project_status_hergebruik_score')))) > 1)
+                    @include('partials.status-carousel-controls')
+                  @endif
+                  <div class="carousel-inner mt-4">
+                    @include('partials.status-carousel')
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 carousel-controls">
-                <a class="carousel-control-prev" href="#carouselStatusControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon mr-auto" aria-hidden="true"></span>
-                  <span class="sr-only">
-                    <? _e("
-                      <!--:nl-->
-                        Vorige
-                      <!--:--><!--:en-->
-                        Previous
-                      <!--:-->
-                    ") ?>
-                  </span>
-                </a>
-                <a class="carousel-control-next" href="#carouselStatusControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon ml-auto" aria-hidden="true"></span>
-                  <span class="sr-only">
-                    <? _e("
-                      <!--:nl-->
-                        Volgende
-                      <!--:--><!--:en-->
-                        Next
-                      <!--:-->
-                    ") ?>
-                  </span>
-                </a>
+                @if (count(array_filter(array(get_field('project_status_lobby_score'), get_field('project_status_data_beschikbaar_score'), get_field('project_status_ontsluiten_en_hulpmiddelen_score'), get_field('project_status_duurzame_ontsluiting_score'), get_field('project_status_hergebruik_score')))) > 1)
+                  <div class="col-12 carousel-controls">
+                    <a class="carousel-control-prev" href="#carouselStatusControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon mr-auto" aria-hidden="true"></span>
+                      <span class="sr-only">
+                        <? _e("
+                          <!--:nl-->
+                            Vorige
+                          <!--:--><!--:en-->
+                            Previous
+                          <!--:-->
+                        ") ?>
+                      </span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselStatusControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon ml-auto" aria-hidden="true"></span>
+                      <span class="sr-only">
+                        <? _e("
+                          <!--:nl-->
+                            Volgende
+                          <!--:--><!--:en-->
+                            Next
+                          <!--:-->
+                        ") ?>
+                      </span>
+                    </a>
+                  </div>
+                @endif
               </div>
             </div>
           </div>
         </div>
-      </div>
+      @endif
     @endwhile
   </div>
 @endsection

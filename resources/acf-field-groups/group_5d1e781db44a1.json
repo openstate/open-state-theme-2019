@@ -45,7 +45,7 @@
                     "label": "Plaatje",
                     "name": "project_plaatje",
                     "type": "image",
-                    "instructions": "Plaatje van de website",
+                    "instructions": "Screenshot van de website (deze moet 1200x750 pixels zijn)",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -319,5 +319,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1565013391
+    "modified": 1565013435
 }
