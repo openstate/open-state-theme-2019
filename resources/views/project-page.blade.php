@@ -17,15 +17,21 @@
               <div class="row position-relative">
                 <div id="carouselControls" class="col-10 offset-1 carousel slide" data-ride="carousel">
                   <div class="row margin-top-50">
-                    <div class="col-lg-4 offset-lg-1 order-lg-12 text-center my-auto">
-                      {!! the_post_thumbnail('col-6-thumbnail', array('class' => 'img-fluid')) !!}
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                      <div class="carousel-inner">
-                        {{-- See app/Controllers/index.php, this calls partials/project-website-big-screenshot for each project website --}}
-                        {!! $project_websites !!}
+                    @if (is_array(get_field('project_websites')))
+                      <div class="col-lg-4 offset-lg-1 order-lg-12 text-center my-auto">
+                        {!! the_post_thumbnail('col-6-thumbnail', array('class' => 'img-fluid')) !!}
                       </div>
-                    </div>
+                      <div class="col-lg-6 order-lg-1">
+                        <div class="carousel-inner">
+                          {{-- See app/Controllers/index.php, this calls partials/project-website-big-screenshot for each project website --}}
+                          {!! $project_websites !!}
+                        </div>
+                      </div>
+                    @else
+                      <div class="col-lg-6 offset-lg-3 text-center my-auto pb-4">
+                        {!! the_post_thumbnail('col-6-thumbnail', array('class' => 'img-fluid')) !!}
+                      </div>
+                    @endif
                   </div>
                   {!! $project_websites_controls !!}
                 </div>
