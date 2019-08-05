@@ -79,6 +79,8 @@
             Ontsluiten en hulpmiddelen
           <!--:--><!--:en-->
             Release and Tools
+            <br>
+            <br>
           <!--:-->
         ") ?>
       </div>
@@ -113,6 +115,8 @@
             Duurzame ontsluiting
           <!--:--><!--:en-->
             Durable releasing
+            <br>
+            <br>
           <!--:-->
         ") ?>
       </div>
