@@ -125,9 +125,9 @@
     wp_reset_query();
 
     $categories = get_the_category();
-    if ( ! empty( $categories ) ) {
-      $cat = esc_html( $categories[0]->term_id );
-      $cat_name = esc_html( $categories[0]->name );
+    if (!empty( $categories)) {
+      $cat = esc_html($categories[0]->term_id);
+      $cat_name = esc_html($categories[0]->name);
     }
 
     $args = array(

@@ -159,10 +159,34 @@ function breadcrumbs() {
     echo '<div class="breadcrumbs font-italic text-uppercase">';
     echo '<a href="' . home_url() . '" rel="nofollow">Home</a>';
     if (is_category() || is_single()) {
+        wp_reset_query();
+        $categories = get_the_category();
+        if (!empty($categories)) {
+          $cat = esc_html($categories[0]->term_id);
+        }
+
+        $args = array(
+          'post_type' => 'page',
+          'posts_per_page' => 1,
+          'cat' => $cat,
+        );
+
+        $the_query = new \WP_Query($args);
+
+        $project_url = '';
+        while ($the_query->have_posts()) {
+            $the_query->the_post();
+            $project_url = get_permalink();
+        }
+        wp_reset_query();
+
         echo "&nbsp;&nbsp;>&nbsp;&nbsp;";
-        the_category('&bull;');
+        echo "<a href='" . $project_url . "'>";
+        echo _e(get_the_category()[0]->name);
+        echo "</a>";
     } elseif(is_page()) {
         get_parent_recursive($post->ID);
     }
     echo '</div>';
+
 }
