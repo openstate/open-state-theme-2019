@@ -2,6 +2,10 @@
   height: 260px;
 }
 
+.page .post .image-cover {
+  height: 68px;
+}
+
 .bg-grijs-blauw {
   background: linear-gradient($grijs-5 55%, $lichtblauw 45%);
 }
@@ -332,6 +336,16 @@
 .search-bar {
   padding: 25px;
   margin-bottom: 50px;
+}
+
+.page-news {
+  h3 {
+    font-weight: 700;
+  }
+
+  .updated {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 1199px) {
