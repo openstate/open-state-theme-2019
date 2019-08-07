@@ -39,9 +39,11 @@
           global $qtranslate_slug;
           $lang = 'nl';
           $lang_text = 'NL/<b>EN</b>';
+          $lang_search_text = 'Search';
           if (get_bloginfo("language") == 'nl') {
             $lang = 'en';
             $lang_text = '<b>NL</b>/EN';
+            $lang_search_text = 'Zoeken';
           }
         ?>
 
@@ -57,8 +59,26 @@
                     <ul id="%1$s" class="%2$s">%3$s</ul>
                   </div>
                   <div class="col-2 col-sm-1 menu-icons rm-gutter">
-                    <div class="language mx-auto">
-                      <a href="' . $qtranslate_slug->get_current_url($lang) . '">' . $lang_text . '</a>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="language mx-auto">
+                          <a href="' . $qtranslate_slug->get_current_url($lang) . '">' . $lang_text . '</a>
+                        </div>
+                      </div>
+                      <div class="col-12 search-menu-col">
+                        <hr class="search-menu-hr">
+                        <div class="custom-search text-center">
+                          <span>
+                            <form method="GET" action="/" role="search">
+                              <input type="search" class="form-control" id="search-menu-icon" name="s">
+                            </form>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-12 search-menu-text text-center">
+                        ' . $lang_search_text . '
+                        <hr class="search-menu-hr">
+                      </div>
                     </div>
                   </div>
                   <br>

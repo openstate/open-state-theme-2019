@@ -111,6 +111,53 @@ body {
   font-weight: 900;
 }
 
+.custom-search {
+  position: absolute;
+  right: calc(50% - 17px);
+}
+
+.search-menu-col {
+  height: 37px;
+  margin-top: 20px;
+}
+
+.search-menu-hr {
+  border-top: 1px solid $zwart;
+  border-bottom: none;
+  margin: 1px;
+}
+
+.search-menu-text {
+  font-size: 17px;
+  font-style: italic;
+}
+
+#search-menu-icon {
+  background-color: transparent;
+  background-image: url("../images/OSF-Icon-zoeken-wit.svg");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  border: none;
+  cursor: pointer;
+  height: 37px;
+  margin: 3px 0;
+  padding: 0 0 0 34px;
+  position: relative;
+  -webkit-transition: width 400ms ease, background 400ms ease;
+  transition: width 400ms ease, background 400ms ease;
+  width: 0;
+}
+
+#search-menu-icon:focus {
+  background-color: #fff;
+  background-image: url("../images/OSF-Icon-zoeken-grijsblauw.svg");
+  border: 2px solid black;
+  cursor: text;
+  outline: 0;
+  width: 280px;
+}
+
 .outer-menu {
   background-color: $grijsblauw;
   margin-left: -16px;

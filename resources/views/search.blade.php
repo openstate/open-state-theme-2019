@@ -16,7 +16,7 @@
               <!--:-->
             ") ?>
           </label>
-          <input type="search" class="form-control" id="search-input" value="{!! get_search_query() !!}" name="s">
+          <input type="search" class="form-control" id="search-input" name="s" value="{!! get_search_query() !!}">
         </form>
       </div>
     </div>

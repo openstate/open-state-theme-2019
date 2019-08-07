@@ -14,9 +14,9 @@
               ") ?>
             </label>
             @if (is_search())
-              <input type="search" class="form-control" id="search-input" value="{!! get_search_query() !!}" name="s">
+              <input type="search" class="form-control" id="search-input" name="s" value="{!! get_search_query() !!}">
             @else
-              <input type="search" class="form-control" id="search-input" value="" name="s">
+              <input type="search" class="form-control" id="search-input" name="s">
             @endif
           </form>
         </div>
