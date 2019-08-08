@@ -188,5 +188,4 @@ function breadcrumbs() {
         get_parent_recursive($post->ID);
     }
     echo '</div>';
-
 }

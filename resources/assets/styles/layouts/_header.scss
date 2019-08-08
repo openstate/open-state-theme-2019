@@ -113,11 +113,11 @@ body {
 
 .custom-search {
   position: absolute;
-  right: calc(50% - 17px);
+  right: calc(50% - 22px);
 }
 
 .search-menu-col {
-  height: 37px;
+  height: 44px;
   margin-top: 20px;
 }
 
@@ -137,26 +137,56 @@ body {
   background-image: url("../images/OSF-Icon-zoeken-wit.svg");
   background-position: 5px center;
   background-repeat: no-repeat;
-  background-size: 24px 24px;
+  background-size: 44px 44px;
   border: none;
   cursor: pointer;
-  height: 37px;
-  margin: 3px 0;
-  padding: 0 0 0 34px;
+  height: 44px;
+  margin: 6px 0;
+  padding: 0 0 0 50px;
   position: relative;
   font-size: 20px;
   -webkit-transition: width 400ms ease, background 400ms ease;
   transition: width 400ms ease, background 400ms ease;
   width: 0;
+
+  &:hover {
+    background-image: url("../images/OSF-Icon-zoeken-paars.svg");
+  }
+
+  &:focus {
+    background-color: #fff;
+    background-image: url("../images/OSF-Icon-zoeken-grijsblauw.svg");
+    background-size: 34px 34px;
+    border: 2px solid black;
+    cursor: text;
+    outline: 0;
+    width: 280px;
+  }
 }
 
-#search-menu-icon:focus {
-  background-color: #fff;
-  background-image: url("../images/OSF-Icon-zoeken-grijsblauw.svg");
-  border: 2px solid black;
-  cursor: text;
-  outline: 0;
-  width: 280px;
+.menu-icon {
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  /* stylelint-disable */
+  .ckan {
+    svg {
+      width: 50px;
+      height: 50px;
+      fill: white;
+      stroke: white;
+
+      &:hover {
+        fill: $paars;
+        stroke: $paars;
+      }
+    }
+  }
+
+  a {
+    color: white;
+  }
+  /* stylelint-enable */
 }
 
 .outer-menu {
@@ -191,9 +221,11 @@ body {
       background-color: white;
       padding: 0 !important;
 
+      /* stylelint-disable */
       svg {
         float: right;
       }
+      /* stylelint-enable */
 
       a:hover {
         color: white;
@@ -381,6 +413,41 @@ body {
 
   .osf-schema {
     padding-top: 0;
+  }
+
+  .menu-icon {
+    margin-top: 1px;
+    margin-bottom: 1px;
+
+    .ckan {
+      width: 20px;
+      height: 20px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .custom-search {
+    right: calc(50% - 15px);
+  }
+
+  #search-menu-icon {
+    background-size: 20px 20px;
+    height: 20px;
+    padding: 0 0 0 30px;
+
+    &:focus {
+      height: 44px;
+      z-index: 100;
+    }
+  }
+
+  .search-menu-col {
+    height: 20px;
+    margin-top: 10px;
   }
 }
 

@@ -40,10 +40,12 @@
           $lang = 'nl';
           $lang_text = 'NL/<b>EN</b>';
           $lang_search_text = 'Search';
+          $lang_contact = 'Contact us';
           if (get_bloginfo("language") == 'nl') {
             $lang = 'en';
             $lang_text = '<b>NL</b>/EN';
             $lang_search_text = 'Zoeken';
+            $lang_contact = 'Neem contact op';
           }
         ?>
 
@@ -78,6 +80,41 @@
                       <div class="col-12 search-menu-text text-center">
                         ' . $lang_search_text . '
                         <hr class="search-menu-hr">
+                      </div>
+                      <div class="col-12 text-center menu-icon">
+                        <a class="d-md-none" href="/contact/" title="' . $lang_contact . ' "><i class="far fa-envelope"></i></a>
+                        <a class="d-none d-md-block" href="/contact/" title="' . $lang_contact . ' "><i class="far fa-2x fa-envelope"></i></a>
+                      </div>
+                      <div class="col-12 text-center menu-icon">
+                        <a class="d-md-none" href="https://slack.hackdeoverheid.nl/" title="Hack de Overheid community Slack" target="_blank" rel="noopener"><i class="fab fa-slack"></i></a>
+                        <a class="d-none d-md-block" href="https://slack.hackdeoverheid.nl/" title="Hack de Overheid community Slack" target="_blank" rel="noopener"><i class="fab fa-2x fa-slack"></i></a>
+                      </div>
+                      <div class="col-12 text-center menu-icon">
+                        <a class="d-md-none" href="https://openstate.eu/feed/" title="RSS" target="_blank" rel="noopener"><i class="fas fa-rss"></i></a>
+                        <a class="d-none d-md-block" href="https://openstate.eu/feed/" title="RSS" target="_blank" rel="noopener"><i class="fas fa-2x fa-rss"></i></a>
+                      </div>
+                      <div class="col-12 text-center menu-icon">
+                        <a class="d-md-none" href="https://twitter.com/openstateeu" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                        <a class="d-none d-md-block" href="https://twitter.com/openstateeu" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-2x fa-twitter"></i></a>
+                      </div>
+                      <div class="col-12 text-center menu-icon">
+                        <a class="d-md-none" href="https://www.facebook.com/openstatefoundation" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a class="d-none d-md-block" href="https://www.facebook.com/openstatefoundation" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-2x fa-facebook-f"></i></a>
+                      </div>
+                      <div class="col-12 text-center menu-icon">
+                        <a class="d-md-none" href="https://www.meetup.com/Hackdeoverheid-Meetups/" title="Hack de Overheid Meetup" target="_blank" rel="noopener"><i class="fab fa-meetup"></i></a>
+                        <a class="d-none d-md-block" href="https://www.meetup.com/Hackdeoverheid-Meetups/" title="Hack de Overheid Meetup" target="_blank" rel="noopener"><i class="fab fa-2x fa-meetup"></i></a>
+                      </div>
+                      <div class="col-12 text-center menu-icon">
+                        <a class="d-md-none" href="https://www.flickr.com/photos/openstate/albums" title="Flickr" target="_blank" rel="noopener"><i class="fab fa-flickr"></i></a>
+                        <a class="d-none d-md-block" href="https://www.flickr.com/photos/openstate/albums" title="Flickr" target="_blank" rel="noopener"><i class="fab fa-2x fa-flickr"></i></a>
+                      </div>
+                      <div class="col-12 text-center menu-icon">
+                        <a class="d-md-none" href="https://github.com/openstate" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a class="d-none d-md-block" href="https://github.com/openstate" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-2x fa-github"></i></a>
+                      </div>
+                      <div class="col-12 text-center menu-icon">
+                        <a href="https://data.openstate.eu/" title="data.openstate.eu" target="_blank" rel="noopener" class="ckan">' . App\template('partials.ckan-svg') . '</a>
                       </div>
                     </div>
                   </div>
