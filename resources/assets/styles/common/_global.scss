@@ -113,6 +113,14 @@ body:not(.home):not(.paged) .wrap {
   padding-bottom: 34px;
 }
 
+nav li:not(.btn).active a:not(.btn) {
+  color: $donkerpaars;
+
+  &:hover {
+    color: $paars;
+  }
+}
+
 .btn {
   color: #fff;
   font-size: 19px;
