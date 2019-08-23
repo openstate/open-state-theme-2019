@@ -8,6 +8,7 @@
   width: 100%;
 }
 
+.donate-form-field,
 .wpcf7-form-control {
   width: 100%;
   height: 75px;
@@ -18,6 +19,7 @@
   border-radius: 6px;
   padding: 10px 20px;
 
+  &.donate-form-button,
   &.wpcf7-submit {
     width: 200px;
     height: 45px;
@@ -28,6 +30,7 @@
   }
 }
 
+.donate-form-field-textarea,
 .wpcf7-textarea {
   height: 130px;
 }
