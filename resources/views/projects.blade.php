@@ -24,7 +24,7 @@
       <div class="col-12 col-sm-6 col-md-4 bg-grijsblauw projects-filter">
         <span class="text-white"><b>Filter</b></span>
         <i class="fas fa-filter text-white float-right filter-icon"></i>
-        @if ($_GET['fwp_projects'])
+        @if ($_GET['_projects'])
           <a class="float-right remove-filters" href="#" onclick="FWP.reset(); event.preventDefault();">
             <? _e("
               <!--:nl-->

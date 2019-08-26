@@ -9,8 +9,8 @@
     }
   ?>
   <?
-    if ($_GET['fwp_projects']) {
-      $filters = ': ' . str_replace(",", " / ", $_GET['fwp_projects']);
+    if ($_GET['_projects']) {
+      $filters = ': ' . str_replace(",", " / ", $_GET['_projects']);
     }
   ?>
   <h6>{!! App::title() !!}{{ $filters }}{{ $counter }}</h6>

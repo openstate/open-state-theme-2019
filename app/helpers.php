@@ -150,9 +150,9 @@ function get_parent_recursive($post_id) {
         if (in_array($post->post_parent, Array(9113, 9116, 9118, 9120, 9122))) {
             $post_parent = get_post($post->post_parent);
             if (get_bloginfo("language") == 'en-US') {
-              echo '<a href="/en/projects-tools-data/?fwp_projects=' . $post_parent->post_name . '">' . get_the_title($post->post_parent) . '</a>';
+              echo '<a href="/en/projects-tools-data/?_projects=' . $post_parent->post_name . '">' . get_the_title($post->post_parent) . '</a>';
             } else {
-              echo '<a href="/nl/projecten-tools-data/?fwp_projects=' . $post_parent->post_name . '">' . get_the_title($post->post_parent) . '</a>';
+              echo '<a href="/nl/projecten-tools-data/?_projects=' . $post_parent->post_name . '">' . get_the_title($post->post_parent) . '</a>';
             }
         } else {
             echo '<a href="' . get_permalink($post->post_parent) . '">' . get_the_title($post->post_parent) . '</a>';
