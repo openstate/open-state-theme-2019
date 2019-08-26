@@ -145,7 +145,18 @@ function get_parent_recursive($post_id) {
     if ($post->post_parent) {
         get_parent_recursive($post->post_parent);
         echo "&nbsp;&nbsp;>&nbsp;&nbsp;";
-        echo '<a href="' . get_permalink($post->post_parent) . '">' . get_the_title($post->post_parent) . '</a>';
+        // Don't link to the actual theme page (those are empty), but link to
+        // the projects page filtered on this theme
+        if (in_array($post->post_parent, Array(9113, 9116, 9118, 9120, 9122))) {
+            $post_parent = get_post($post->post_parent);
+            if (get_bloginfo("language") == 'en-US') {
+              echo '<a href="/en/projects-tools-data/?fwp_projects=' . $post_parent->post_name . '">' . get_the_title($post->post_parent) . '</a>';
+            } else {
+              echo '<a href="/nl/projecten-tools-data/?fwp_projects=' . $post_parent->post_name . '">' . get_the_title($post->post_parent) . '</a>';
+            }
+        } else {
+            echo '<a href="' . get_permalink($post->post_parent) . '">' . get_the_title($post->post_parent) . '</a>';
+        }
     }
 }
 
@@ -154,12 +165,12 @@ function get_parent_recursive($post_id) {
  * @return breadcrumb HTML
  */
 function breadcrumbs() {
+    wp_reset_query();
     global $post;
 
     echo '<div class="breadcrumbs font-italic text-uppercase">';
     echo '<a href="' . home_url() . '" rel="nofollow">Home</a>';
     if (is_category() || is_single()) {
-        wp_reset_query();
         $categories = get_the_category();
         if (!empty($categories)) {
           $cat = esc_html($categories[0]->term_id);
@@ -178,7 +189,6 @@ function breadcrumbs() {
             $the_query->the_post();
             $project_url = get_permalink();
         }
-        wp_reset_query();
 
         echo "&nbsp;&nbsp;>&nbsp;&nbsp;";
         echo "<a href='" . $project_url . "'>";
@@ -188,4 +198,5 @@ function breadcrumbs() {
         get_parent_recursive($post->ID);
     }
     echo '</div>';
+    wp_reset_query();
 }

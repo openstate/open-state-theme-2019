@@ -1,3 +1,76 @@
+.projects-row {
+  margin-top: 50px;
+}
+
+.projects-filter {
+  margin: -50px 25px 25px -25px;
+  padding: 25px;
+  font-size: 24px;
+}
+
+.remove-filters {
+  color: white;
+  font-size: 18px;
+}
+
+.facetwp-facet {
+  margin-top: 15px;
+
+  .facetwp-checkbox {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 700;
+    color: $donkerderblauw;
+    letter-spacing: 0.04em;
+    background-size: 40px 40px;
+    padding-left: 40px;
+
+    &:hover {
+      color: $paars;
+    }
+
+    &[data-value="elections"] {
+      background-image: url("../images/OSF-Icon-verkiezingen-hover.svg");
+
+      &.checked {
+        background-image: url("../images/OSF-Icon-verkiezingen.svg");
+      }
+    }
+
+    &[data-value="decisions"] {
+      background-image: url("../images/OSF-Icon-besluiten-hover.svg");
+      background-position-x: -2px;
+
+      &.checked {
+        background-image: url("../images/OSF-Icon-besluiten.svg");
+      }
+    }
+
+    &[data-value="finances"] {
+      background-image: url("../images/OSF-Icon-financien-hover.svg");
+      background-position-x: -8px;
+
+      &.checked {
+        background-image: url("../images/OSF-Icon-financien.svg");
+      }
+    }
+
+    &[data-value="results"] {
+      background-image: url("../images/OSF-Icon-resultaten-hover.svg");
+      background-position-x: -3px;
+
+      &.checked {
+        background-image: url("../images/OSF-Icon-resultaten.svg");
+      }
+    }
+
+    &[data-value="events"] {
+      background-size: 14px 14px;
+      background-position-x: 7px;
+    }
+  }
+}
+
 .page .image-cover {
   height: 260px;
 }
@@ -410,6 +483,10 @@
 }
 
 @media (max-width: 575px) {
+  .projects-filter {
+    margin: 0 0 25px 0;
+  }
+
   .website-title-button {
     width: 230px;
   }

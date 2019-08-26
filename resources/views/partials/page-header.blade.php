@@ -1,9 +1,19 @@
 <div class="page-header">
-  <? if($the_query) {
-    $counter = ' [' . $the_query->post_count . ']';
-  }
+  <?
+    if($the_query) {
+      if ($the_query->post_count == $total_count_query->post_count) {
+        $counter = ' [' . $total_count_query->post_count . ']';
+      } else {
+        $counter = ' [' . $the_query->post_count . '/' . $total_count_query->post_count . ']';
+      }
+    }
   ?>
-  <h6>{!! App::title() !!}{{ $counter }}</h6>
+  <?
+    if ($_GET['fwp_projects']) {
+      $filters = ': ' . str_replace(",", " / ", $_GET['fwp_projects']);
+    }
+  ?>
+  <h6>{!! App::title() !!}{{ $filters }}{{ $counter }}</h6>
 </div>
 <div class="row">
   <div class="col-12">
