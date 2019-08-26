@@ -1,6 +1,6 @@
 <div>
   <form action="https://openstate.us4.list-manage.com/subscribe/post?u=03355fd4f1a7935cae63b21aa&amp;id=a9619e4f3e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <label for="mce-EMAIL" class="footer-form">
+    <label for="mce-EMAIL" class="footer-form text-donkerderblauw">
       <? _e("
         <!--:nl-->
           <span class='font-weight-bold'>OP DE HOOGTE BLIJVEN?</span> MELD JE AAN VOOR DE MAANDELIJKSE NIEUWSBRIEF:
