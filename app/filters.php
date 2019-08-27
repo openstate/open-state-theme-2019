@@ -134,9 +134,9 @@ add_filter('facetwp_facet_orderby', function($orderby, $facet) {
 }, 10, 2);
 
 // Change parenthesis to brackets
-add_filter( 'facetwp_facet_html', function( $output, $params ) {
-    if ( 'projects' == $params['facet']['name'] ) {
-        $output = preg_replace( '/\(([0-9]+)\)/', '[$1]', $output );
+add_filter('facetwp_facet_html', function($output, $params) {
+    if ('projects' == $params['facet']['name']) {
+        $output = preg_replace('/\(([0-9]+)\)/', '[$1]', $output);
     }
     return $output;
-}, 10, 2 );
+}, 10, 2);

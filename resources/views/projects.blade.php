@@ -24,7 +24,7 @@
       <div class="col-12 col-sm-6 col-md-4 bg-grijsblauw projects-filter">
         <span class="text-white"><b>Filter</b></span>
         <i class="fas fa-filter text-white float-right filter-icon"></i>
-        @if ($_GET['_projects'])
+        @if ($_GET['_projects'] or $_GET['_projects_search'])
           <a class="float-right remove-filters" href="#" onclick="FWP.reset(); event.preventDefault();">
             <? _e("
               <!--:nl-->
@@ -35,6 +35,7 @@
             ") ?>
           </a>
         @endif
+        <?php echo facetwp_display('facet', 'projects_search'); ?>
         <?php echo facetwp_display('facet', 'projects'); ?>
       </div>
       <?

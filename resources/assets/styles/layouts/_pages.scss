@@ -13,6 +13,23 @@
   font-size: 18px;
 }
 
+.facetwp-facet.facetwp-type-search {
+  margin-bottom: 15px;
+}
+
+.facetwp-type-search {
+  .facetwp-btn {
+    display: none;
+  }
+
+  .facetwp-search {
+    width: 100%;
+    border-style: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+  }
+}
+
 .facetwp-facet {
   margin-top: 15px;
 
