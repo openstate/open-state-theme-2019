@@ -9,6 +9,7 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
+import projects from './routes/projects';
 
 // import then needed Font Awesome functionality
 import { config, library, dom } from '@fortawesome/fontawesome-svg-core';
@@ -34,6 +35,8 @@ const routes = new Router({
   home,
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
+  // Projects page
+  projects,
 });
 
 // Load Events

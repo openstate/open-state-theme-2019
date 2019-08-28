@@ -1,16 +1,27 @@
-.projects-row {
-  margin-top: 50px;
-}
-
 .projects-filter {
-  margin: -50px 25px 25px -25px;
+  margin: 0 25px 25px -50px;
   padding: 25px;
   font-size: 24px;
+  width: 380px;
+  height: 488px;
 }
 
-.remove-filters {
-  color: white;
-  font-size: 18px;
+.projects-row {
+  margin-top: -463px;
+}
+
+#no-results {
+  display: none;
+  height: 488px;
+}
+
+#remove-filters {
+  display: none;
+
+  a {
+    color: white;
+    font-size: 18px;
+  }
 }
 
 .facetwp-facet.facetwp-type-search {
@@ -439,6 +450,11 @@
 }
 
 @media (max-width: 1199px) {
+  #no-results,
+  .projects-filter {
+    width: 320px;
+  }
+
   .website-title-button {
     width: 190px;
   }
@@ -464,6 +480,16 @@
 }
 
 @media (max-width: 991px) {
+  #no-results,
+  .projects-filter {
+    width: 240px;
+    height: 590px;
+  }
+
+  .projects-row {
+    margin-top: -565px;
+  }
+
   #carouselControls .carousel-indicators {
     top: 60px;
 
@@ -499,9 +525,32 @@
   }
 }
 
+@media (max-width: 767px) {
+  #no-results,
+  .projects-filter {
+    width: 270px;
+    height: 506px;
+  }
+
+  .projects-row {
+    margin-top: -481px;
+  }
+}
+
 @media (max-width: 575px) {
   .projects-filter {
     margin: 0 0 25px 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #no-results {
+    width: 100%;
+    height: 100%;
+  }
+
+  .projects-row {
+    margin-top: 0;
   }
 
   .website-title-button {
