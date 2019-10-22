@@ -180,6 +180,7 @@ function breadcrumbs() {
           'post_type' => 'page',
           'posts_per_page' => 1,
           'cat' => $cat,
+          'no-facetwp' => true,
         );
 
         $the_query = new \WP_Query($args);

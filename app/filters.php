@@ -140,3 +140,14 @@ add_filter('facetwp_facet_html', function($output, $params) {
     }
     return $output;
 }, 10, 2);
+
+// FacetWP automagically adds '<!--fwp-loop-->\n' to the output of
+// WordPress queries. This also happens in the breadcrumb and adds an
+// extra space there which is ugly, so we explicitly tell FacetWP here
+// to not look for a query loop if 'no-facetwp' is specified.
+add_filter('facetwp_is_main_query', function($is_main_query, $query) {
+    if ($query->get('no-facetwp')) {
+        $is_main_query = true;
+    }
+    return $is_main_query;
+}, 10, 2 );
