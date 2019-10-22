@@ -147,7 +147,7 @@ add_filter('facetwp_facet_html', function($output, $params) {
 // to not look for a query loop if 'no-facetwp' is specified.
 add_filter('facetwp_is_main_query', function($is_main_query, $query) {
     if ($query->get('no-facetwp')) {
-        $is_main_query = true;
+        $is_main_query = false;
     }
     return $is_main_query;
 }, 10, 2 );
