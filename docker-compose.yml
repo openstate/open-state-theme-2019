@@ -7,14 +7,5 @@ services:
     volumes:
       - ./:/theme
     working_dir: /theme
-    ports:
-      - '3000:3000'
-      - '3001:3001'
-    networks:
-      - nginx-load-balancer
     restart: always
     command: tail -f /dev/null
-networks:
-  nginx-load-balancer:
-    external:
-      name: docker_nginx-load-balancer
