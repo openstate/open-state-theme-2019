@@ -9,7 +9,7 @@ GIT_REPO = 'open-state-theme-2019'
 DIR = '/home/projects/wordpress-new/wp-content/themes/%s' % (GIT_REPO)
 
 # Container used to compile the assets
-NODE_CONTAINER = 'openstatetheme2019_node_1'
+NODE_CONTAINER = '%s_node_1' % (GIT_REPO)
 
 # Server name
 SERVER = 'Oxygen'
