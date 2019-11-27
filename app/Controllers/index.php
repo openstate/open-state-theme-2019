@@ -47,7 +47,7 @@ class Index extends Controller
             foreach($project_websites as $p) {
                 $project_title = $p['project_title'];
                 if (!$project_title) {
-                    $project_title = rtrim(ltrim($p['project_url'], 'https?://'), '/');
+                    $project_title = rtrim(preg_replace('/^https?:\/\//', '', $p['project_url']), '/');
                 }
 
                 $return .= \App\template('partials.project-website-big-screenshot', [
