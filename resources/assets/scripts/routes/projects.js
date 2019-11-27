@@ -14,10 +14,8 @@ export default {
       $(document).on('facetwp-loaded', function() {
         if (url_parameter('_projects') || url_parameter('_projects_search')) {
           $('#remove-filters').css('display', 'inline');
-          console.log('inline');
         } else {
           $('#remove-filters').css('display', 'none');
-          console.log('none');
         }
 
         if (url_parameter('_projects')) {

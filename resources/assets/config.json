@@ -10,7 +10,7 @@
   },
   "publicPath": "/wp-content/themes/open-state-theme-2019",
   "devUrl": "https://openstate.eu",
-  "proxyUrl": "https://192.168.144.4:3000",
+  "proxyUrl": "https://192.168.144.2:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",

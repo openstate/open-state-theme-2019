@@ -11,12 +11,15 @@ DIR = '/home/projects/wordpress-new/wp-content/themes/%s' % (GIT_REPO)
 # Container used to compile the assets
 NODE_CONTAINER = 'openstatetheme2019_node_1'
 
+# Server name
+SERVER = 'Oxygen'
+
 
 @task
 def deploy(c):
-    sudo_pass = getpass.getpass("What's your sudo password?")
+    sudo_pass = getpass.getpass("Enter your sudo password on %s: " % SERVER)
     config = Config(overrides={'sudo': {'password': sudo_pass}})
-    c = Connection('Oxygen', config=config)
+    c = Connection(SERVER, config=config)
 
     c.sudo(
         'bash -c "cd %s && git pull git@github.com:openstate/%s.git"' % (
