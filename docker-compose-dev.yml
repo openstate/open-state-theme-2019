@@ -7,3 +7,9 @@ services:
     restart: "no"
     volumes:
       - ./../../../../nginx-load-balancer/docker/mkcert/openstate.eu/:/certs/
+    networks:
+      - nginx-load-balancer
+networks:
+  nginx-load-balancer:
+    external:
+      name: docker_nginx-load-balancer

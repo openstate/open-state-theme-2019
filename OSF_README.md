@@ -12,3 +12,4 @@ When you want to compile the assets:
         - `docker exec open-state-theme-2019_node_1 yarn build`
     - Once built, you can also watch the files for changes and automatically compile them:
         - `docker exec open-state-theme-2019_node_1 yarn start`
+            - browse to https://localhost:3000
