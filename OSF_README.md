@@ -1,10 +1,10 @@
-To create the Node container (only required to do once):
+# To create the Node container (only required to do once):
 - On production:
     - `sudo docker-compose up -d`
 - On development:
     - `sudo docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d`
 
-When you want to compile the assets:
+# When you want to compile the assets:
 - For production:
     - To deploy new code and compile it, use `fab deploy` from your development machine
 - For development:
@@ -13,3 +13,11 @@ When you want to compile the assets:
     - Once built, you can also watch the files for changes and automatically compile them:
         - `docker exec open-state-theme-2019_node_1 yarn start`
             - browse to https://localhost:3000
+
+# To access wp-admin while developing (this requires the Nginx load balancer):
+- add the following to `/etc/hosts` on your host, where `x.x.x.x` is the IP of the Nginx load balancer:
+    ```
+    x.x.x.x mu.openstate.eu
+    x.x.x.x openstate.eu
+    x.x.x.x www.openstate.eu
+    ```
