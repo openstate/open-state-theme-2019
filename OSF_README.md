@@ -4,7 +4,7 @@
 - On development:
     - `sudo docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d`
     - Enter the `open-state-theme-2019_node_1` container and link the Nginx load balancer IP to openstate.eu in the hosts file
-        `echo "x.x.x. openstate.eu" >> /etc/hosts`
+        `echo "x.x.x.x openstate.eu" >> /etc/hosts`
 
 # When you want to compile the assets:
 - For production:
@@ -16,6 +16,7 @@
         - `docker exec open-state-theme-2019_node_1 yarn start`
             - browse to https://localhost:3000
             - NOTE: if you run `yarn start` a second time it will run on port 3002 (which isn't opened in the container); restart the container to get it to work on port 3000 again
+                - After restarting the container make sure to add `echo "x.x.x.x openstate.eu" >> /etc/hosts` again as shown above
 
 # To access wp-admin while developing (this requires the Nginx load balancer):
 - add the following to `/etc/hosts` on your host, where `x.x.x.x` is the IP of the Nginx load balancer:
