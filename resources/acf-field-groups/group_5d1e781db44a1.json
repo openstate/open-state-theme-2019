@@ -22,6 +22,25 @@
             "append": ""
         },
         {
+            "key": "field_5de695d75e697",
+            "label": "Project afgerond",
+            "name": "project_afgerond",
+            "type": "true_false",
+            "instructions": "Vink dit veld aan om aan te geven dat het project afgerond is. Het project komt dan onder de 'afgeronde projecten' lijn te staan op de projectoverzichtspagina. Dit gebruiken we om projecten die minder relevant zijn of waarvan de data al lang niet meer bijgewerkt is onderaan het overzicht te zetten.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5d2358b507269",
             "label": "Project websites",
             "name": "project_websites",
@@ -319,5 +338,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1565013435
+    "modified": 1575558771
 }

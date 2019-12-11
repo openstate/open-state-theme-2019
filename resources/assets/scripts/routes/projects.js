@@ -12,6 +12,14 @@ export default {
       }
 
       $(document).on('facetwp-loaded', function() {
+        // Add extra height if there are no current projects, in order
+        // to make the completed projects fall below the filter
+        if ($('.current-project').length == 0) {
+           $('.projects-row').addClass('no-projects');
+        } else {
+           $('.projects-row').removeClass('no-projects');
+        }
+
         if (url_parameter('_projects') || url_parameter('_projects_search')) {
           $('#remove-filters').css('display', 'inline');
         } else {

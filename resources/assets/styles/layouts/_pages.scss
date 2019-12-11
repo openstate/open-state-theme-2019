@@ -8,6 +8,26 @@
 
 .projects-row {
   margin-top: -463px;
+
+  &.no-projects {
+    height: 448px;
+  }
+}
+
+.completed-projects-hr {
+  margin-left: -40px;
+}
+
+.completed-projects-text {
+  background-color: $zwart;
+  color: white;
+  font-weight: 900;
+  font-size: 19px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: -40px;
+  width: 220px;
+  text-align: center;
 }
 
 #no-results {
@@ -450,6 +470,14 @@
 }
 
 @media (max-width: 1199px) {
+  .completed-projects-hr {
+    margin-left: -30px;
+  }
+
+  .completed-projects-text {
+    margin-left: -30px;
+  }
+
   #no-results,
   .projects-filter {
     width: 320px;
@@ -488,6 +516,10 @@
 
   .projects-row {
     margin-top: -565px;
+
+    &.no-projects {
+      height: 550px;
+    }
   }
 
   #carouselControls .carousel-indicators {
@@ -534,10 +566,22 @@
 
   .projects-row {
     margin-top: -481px;
+
+    &.no-projects {
+      height: 466px;
+    }
   }
 }
 
 @media (max-width: 575px) {
+  .completed-projects-hr {
+    margin-left: -10px;
+  }
+
+  .completed-projects-text {
+    margin-left: -10px;
+  }
+
   .projects-filter {
     margin: 0 0 25px 0;
     width: 100%;
@@ -551,6 +595,10 @@
 
   .projects-row {
     margin-top: 0;
+
+    &.no-projects {
+      height: inherit;
+    }
   }
 
   .website-title-button {

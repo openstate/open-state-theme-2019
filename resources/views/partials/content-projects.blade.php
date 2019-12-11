@@ -1,5 +1,9 @@
 <article @php post_class() @endphp>
-  <div class="row">
+  @if (get_field('project_afgerond', get_the_id()) == true)
+    <div class="row">
+  @else
+    <div class="row current-project">
+  @endif
     <div class="col-12">
       <header>
         <a href="{!! the_permalink() !!}">
