@@ -146,7 +146,7 @@
             ") ?>
           </div>
         </div>
-        <?=
+        <?
           wp_reset_query();
           $args = array(
             'numberposts' => -1,
@@ -164,56 +164,60 @@
             'order' => 'asc'
           );
           $the_query = new WP_Query($args);
-
-          if($the_query->have_posts()):
-            while($the_query->have_posts()) : $the_query->the_post(); ?>
-              <div class="row">
-                <div class="col-12 sidebar bg-grijs-10">
-                  <a href="<? the_permalink(); ?>">
-                    <div class="overlay-container agenda-image">
-                      <? the_post_thumbnail('col-4-thumbnail', array('class' => 'img-fluid image-cover agenda-image')); ?>
-                      <div class="overlay overlay-donkerpaars d-flex agenda-image"></div>
-                    </div>
-                  </a>
-                  <div class="agenda-item">
-                    <?
-                      $unixtimestamp = strtotime($agenda_tijdstip);
-                      $formatted_date = date_i18n('j F, H:i', $unixtimestamp);
-                    ?>
-                    <h5 class="text-donkerpaars font-weight-bold">{{ $formatted_date }}</h5>
-                    <a href="<? the_permalink(); ?>"><h5 class="font-weight-bold"><? the_title(); ?></h5></a>
-                  </div>
-                  <div class="row agenda-locatie bg-white mx-0">
-                    <div class="col-3 my-auto rm-gutter">
-                      <span class="fa-stack text-donkerpaars">
-                        <i class="far fa-circle fa-stack-2x icon-background"></i>
-                        <i class="fas fa-map-marker-alt fa-stack-1x"></i>
-                      </span>
-                    </div>
-                    <div class="col-9">
-                      {{ $agenda_locatie }}
-                    </div>
-                  </div>
-                  @if ($agenda_inschrijfformulier_url)
-                    <div class="inschrijven text-right">
-                      <a href="{{ $agenda_inschrijfformulier_url }}" target="_blank" rel="noopener"><i><b>
-                        <? _e("
-                          <!--:nl-->
-                            INSCHRIJVEN >
-                          <!--:--><!--:en-->
-                            REGISTER >
-                          <!--:-->
-                        ") ?>
-                      </b></i></a>
-                      <hr class="mt-0">
-                    </div>
-                  @endif
-                </div>
-              </div>
-            <? endwhile;
-          endif;
-          wp_reset_query();
         ?>
+
+        @if ($the_query->have_posts())
+          @while ($the_query->have_posts())
+            <? $the_query->the_post() ?>
+            <div class="row">
+              <div class="col-12 sidebar bg-grijs-10">
+                <a href="<? the_permalink(); ?>">
+                  <div class="overlay-container agenda-image">
+                    <? the_post_thumbnail('col-4-thumbnail', array('class' => 'img-fluid image-cover agenda-image')); ?>
+                    <div class="overlay overlay-donkerpaars d-flex agenda-image"></div>
+                  </div>
+                </a>
+                <div class="agenda-item">
+                  <?
+                    $unixtimestamp = strtotime(get_field('agenda_tijdstip', get_the_id()));
+                    $formatted_date = date_i18n('j F, H:i', $unixtimestamp);
+                  ?>
+                  <h5 class="text-donkerpaars font-weight-bold">{{ $formatted_date }}</h5>
+                  <a href="<? the_permalink(); ?>"><h5 class="font-weight-bold"><? the_title(); ?></h5></a>
+                </div>
+                <div class="row agenda-locatie bg-white mx-0">
+                  <div class="col-3 my-auto rm-gutter">
+                    <span class="fa-stack text-donkerpaars">
+                      <i class="far fa-circle fa-stack-2x icon-background"></i>
+                      <i class="fas fa-map-marker-alt fa-stack-1x"></i>
+                    </span>
+                  </div>
+                  <div class="col-9">
+                    <? echo get_field('agenda_locatie', get_the_id()) ?>
+                  </div>
+                </div>
+                @if ($agenda_inschrijfformulier_url)
+                  <div class="inschrijven text-right">
+                    <a href="<? echo get_field('agenda_inschrijfformulier_url', get_the_id()) ?>" target="_blank" rel="noopener"><i><b>
+                      <? _e("
+                        <!--:nl-->
+                          INSCHRIJVEN >
+                        <!--:--><!--:en-->
+                          REGISTER >
+                        <!--:-->
+                      ") ?>
+                    </b></i></a>
+                    <hr class="mt-0">
+                  </div>
+                @endif
+                @if ($the_query->current_post + 1 != $the_query->post_count)
+                  <br>
+                @endif
+              </div>
+            </div>
+          @endwhile
+        @endif
+        <? wp_reset_query(); ?>
 
         <div class="row highlights">
           <div class="col-12 nieuws-agenda sidebar text-paars bg-grijs-5">
