@@ -13,15 +13,7 @@
       <div class="row">
         <div class="col-12">
           <div class="mc-field-group mc-first-group">
-            <input type="email" placeholder="
-<? _e("
-<!--:nl-->
-e-mailadres
-<!--:--><!--:en-->
-email address
-<!--:-->
-") ?>
-            " value="" name="EMAIL" class="email form-control" id="mce-EMAIL">
+            <input type="email" placeholder="<? _e("<!--:nl-->e-mailadres<!--:--><!--:en-->email address<!--:-->") ?>" value="" name="EMAIL" class="email form-control" id="mce-EMAIL">
           </div>
         </div>
       </div>
@@ -55,8 +47,8 @@ email address
     </a>
   </p>
 </div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script type='text/javascript'>
+<script src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script>
   var $mcj = jQuery.noConflict(true);
   (function($) {
     window.fnames = new Array();
