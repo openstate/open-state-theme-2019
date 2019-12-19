@@ -70,11 +70,9 @@
                       <div class="col-12 search-menu-col">
                         <hr class="search-menu-hr">
                         <div class="custom-search text-center">
-                          <span>
-                            <form method="GET" action="/" role="search">
-                              <input type="search" class="form-control" id="search-menu-icon" name="s">
-                            </form>
-                          </span>
+                          <form method="GET" action="/" role="search">
+                            <input type="search" class="form-control" id="search-menu-icon" name="s">
+                          </form>
                         </div>
                       </div>
                       <div class="col-12 search-menu-text text-center">
