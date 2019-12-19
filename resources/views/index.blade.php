@@ -29,9 +29,9 @@
 
         <div class="col-md-5 col-lg-4 osf-schema my-auto">
           <div class="row justify-content-center">
-            <img class="osf-schema-top-left" src="@asset('images/OSF-Icon-pijl-links-boven.svg')">
+            <img class="osf-schema-top-left" src="@asset('images/OSF-Icon-pijl-links-boven.svg')" alt="">
             <div class="osf-schema-top text-center">
-              <img src="@asset('images/OSF-Icon-besluiten.svg')">
+              <img src="@asset('images/OSF-Icon-besluiten.svg')" alt="">
                 <? _e("
                   <!--:nl-->
                     BESLUITEN
@@ -40,12 +40,12 @@
                   <!--:-->
                 ") ?>
               </div>
-            <img class="osf-schema-top-right" src="@asset('images/OSF-Icon-pijl-rechts-boven.svg')">
+            <img class="osf-schema-top-right" src="@asset('images/OSF-Icon-pijl-rechts-boven.svg')" alt="">
           </div>
 
           <div class="row osf-schema-row-up">
             <div class="osf-schema-center-left">
-              <img class="img-fluid" src="@asset('images/OSF-Icon-verkiezingen.svg')">
+              <img class="img-fluid" src="@asset('images/OSF-Icon-verkiezingen.svg')" alt="">
               <? _e("
                 <!--:nl-->
                   VERKIEZINGEN
@@ -54,9 +54,9 @@
                 <!--:-->
               ") ?>
             </div>
-            <img class="osf-schema-center img-fluid" src="@asset('images/OSF-Icon-pijl-midden.svg')">
+            <img class="osf-schema-center img-fluid" src="@asset('images/OSF-Icon-pijl-midden.svg')" alt="">
             <div class="osf-schema-center-right text-center">
-              <img class="img-fluid" src="@asset('images/OSF-Icon-financien.svg')">
+              <img class="img-fluid" src="@asset('images/OSF-Icon-financien.svg')" alt="">
               <? _e("
                 <!--:nl-->
                   FINANCIËN
@@ -68,9 +68,9 @@
           </div>
 
           <div class="row osf-schema-row-up justify-content-center">
-            <img class="osf-schema-bottom-left img-fluid" src="@asset('images/OSF-Icon-pijl-links-onder.svg')">
+            <img class="osf-schema-bottom-left img-fluid" src="@asset('images/OSF-Icon-pijl-links-onder.svg')" alt="">
             <div class="osf-schema-bottom">
-              <img class="img-fluid" src="@asset('images/OSF-Icon-resultaten.svg')">
+              <img class="img-fluid" src="@asset('images/OSF-Icon-resultaten.svg')" alt="">
               <? _e("
                 <!--:nl-->
                   RESULTATEN
@@ -79,7 +79,7 @@
                 <!--:-->
               ") ?>
             </div>
-            <img class="osf-schema-bottom-right img-fluid" src="@asset('images/OSF-Icon-pijl-rechts-onder.svg')">
+            <img class="osf-schema-bottom-right img-fluid" src="@asset('images/OSF-Icon-pijl-rechts-onder.svg')" alt="">
           </div>
         </div>
       </div>
