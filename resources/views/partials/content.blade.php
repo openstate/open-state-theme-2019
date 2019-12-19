@@ -8,7 +8,7 @@
             <div class="overlay overlay-blauw d-flex">@include('partials/entry-meta')</div>
           </div>
         </a>
-        <h5 class="entry-title bg-roze"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
+        <h5 class="entry-title bg-roze"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h5>
       </header>
     </div>
   </div>

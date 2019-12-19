@@ -32,7 +32,7 @@ email address
       <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
       <div style="position: absolute; left: -5000px;" aria-hidden="true">
         <input type="text" name="b_03355fd4f1a7935cae63b21aa_a9619e4f3e" tabindex="-1" value="">
-        <input type="submit" name="subscribe" id="mc-embedded-subscribe style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1"">
+        <input type="submit" name="subscribe" id="mc-embedded-subscribe" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1"">
       </div>
     </div>
   </form>

@@ -282,7 +282,6 @@
                     What do we do? Check out our movie <a href='about/'>or read more about us</a>
                   <!--:-->
                 ") ?>
-                </a>
               </h5>
             </div>
           </div>

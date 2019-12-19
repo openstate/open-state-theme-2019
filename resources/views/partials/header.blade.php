@@ -31,7 +31,7 @@
 
         <div class="col-3 col-sm-2 col-lg-1 offset-lg-3 text-right">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="menu-text">MENU</a>
+            <span class="menu-text">MENU</span>
           </button>
         </div>
 
