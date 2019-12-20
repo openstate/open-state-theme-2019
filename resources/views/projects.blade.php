@@ -13,8 +13,10 @@
       'posts_per_page' => -1,
       'post_parent__in' => Array(9113, 9116, 9118, 9120, 9122),
       'meta_key' => 'project_afgerond',
-      'orderby' => 'meta_value',
-      'order' => 'asc'
+      'orderby' => array(
+        'meta_value' => 'asc',
+        'modified' => 'desc'
+      )
     );
     $total_count_query = new WP_Query($args);
     $args['facetwp'] = true;

@@ -36,7 +36,7 @@
       What can you expect?
       <!--:-->
     ") ?>
-    <a href="https://us4.campaign-archive.com/home/?u=03355fd4f1a7935cae63b21aa&id=a9619e4f3e" target="_blank" rel="noopener">
+    <a href="https://us4.campaign-archive.com/home/?u=03355fd4f1a7935cae63b21aa&amp;id=a9619e4f3e" target="_blank" rel="noopener">
       <? _e("
         <!--:nl-->
         Zie onze eerdere nieuwsbrieven.

@@ -1,9 +1,11 @@
 # To create the Node container (only required to do once):
 - On production:
     - `sudo docker-compose up -d`
+    - (afterwards when you need to start the container if it exited you can simply us `sudo docker compose start`)
 - On development:
     - `sudo docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d`
-    - Enter the `open-state-theme-2019_node_1` container and link the Nginx load balancer IP to openstate.eu in the hosts file
+    - (afterwards when you need to start the container if it exited you can simply us `sudo docker-compose -f docker-compose.yml -f docker-compose-dev.yml start`)
+    - Enter the container `sudo docker exec -it open-state-theme-2019_node_1 bash` and link the Nginx load balancer IP to openstate.eu in the hosts file (NOTE: you need to do this again after each time you start the container)
         `echo "x.x.x.x openstate.eu" >> /etc/hosts`
 
 # When you want to compile the assets:
