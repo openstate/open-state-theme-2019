@@ -3,6 +3,11 @@
   padding-bottom: 0;
 }
 
+.navbar {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .top-projects-tools-data a {
   margin-top: 14px;
   background-color: $grijs-50;
@@ -105,6 +110,18 @@ body {
   padding-right: 0;
 }
 
+.navbar-collapse {
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 15px;
+}
+
+.collapsing {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 .menu-text {
   color: $donkerblauw;
   font-size: 19px;
@@ -125,6 +142,7 @@ body {
   border-top: 1px solid $zwart;
   border-bottom: none;
   margin: 1px;
+  width: 70%;
 }
 
 .search-menu-text {

@@ -60,24 +60,24 @@
                   <div class="col-10 col-sm-10 offset-sm-1 inner-menu">
                     <ul id="%1$s" class="%2$s">%3$s</ul>
                   </div>
-                  <div class="col-2 col-sm-1 menu-icons rm-gutter">
+                  <div class="col-2 col-sm-1 menu-icons rm-gutter-left">
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 rm-gutter">
                         <div class="language mx-auto">
                           <a href="' . $qtranslate_slug->get_current_url($lang) . '">' . $lang_text . '</a>
                         </div>
                       </div>
-                      <div class="col-12 search-menu-col">
-                        <hr class="search-menu-hr">
+                      <div class="col-12 search-menu-col rm-gutter">
+                        <hr class="search-menu-hr mx-auto">
                         <div class="custom-search text-center">
                           <form method="GET" action="/" role="search">
                             <input type="search" class="form-control" id="search-menu-icon" name="s">
                           </form>
                         </div>
                       </div>
-                      <div class="col-12 search-menu-text text-center">
+                      <div class="col-12 search-menu-text text-center rm-gutter">
                         ' . $lang_search_text . '
-                        <hr class="search-menu-hr">
+                        <hr class="search-menu-hr mx-auto">
                       </div>
                       <div class="col-12 text-center menu-icon">
                         <a class="d-md-none" href="/contact/" title="' . $lang_contact . ' "><i class="far fa-envelope"></i></a>
