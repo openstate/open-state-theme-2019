@@ -437,9 +437,11 @@ body {
 
   #search-menu-icon {
     background-size: 20px 20px;
+    left: 40%;
     height: 20px;
 
     &:focus {
+      left: 0;
       height: 44px;
       z-index: 100;
     }
