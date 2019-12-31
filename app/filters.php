@@ -151,3 +151,133 @@ add_filter('facetwp_is_main_query', function($is_main_query, $query) {
     }
     return $is_main_query;
 }, 10, 2 );
+
+
+// Add credit to an image
+function add_credit_to_image($matches, $featured_image=false, $post_thumbnail_id='') {
+	if ($featured_image) {
+		$return = $matches;
+	} else {
+		$return = $matches[0];
+		preg_match('/wp-image-([0-9]+)/', $return, $match);
+		$post_thumbnail_id = $match[1];
+	}
+	$return_block = '';
+
+	if (get_post_meta($post_thumbnail_id, 'license_url', true)) {
+		$license_url     = get_post_meta( $post_thumbnail_id, 'license_url', true );
+		$license_url     = strtolower( $license_url );
+		$attribution_url = get_post_meta( $post_thumbnail_id, 'attribution_url', true );
+		$source_work_url = get_post_meta( $post_thumbnail_id, 'source_work_url', true );
+		$extras_url      = get_post_meta( $post_thumbnail_id, 'extra_permissions_url', true );
+		// Unfiltered.
+		$meta   = wp_get_attachment_metadata( $post_thumbnail_id, true );
+		$credit = get_post_meta( $post_thumbnail_id, 'attribution_name', true );
+		if ( ( ! $credit )
+			&& isset( $image_metadata['credit'] )
+		) {
+			$credit = $meta['image_meta']['credit'];
+		}
+		$title = get_the_title( $post_thumbnail_id );
+		if ( ! $title ) {
+			$title = $meta['image_meta']['title'];
+		}
+		if ( ! $title ) {
+			$title = $fallback_title;
+		}
+		if ( strpos( $license_url, 'creativecommons' ) ) {
+			if ( substr( $license_url, -1 ) != '/' ) {
+				$license_url = $license_url . '/';
+			}
+		}
+		if ( $license_url ) {
+			$license_name = \CreativeCommonsImage::license_name( $license_url );
+			$button_url   = \CreativeCommonsImage::license_button_url( $license_url );
+		}
+		// RDF stuff.
+		if ( $license_url ) {
+			$license_button_url = \CreativeCommonsImage::license_button_url( $license_url );
+			$l                  = \CreativeCommons::get_instance();
+			if ( \CreativeCommonsImage::license_url_is_zero( $license_url ) ) {
+				$html_rdfa = $l->cc0_html_rdfa(
+					$title,
+					$attribution_url,
+					$credit
+				);
+			} else {
+				$html_rdfa = $l->license_html_rdfa(
+					$license_url,
+					$license_name,
+					$license_button_url,
+					$title,
+					true, // is_singular.
+					$attribution_url,
+					$credit,
+					$source_work_url,
+					$extras_url,
+					'',
+					'',
+					'',
+					$credit,
+					$attribution_url
+				); // warning_text.
+			}
+			//$button = \CreativeCommonsButton::get_instance()->markup(
+			//	$html_rdfa,
+			//	false,
+			//	31,
+			//	false
+			//);
+			$block = $button;
+			$block = '<!-- RDFa! -->' . $html_rdfa . '<!-- end of RDFa! -->';
+		} else {
+			if ( $title ) {
+				if ( $credit ) {
+					$block .= '<p>( ' . $title . ' by ' . $credit . ')</p>';
+				} else {
+					$block .= '<p>( ' . $title . ')</p>';
+				}
+			}
+		}
+		$return_block .= $block;
+
+		$modal = '
+		<button type="button" class="btn btn-primary image-credit" data-toggle="modal" data-target="#creditModal' . $match[1] .'">
+		  i
+		</button>
+
+		<div class="text-left modal fade" id="creditModal' . $match[1] . '" tabindex="-1" role="dialog" aria-labelledby="creditModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      ' . $return_block . '
+		      </div>
+		    </div>
+		  </div>
+		</div>';
+
+		$return = '<div class="text-right">' . $return . $modal . '</div>';
+	}
+
+	return $return;
+}
+
+// Add credits to images in post/page content
+add_filter('the_content', function($content) {
+	if (class_exists('CreativeCommons')) {
+		return preg_replace_callback(
+			'/(<\s*img[^>]+)(src\s*=\s*"[^"]+")([^>]+>)/i',
+			'\App\add_credit_to_image',
+			$content
+		);
+	} else {
+		return $content;
+	}
+}, 10, 2);
+
+add_filter('post_thumbnail_html', function($html, $post_id, $post_thumbnail_id, $size, $attr) {
+	return add_credit_to_image($html, true, $post_thumbnail_id);
+}, 10, 5);
