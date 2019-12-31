@@ -279,5 +279,12 @@ add_filter('the_content', function($content) {
 }, 10, 2);
 
 add_filter('post_thumbnail_html', function($html, $post_id, $post_thumbnail_id, $size, $attr) {
-	return add_credit_to_image($html, true, $post_thumbnail_id);
+	$classes = get_body_class();
+	if (in_array('page-template-projects', $classes)) {
+		return $html;
+	} elseif (class_exists('CreativeCommons')) {
+		return add_credit_to_image($html, true, $post_thumbnail_id);
+	} else {
+		return $html;
+	}
 }, 10, 5);
