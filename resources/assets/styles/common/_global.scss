@@ -188,10 +188,15 @@ nav li:not(.btn).active a:not(.btn) {
   background-color: $lichtblauw;
 }
 
+.image-credit-div {
+  margin-bottom: -32px;
+}
+
 .image-credit {
   position: relative;
-  top: -40px;
+  top: -52px;
   left: -3px;
+  margin-bottom: -40px;
   background-color: #73247555;
   border-color: #732475aa;
   border-radius: 30px;

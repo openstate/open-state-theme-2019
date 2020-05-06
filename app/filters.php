@@ -259,7 +259,7 @@ function add_credit_to_image($matches, $featured_image=false, $post_thumbnail_id
 		  </div>
 		</div>';
 
-		$return = '<div class="text-right">' . $return . $modal . '</div>';
+		$return = '<div class="image-credit-div text-right">' . $return . $modal . '</div>';
 	}
 
 	return $return;
@@ -278,9 +278,13 @@ add_filter('the_content', function($content) {
 	}
 }, 10, 2);
 
+function in_array_any($needles, $haystack) {
+    return (bool)array_intersect($needles, $haystack);
+}
+
 add_filter('post_thumbnail_html', function($html, $post_id, $post_thumbnail_id, $size, $attr) {
 	$classes = get_body_class();
-	if (in_array('page-template-projects', $classes)) {
+	if (in_array_any(array('home', 'search', 'page-news-archive-data', 'page-template-projects'), $classes)) {
 		return $html;
 	} elseif (class_exists('CreativeCommons')) {
 		return add_credit_to_image($html, true, $post_thumbnail_id);
