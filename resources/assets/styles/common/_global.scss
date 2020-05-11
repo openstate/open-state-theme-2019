@@ -121,6 +121,15 @@ nav li:not(.btn).active a:not(.btn) {
   }
 }
 
+// Make space for the WordPress admin bar when logged in
+.admin-bar .fixed-top {
+  top: 46px;
+
+  @media (min-width: 783px) {
+    top: 32px;
+  }
+}
+
 .btn {
   color: #fff;
   font-size: 19px;
