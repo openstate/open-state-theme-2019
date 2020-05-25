@@ -21,6 +21,7 @@ module.exports = {
       },
       plugins: [imageminMozjpeg({ quality: 75 })],
       disable: (config.enabled.watcher),
+      test: /^(?!images\/OSF-background.*\.jpg).*$/,
     }),
     new UglifyJsPlugin({
       uglifyOptions: {
