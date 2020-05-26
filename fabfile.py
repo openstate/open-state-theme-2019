@@ -22,7 +22,7 @@ def deploy(c):
     c = Connection(SERVER, config=config)
 
     c.sudo(
-        'bash -c "cd %s && git pull git@github.com:openstate/%s.git"' % (
+        'cd %s && git pull git@github.com:openstate/%s.git' % (
             DIR,
             GIT_REPO
         )
