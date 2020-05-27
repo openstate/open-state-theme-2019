@@ -17,21 +17,6 @@
 
   @php wp_head() @endphp
 
-  <!-- Piwik -->
-  <script type="text/javascript">
-    var _paq = _paq || [];
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      _paq.push(['setTrackerUrl',  'https://ss-api-d8700d972e5068e05df824daaf10bb1e.openstate.eu']);
-      _paq.push(['setSiteId', 1]);
-      _paq.push(['setApiToken', '5MCfl3NJMI6qZif3YuaM5p-89-Mj-TlAHhX0jxOoEUd']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src='https://ss-b5g27hswtn22u19wyueu.openstate.eu/embed.js'; s.parentNode.insertBefore(g,s);
-    })();
-  </script>
-  <!-- End Piwik Code -->
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-32274817-1"></script>
   <script>
