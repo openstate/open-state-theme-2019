@@ -22,9 +22,8 @@ def deploy_and_compile(c):
     c = Connection(SERVER, config=config)
 
     c.sudo(
-        'cd %s && git pull git@github.com:openstate/%s.git' % (
-            DIR,
-            GIT_REPO
+        'bash -c "cd %s && git pull"' % (
+            DIR
         )
     )
     output = c.sudo(
@@ -47,8 +46,7 @@ def deploy_pull_only(c):
     c = Connection(SERVER, config=config)
 
     c.sudo(
-        'cd %s && git pull git@github.com:openstate/%s.git' % (
-            DIR,
-            GIT_REPO
+        'bash -c "cd %s && git pull"' % (
+            DIR
         )
     )
