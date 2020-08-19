@@ -6,7 +6,7 @@ import getpass
 GIT_REPO = 'open-state-theme-2019'
 
 # Path of the directory
-DIR = '/home/projects/wordpress-new/wp-content/themes/%s' % (GIT_REPO)
+DIR = '/home/projects/wordpress/wp-content/themes/%s' % (GIT_REPO)
 
 # Container used to compile the assets
 NODE_CONTAINER = '%s_node_1' % (GIT_REPO)
