@@ -261,6 +261,7 @@
                   </a>
                   <div class="bg-grijs-15 uitgelicht-item">
                     <a href="<? the_permalink(); ?>"><h5><? the_title(); ?></h5></a>
+                    <p class="mb-0"><? echo get_field('project_samenvatting', get_the_id()) ?></p>
                   </div>
                 </div>
               </div>
