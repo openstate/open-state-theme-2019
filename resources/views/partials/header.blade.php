@@ -96,6 +96,10 @@
                         <a class="d-none d-md-block" href="https://twitter.com/openstateeu" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-2x fa-twitter"></i></a>
                       </div>
                       <div class="col-12 text-center menu-icon">
+                        <a class="d-md-none" href="https://www.linkedin.com/company/open-state-foundation/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                        <a class="d-none d-md-block" href="https://www.linkedin.com/company/open-state-foundation/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-2x fa-linkedin"></i></a>
+                      </div>
+                      <div class="col-12 text-center menu-icon">
                         <a class="d-md-none" href="https://www.facebook.com/openstatefoundation" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
                         <a class="d-none d-md-block" href="https://www.facebook.com/openstatefoundation" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-2x fa-facebook-f"></i></a>
                       </div>
