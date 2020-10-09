@@ -16,13 +16,13 @@ import { config, library, dom } from '@fortawesome/fontawesome-svg-core';
 // import required icons
 import { faDonate, faTools, faArrowRight, faRss, faMapMarkerAlt, faFilter } from '@fortawesome/free-solid-svg-icons';
 import { faCommentDots, faEnvelope, faQuestionCircle, faArrowAltCircleDown, faClock, faCircle } from '@fortawesome/free-regular-svg-icons';
-import { faSlack, faTwitter, faFacebookF, faMeetup, faFlickr, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faSlack, faTwitter, faLinkedIn, faFacebookF, faMeetup, faFlickr, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 // allow usage in pseudo elements
 config.searchPseudoElements=true;
 
 // add the imported icons to the library
-library.add(faDonate, faTools, faArrowRight, faCommentDots, faEnvelope, faSlack, faRss, faTwitter, faFacebookF, faMeetup, faFlickr, faGithub, faQuestionCircle, faArrowAltCircleDown, faMapMarkerAlt, faClock, faCircle, faFilter);
+library.add(faDonate, faTools, faArrowRight, faCommentDots, faEnvelope, faSlack, faRss, faTwitter, faLinkedIn, faFacebookF, faMeetup, faFlickr, faGithub, faQuestionCircle, faArrowAltCircleDown, faMapMarkerAlt, faClock, faCircle, faFilter);
 
 // tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
 dom.watch();

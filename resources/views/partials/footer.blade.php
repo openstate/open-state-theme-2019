@@ -67,6 +67,7 @@
         <a href="https://slack.hackdeoverheid.nl/" title="Hack de Overheid community Slack" target="_blank" rel="noopener"><i class="fab fa-3x fa-slack"></i></a>
         <a href="<?php _e("<!--:nl-->https://openstate.eu/nl/feed/<!--:--><!--:en-->https://openstate.eu/en/feed/<!--:-->"); ?>" title="RSS" target="_blank" rel="noopener"><i class="fas fa-3x fa-rss"></i></a>
         <a href="https://twitter.com/openstateeu" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-3x fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/open-state-foundation/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-3x fa-linkedin"></i></a>
         <a href="https://www.facebook.com/openstatefoundation" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-3x fa-facebook-f"></i></a>
         <a href="https://www.meetup.com/Hackdeoverheid-Meetups/" title="Hack de Overheid Meetup" target="_blank" rel="noopener"><i class="fab fa-3x fa-meetup"></i></a>
         <a href="https://www.flickr.com/photos/openstate/albums" title="Flickr" target="_blank" rel="noopener"><i class="fab fa-3x fa-flickr"></i></a>
