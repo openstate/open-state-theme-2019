@@ -292,3 +292,26 @@ add_filter('post_thumbnail_html', function($html, $post_id, $post_thumbnail_id, 
 		return $html;
 	}
 }, 10, 5);
+
+// Catch Mollie donation webhook, request payment details from their API and send an email to us
+add_action('do_parse_request', function($do_parse, $wp) {
+    $current_path = esc_url_raw(add_query_arg([]));
+
+    if (strpos($current_path, 'dmm-webhook')) {
+        $apikey = get_option('dmm_mollie_apikey');
+
+        $args = array(
+            'headers' => array(
+                'Authorization' => 'Bearer ' . $apikey
+            )
+        );
+        $payment_response = wp_remote_get('https://api.mollie.com/v2/payments/' . $_POST['id'], $args);
+        $payment_json = json_decode(wp_remote_retrieve_body($payment_response));
+
+        $customer_response = wp_remote_get('https://api.mollie.com/v2/customers/' . $payment_json->customerId, $args);        $customer_json = json_decode(wp_remote_retrieve_body($customer_response));
+
+        wp_mail(get_option('admin_email'), 'Donatie aan Open State Foundation', "Donatie aan Open State Foundation\n\nStatus: $payment_json->status\nEenmalig/periodiek: $payment_json->sequenceType\nBedrag (€): " . $payment_json->amount->value . "\nBericht: $payment_json->description\nNaam: " . $customer_json->name . "\nE-mail: " . $customer_json->email . "\nPayment ID: $payment_json->id");
+    }
+
+    return $do_parse;
+}, 30, 2);
