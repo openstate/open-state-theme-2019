@@ -20,6 +20,10 @@
             - NOTE: if you run `yarn start` a second time it will run on port 3002 (which isn't opened in the container); restart the container to get it to work on port 3000 again
                 - After restarting the container make sure to add `echo "x.x.x.x openstate.eu" >> /etc/hosts` again as shown above
 
+Some other commands:
+- To only check lint style use `docker exec open-state-theme-2019_node_1 yarn run lint:styles`
+
+
 # To access wp-admin while developing (this requires the Nginx load balancer):
 - add the following to `/etc/hosts` on your host, where `x.x.x.x` is the IP of the Nginx load balancer:
     ```

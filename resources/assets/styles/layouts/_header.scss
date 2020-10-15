@@ -8,6 +8,10 @@
   padding-left: 0;
 }
 
+.top-menu-text {
+  flex: 1;
+}
+
 .top-projects-tools-data a {
   margin-top: 14px;
   background-color: $grijs-50;
@@ -52,11 +56,6 @@
   /* stylelint-enable */
 }
 
-.top-projects-tools-data svg,
-.top-donate svg {
-  float: right;
-}
-
 .breadcrumbs-parent {
   font-size: 0;
   height: 0;
@@ -89,6 +88,24 @@
 #menu-top-menu {
   li {
     max-width: 300px;
+  }
+
+  // Swap the order of the icons
+  a {
+    display: flex;
+    align-items: center;
+
+    :nth-child(1) {
+      order: 1;
+    }
+
+    :nth-child(2) {
+      order: 3;
+    }
+
+    :nth-child(3) {
+      order: 2;
+    }
   }
 }
 
@@ -244,11 +261,11 @@ body {
       svg {
         float: right;
       }
-      /* stylelint-enable */
 
       a:hover {
         color: white;
       }
+      /* stylelint-enable */
     }
 
     /* stylelint-disable */
@@ -378,13 +395,8 @@ body {
   }
 }
 
-// Hack to fix icons in top menu buttons moving outside of the button when there is no space left
 @media (max-width: 920px) {
-  #menu-top-menu {
-    max-width: 213px;
-  }
-
-  // Also drop the osf-schema a bit
+  // Drop the osf-schema a bit
   .osf-schema {
     padding-top: 70px;
   }
