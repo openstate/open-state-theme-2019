@@ -197,30 +197,22 @@ function add_credit_to_image($matches, $featured_image=false, $post_thumbnail_id
 		if ( $license_url ) {
 			$license_button_url = \CreativeCommonsImage::license_button_url( $license_url );
 			$l                  = \CreativeCommons::get_instance();
-			if ( \CreativeCommonsImage::license_url_is_zero( $license_url ) ) {
-				$html_rdfa = $l->cc0_html_rdfa(
-					$title,
-					$attribution_url,
-					$credit
-				);
-			} else {
-				$html_rdfa = $l->license_html_rdfa(
-					$license_url,
-					$license_name,
-					$license_button_url,
-					$title,
-					true, // is_singular.
-					$attribution_url,
-					$credit,
-					$source_work_url,
-					$extras_url,
-					'',
-					'',
-					'',
-					$credit,
-					$attribution_url
-				); // warning_text.
-			}
+			$html_rdfa = $l->license_html_rdfa(
+				$license_url,
+				$license_name,
+				$license_button_url,
+				$title,
+				true, // is_singular.
+				$attribution_url,
+				$credit,
+				$source_work_url,
+				$extras_url,
+				'',
+				'',
+				'',
+				$credit,
+				$attribution_url
+			); // warning_text.
 			//$button = \CreativeCommonsButton::get_instance()->markup(
 			//	$html_rdfa,
 			//	false,
