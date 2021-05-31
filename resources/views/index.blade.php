@@ -7,9 +7,9 @@
         <div class="col-md-7 col-lg-8 home-banner-text my-auto">
           <? _e("
             <!--:nl-->
-              OPEN DATA VOOR <span class='text-paars'>DIGITALE</span> TRANSPARANTIE
+              OPEN DATA, <span class='text-paars'>TRANSPARANTE SAMENLEVING</span>
             <!--:--><!--:en-->
-              OPEN DATA FOR <span class='text-paars'>DIGITAL</span> TRANSPARENCY
+              OPEN DATA, <span class='text-paars'>TRANSPARENT SOCIETY</span>
             <!--:-->
           ") ?>
           <div>
