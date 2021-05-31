@@ -38,7 +38,13 @@
     <div class="row footer-bar">
       <div class="col-lg-8">
         <p>
-          Wil je samen met ons het verschil maken? Met een donatie steun je Open State Foundation in haar missie voor digitale transparantie door publieke informatie als open data beschikbaar te krijgen en deze toegankelijk te maken voor hergebruikers. Samen versterken we daarmee de democratie en creëren we maatschappelijke en economische waarde voor iedereen.
+          <? _e("
+            <!--:nl-->
+              Wil je samen met ons het verschil maken? Met een donatie steun je Open State Foundation in haar missie voor een transparante samenleving door publieke informatie als open data beschikbaar te krijgen en deze toegankelijk te maken voor hergebruikers. Samen versterken we daarmee de democratie en creëren we maatschappelijke en economische waarde voor iedereen.
+            <!--:--><!--:en-->
+              Do you want to make a difference? With a donation you can support Open State Foundation in its mission for a transparent society by publishing public information as open data and making it available to re-users. Together we empower democracy and create social and economic value for everyone.
+            <!--:-->
+          ") ?>
         </p>
       </div>
       <div class="col-lg-4 text-lg-right my-auto">

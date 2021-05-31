@@ -19,9 +19,9 @@
           <a class="navbar-brand mr-0" href="{{ home_url('/') }}">
             @if (!is_front_page())
               @if (get_bloginfo("language") == 'en-US')
-                <img class="navbar-brand-img img-fluid" src="@asset('images/Open-state-foundation-logo-tagline-en.svg')" alt="Open State Foundation - open data for digital transparency">
+                <img class="navbar-brand-img img-fluid" src="@asset('images/Open-state-foundation-logo-tagline-en.svg')" alt="Open State Foundation - open data, transparent society">
               @else
-                <img class="navbar-brand-img img-fluid" src="@asset('images/Open-state-foundation-logo-tagline-nl.svg')" alt="Open State Foundation - open data voor digitale transparantie">
+                <img class="navbar-brand-img img-fluid" src="@asset('images/Open-state-foundation-logo-tagline-nl.svg')" alt="Open State Foundation - open data, transparante samenleving">
               @endif
             @else
               <img class="navbar-brand-img img-fluid" src="@asset('images/Open-state-foundation-logo.svg')" alt="Open State Foundation">
