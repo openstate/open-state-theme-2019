@@ -12,6 +12,12 @@ export default {
       }
 
       $(document).on('facetwp-loaded', function() {
+        if ($('html').attr('lang') == 'nl') {
+          $('.facetwp-search').attr('placeholder', 'zoeken');
+        } else {
+          $('.facetwp-search').attr('placeholder', 'search');
+        }
+
         // Add extra height if there are no current projects, in order
         // to make the completed projects fall below the filter
         if ($('.current-project').length == 0) {
