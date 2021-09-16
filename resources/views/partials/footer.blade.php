@@ -40,9 +40,9 @@
         <p>
           <? _e("
             <!--:nl-->
-              Wil je samen met ons het verschil maken? Met een donatie steun je Open State Foundation in haar missie voor een transparante samenleving door publieke informatie als open data beschikbaar te krijgen en deze toegankelijk te maken voor hergebruikers. Samen versterken we daarmee de democratie en creëren we maatschappelijke en economische waarde voor iedereen.
+              Ja, ik wil ook een open overheid! Wil jij kunnen zien wie er bij ministers lobbyen? Wil jij zelf de uitslagen van jouw stembureau controleren? Wil jij de uitgaven van gemeenten makkelijk met elkaar kunnen vergelijken? Wil jij publieke data achter een betaalmuur weghalen? Wij kunnen ons werk doen en overheidsinformatie ontsluiten met jouw steun. Maak ons werk mogelijk en doe vandaag nog een donatie.
             <!--:--><!--:en-->
-              Do you want to make a difference? With a donation you can support Open State Foundation in its mission for a transparent society by publishing public information as open data and making it available to re-users. Together we empower democracy and create social and economic value for everyone.
+              Yes, I want an open government! Do you want to see who is lobbying ministers? Do you want to check the results of your own polling station? Do you want to be able to compare municipal spending? Do you want to open public data stuck behind a paywall? We can do our job and unlock government information with your support. Make our work possible and make a donation today.
             <!--:-->
           ") ?>
         </p>
