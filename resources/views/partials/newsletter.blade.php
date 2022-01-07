@@ -59,6 +59,7 @@
     ftypes[1]='text';
     if ($("html").attr("lang") == "nl") {
       $mcj.extend($mcj.validator.messages, {
+        required: "Dit is een verplicht veld.",
         email: "Dit is een ongeldig e-mailadres.",
       });
     }
