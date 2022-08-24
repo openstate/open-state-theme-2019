@@ -147,6 +147,157 @@
     <div class="d-none">
       {!! do_shortcode( '[doneren_met_mollie]' ) !!}
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <br>
+          <div>
+            <h5 id="bedrijfsdonateurs">
+              <? _e("
+                <!--:nl-->
+                  Bedrijfsdonateurs
+                <!--:--><!--:en-->
+                  Corporate donors
+                <!--:-->
+              ") ?>
+            </h5>
+          </div>
+          <br>
+          <p>
+            <b style="font-size: 30px;">
+              <? _e("
+                <!--:nl-->
+                  We staan open voor bedrijfsdonateurs!
+                <!--:--><!--:en-->
+                  We are open for corporate donors!
+                <!--:-->
+              ") ?>
+            </b>
+          </p>
+          <p>
+            <? _e("
+              <!--:nl-->
+              <!--:--><!--:en-->
+              <!--:-->
+            ") ?>
+            <? _e("
+              <!--:nl-->
+                Wil je met jouw bedrijf doneren aan Open State Foundation? Vraag dan naar onze propositie via <a href='mailto:serv@openstate.eu'>serv@openstate.eu</a>!
+              <!--:--><!--:en-->
+                Would you like your company to donate to Open State Foundation? Then ask for our proposition via <a href='mailto:serv@openstate.eu'>serv@openstate.eu</a>!
+              <!--:-->
+            ") ?>
+          </p>
+          <div>
+            <b>
+              <? _e("
+                <!--:nl-->
+                  Open World-donateurs
+                <!--:--><!--:en-->
+                  Open World-donors
+                <!--:-->
+              ") ?>
+            </b>
+            <p>
+              <? _e("
+                <!--:nl-->
+                  €5.000 of meer per jaar (niet meer dan 10% van onze continuïteitsreserve).
+                <!--:--><!--:en-->
+                  €5,000 or more per year (not more than 10% of our continuity reserve).
+                <!--:-->
+              ") ?>
+            </p>
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <i>
+                    <? _e("
+                      <!--:nl-->
+                        Wordt jouw bedrijf de eerste Open World-donateur? Dan tonen we hier groot jouw logo, bedrijfsnaam, beschrijving en link naar je website.
+                      <!--:--><!--:en-->
+                        Will your company be the first Open World-donor? Then we will largely show your logo, company name, description and link to your website.
+                      <!--:-->
+                    ") ?>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div>
+            <b>
+              <? _e("
+                <!--:nl-->
+                  Open State-donateurs
+                <!--:--><!--:en-->
+                  Open State-donors
+                <!--:-->
+              ") ?>
+            </b>
+            <p>
+              <? _e("
+                <!--:nl-->
+                  €1.000 - €5.000 per jaar.
+                <!--:--><!--:en-->
+                  €1,000 - €5,000 per year.
+                <!--:-->
+              ") ?>
+            </p>
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <i>
+                    <? _e("
+                      <!--:nl-->
+                        Wordt jouw bedrijf de eerste Open State-donateur? Dan tonen we hier jouw logo, bedrijfsnaam, beschrijving en link naar je website.
+                      <!--:--><!--:en-->
+                        Will your company be the first Open State-donor? Then we will show your logo, company name, description and link to your website.
+                      <!--:-->
+                    ") ?>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div>
+            <b>
+              <? _e("
+                <!--:nl-->
+                  Open Street-donateurs
+                <!--:--><!--:en-->
+                  Open Street-donors
+                <!--:-->
+              ") ?>
+            </b>
+            <p>
+              <? _e("
+                <!--:nl-->
+                  €500 - €1.000 per jaar.
+                <!--:--><!--:en-->
+                  €500 - €1,000 per year.
+                <!--:-->
+              ") ?>
+            </p>
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <i>
+                    <? _e("
+                      <!--:nl-->
+                        Wordt jouw bedrijf de eerste Open Street-donateur? Dan tonen we hier jouw bedrijfsnaam en een link naar je website.
+                      <!--:--><!--:en-->
+                        Will your company be the first Open Street-donor? Then we will show your company name and a link to your website.
+                      <!--:-->
+                    ") ?>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script>
       window.onload=function() {
           var dmm_dd = document.getElementById('dmm_dd');
