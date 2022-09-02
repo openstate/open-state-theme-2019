@@ -182,9 +182,9 @@
             ") ?>
             <? _e("
               <!--:nl-->
-                Wil je met jouw bedrijf doneren aan Open State Foundation? Bekijk dan onze <a href='https://openstate.eu/wp-content/uploads/sites/14/2022/09/Open-State-Foundation-Bedrijfsdonateurs-propositie.pdf'><b>propositie</b></a>!
+                Wil je met jouw bedrijf doneren aan Open State Foundation? Bekijk dan onze <a href='https://openstate.eu/wp-content/uploads/sites/14/2022/09/Open-State-Foundation-Bedrijfsdonateurs-propositie.pdf' target='blank'><b>propositie</b></a>!
               <!--:--><!--:en-->
-                Would you like your company to donate to Open State Foundation? Then take a look at our <a href='https://openstate.eu/wp-content/uploads/sites/14/2022/09/Open-State-Foundation-Bedrijfsdonateurs-propositie.pdf'><b>proposition</b></a>!
+                Would you like your company to donate to Open State Foundation? Then take a look at our <a href='https://openstate.eu/wp-content/uploads/sites/14/2022/09/Open-State-Foundation-Bedrijfsdonateurs-propositie.pd target='blank'><b>proposition</b></a>!
               <!--:-->
             ") ?>
           </p>
