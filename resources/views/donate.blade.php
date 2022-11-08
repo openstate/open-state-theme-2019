@@ -210,15 +210,20 @@
             <div class="container">
               <div class="row">
                 <div class="col-12 col-md-6">
-                  <i>
-                    <? _e("
-                      <!--:nl-->
-                        Wordt jouw bedrijf de eerste Open World-donateur? Dan tonen we hier groot jouw logo, bedrijfsnaam, beschrijving en link naar je website.
-                      <!--:--><!--:en-->
-                        Will your company be the first Open World-donor? Then we will largely show your logo, company name, description and link to your website.
-                      <!--:-->
-                    ") ?>
-                  </i>
+                  <a href="https://www.centric.eu/" target="_blank" rel="noopener">
+                    <img class="img-fluid" src="@asset('images/logo-centric.svg')" alt="Logo van Centric">
+                  </a>
+                  <p><b>Centric</b></p>
+                  <? _e("
+                    <!--:nl-->
+                      <p>Centric is een ervaren en betrokken IT-partner voor gemeentelijke instellingen. Met onze applicaties en services ondersteunen we de decentrale overheid al meer dan 25 jaar in ieder beleidsveld.</p>
+                    <!--:--><!--:en-->
+                      <p>Centric is an experienced and committed IT partner for municipal institutions. With our applications and services, we have been supporting decentralized government in every policy area for more than 25 years.</p>
+                    <!--:-->
+                  ") ?>
+                  <p>
+                    <a href="https://www.centric.eu/" target="_blank" rel="noopener">centric.eu</a>
+                  </p>
                 </div>
               </div>
             </div>
