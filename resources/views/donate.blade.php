@@ -210,9 +210,11 @@
             <div class="container">
               <div class="row">
                 <div class="col-12 col-md-6">
-                  <a href="https://www.centric.eu/" target="_blank" rel="noopener">
-                    <img class="img-fluid" src="@asset('images/logo-centric.svg')" alt="Logo van Centric">
-                  </a>
+                  <p>
+                    <a href="https://www.centric.eu/" target="_blank" rel="noopener">
+                      <img class="img-fluid" src="@asset('images/logo-centric.svg')" alt="Logo van Centric">
+                    </a>
+                  </p>
                   <p><b>Centric</b></p>
                   <? _e("
                     <!--:nl-->
