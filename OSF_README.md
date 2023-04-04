@@ -5,6 +5,7 @@
 - On development:
     - `sudo docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d`
     - (afterwards when you need to start the container if it exited you can simply us `sudo docker-compose -f docker-compose.yml -f docker-compose-dev.yml start`)
+    - `docker exec open-state-theme-2019_node_1 yarn`
     - Enter the container `sudo docker exec -it open-state-theme-2019_node_1 bash` and link the Nginx load balancer IP to openstate.eu in the hosts file (NOTE: you need to do this again after each time you start the container)
         `echo "x.x.x.x openstate.eu" >> /etc/hosts`
 
