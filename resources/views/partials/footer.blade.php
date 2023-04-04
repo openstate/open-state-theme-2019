@@ -40,9 +40,9 @@
         <p>
           <? _e("
             <!--:nl-->
-              Ja, ik wil ook een <b>open overheid</b>! Wil jij kunnen zien wie er bij ministers lobbyen? Wil jij zelf de uitslagen van jouw stembureau controleren? Wil jij de uitgaven van gemeenten makkelijk met elkaar kunnen vergelijken? Wil jij publieke data achter een betaalmuur weghalen? Wij kunnen ons werk doen en <b>overheidsinformatie ontsluiten met jouw steun</b>. Maak ons werk mogelijk en doe vandaag nog een <b>donatie</b>.
+              <b>Ja, ik wil ook een open overheid</b>! Wil jij kunnen zien wie er bij ministers lobbyen? Wil jij zelf de uitslagen van jouw stembureau controleren? Wil jij de uitgaven van gemeenten makkelijk met elkaar kunnen vergelijken? Wil jij publieke data achter een betaalmuur weghalen? Wij kunnen ons werk doen en <b>overheidsinformatie ontsluiten met jouw steun</b>. Maak ons werk mogelijk en doe vandaag nog een <b>donatie</b>.
             <!--:--><!--:en-->
-              Yes, I want an <b>open government</b>! Do you want to see who is lobbying ministers? Do you want to check the results of your own polling station? Do you want to be able to compare municipal spending? Do you want to open public data stuck behind a paywall? We can do our job and <b>unlock government information with your support</b>. Make our work possible and make a <b>donation</b> today.
+              <b>Yes, I want an open government</b>! Do you want to see who is lobbying ministers? Do you want to check the results of your own polling station? Do you want to be able to compare municipal spending? Do you want to open public data stuck behind a paywall? We can do our job and <b>unlock government information with your support</b>. Make our work possible and make a <b>donation</b> today.
             <!--:-->
           ") ?>
         </p>
