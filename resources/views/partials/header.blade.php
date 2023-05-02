@@ -84,8 +84,8 @@
                         <a class="d-none d-md-block" href="/contact/" title="' . $lang_contact . ' "><i class="far fa-2x fa-envelope"></i></a>
                       </div>
                       <div class="col-12 text-center menu-icon">
-                        <a class="d-md-none" href="https://slack.hackdeoverheid.nl/" title="Hack de Overheid community Slack" target="_blank" rel="noopener"><i class="fab fa-slack"></i></a>
-                        <a class="d-none d-md-block" href="https://slack.hackdeoverheid.nl/" title="Hack de Overheid community Slack" target="_blank" rel="noopener"><i class="fab fa-2x fa-slack"></i></a>
+                        <a class="d-md-none" href="https://join.slack.com/t/hackdeoverheid/shared_invite/zt-1uf4fks3o-1zId60CY_5sSyYza0NSwAQ" title="Hack de Overheid community Slack" target="_blank" rel="noopener"><i class="fab fa-slack"></i></a>
+                        <a class="d-none d-md-block" href="https://join.slack.com/t/hackdeoverheid/shared_invite/zt-1uf4fks3o-1zId60CY_5sSyYza0NSwAQ" title="Hack de Overheid community Slack" target="_blank" rel="noopener"><i class="fab fa-2x fa-slack"></i></a>
                       </div>
                       <div class="col-12 text-center menu-icon">
                         <a class="d-md-none" href="https://openstate.eu/feed/" title="RSS" target="_blank" rel="noopener"><i class="fas fa-rss"></i></a>

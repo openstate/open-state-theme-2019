@@ -70,7 +70,7 @@
       </div>
       <div class="row footer-icons d-flex justify-content-center">
         <a href="/contact/" title="<?php _e("<!--:nl-->Neem contact op<!--:--><!--:en-->Contact us<!--:-->"); ?>"><i class="far fa-3x fa-envelope"></i></a>
-        <a href="https://slack.hackdeoverheid.nl/" title="Hack de Overheid community Slack" target="_blank" rel="noopener"><i class="fab fa-3x fa-slack"></i></a>
+        <a href="https://join.slack.com/t/hackdeoverheid/shared_invite/zt-1uf4fks3o-1zId60CY_5sSyYza0NSwAQ" title="Hack de Overheid community Slack" target="_blank" rel="noopener"><i class="fab fa-3x fa-slack"></i></a>
         <a href="<?php _e("<!--:nl-->https://openstate.eu/nl/feed/<!--:--><!--:en-->https://openstate.eu/en/feed/<!--:-->"); ?>" title="RSS" target="_blank" rel="noopener"><i class="fas fa-3x fa-rss"></i></a>
         <a href="https://mastodon.nl/@openstate" title="Mastodon" target="_blank" rel="noopener"><i class="fab fa-3x fa-mastodon"></i></a>
         <a href="https://twitter.com/openstateeu" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-3x fa-twitter"></i></a>
