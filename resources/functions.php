@@ -145,6 +145,13 @@ function extend_mime_types( $existing_mimes=array() ) {
     $existing_mimes['mp4']  = 'video/mp4';
     $existing_mimes['ogg']  = 'video/ogg';
     $existing_mimes['svg']  = 'image/svg+xml';
+    $existing_mimes['odt']  = 'application/vnd.oasis.opendocument.text';
+    $existing_mimes['ods']  = 'application/vnd.oasis.opendocument.spreadsheet';
+    $existing_mimes['odp']  = 'application/vnd.oasis.opendocument.presentation';
+    $existing_mimes['odg']  = 'application/vnd.oasis.opendocument.graphics';
+    $existing_mimes['odc']  = 'application/vnd.oasis.opendocument.chart';
+    $existing_mimes['odb']  = 'application/vnd.oasis.opendocument.database';
+    $existing_mimes['odf']  = 'application/vnd.oasis.opendocument.formula';
 
     // Return an array now including our added mime types
     return $existing_mimes;
