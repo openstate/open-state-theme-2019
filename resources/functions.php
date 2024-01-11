@@ -156,3 +156,25 @@ function extend_mime_types( $existing_mimes=array() ) {
     // Return an array now including our added mime types
     return $existing_mimes;
 }
+
+// Some custom code for the 'Open overheid kieswijzer 2023' post
+// https://openstate.eu/nl/2023/11/open-overheid-kieswijzer-2023/
+function ti_custom_javascript() {
+    if (is_single ('11830')) {
+        remove_filter('the_content', 'wptexturize');
+        ?>
+            <script type="text/javascript">
+                jQuery(function () {
+                    jQuery('[data-toggle="tooltip"]').tooltip({
+                        html: true,
+                        animation: false,
+                        placement: 'bottom',
+                        template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner" style="max-width: 450px; text-align: start"></div></div>',
+                        sanitize: false
+                    });
+                });
+            </script>
+        <?php
+    }
+}
+add_action('wp_head', 'ti_custom_javascript');
