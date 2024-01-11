@@ -140,18 +140,13 @@ add_action('pre_get_posts', 'set_posts_per_page');
 // Allow videos and SVG to be uploaded
 add_filter('mime_types', 'extend_mime_types');
 function extend_mime_types( $existing_mimes=array() ) {
-    // Add webm, mp4, OGG and SVG to the list of mime types
+    // Add webm, mp4, OGG and SVG to the list of mime types;
+    // Some mime types can/must also be set via
+    // My Sites -> Network Admin -> Settings
     $existing_mimes['webm'] = 'video/webm';
     $existing_mimes['mp4']  = 'video/mp4';
     $existing_mimes['ogg']  = 'video/ogg';
     $existing_mimes['svg']  = 'image/svg+xml';
-    $existing_mimes['odt']  = 'application/vnd.oasis.opendocument.text';
-    $existing_mimes['ods']  = 'application/vnd.oasis.opendocument.spreadsheet';
-    $existing_mimes['odp']  = 'application/vnd.oasis.opendocument.presentation';
-    $existing_mimes['odg']  = 'application/vnd.oasis.opendocument.graphics';
-    $existing_mimes['odc']  = 'application/vnd.oasis.opendocument.chart';
-    $existing_mimes['odb']  = 'application/vnd.oasis.opendocument.database';
-    $existing_mimes['odf']  = 'application/vnd.oasis.opendocument.formula';
 
     // Return an array now including our added mime types
     return $existing_mimes;
