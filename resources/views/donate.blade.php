@@ -14,7 +14,7 @@
         @include('partials.content-page')
       </div>
     </header>
-    <div class="container-fluid bg-grijsblauw">
+    <div id="donatieformulier" class="container-fluid bg-grijsblauw">
       <div class="row">
         <div class="container">
           <div class="row padding-top-50 padding-bottom-40">
