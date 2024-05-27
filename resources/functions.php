@@ -152,10 +152,11 @@ function extend_mime_types( $existing_mimes=array() ) {
     return $existing_mimes;
 }
 
-// Some custom code for the 'Open overheid kieswijzer 2023' post
+// Some custom code for Kieswijzerposts
 // https://openstate.eu/nl/2023/11/open-overheid-kieswijzer-2023/
+// https://openstate.eu/nl/2024/05/open-europees-parlementskieswijzer-2024/
 function ti_custom_javascript() {
-    if (is_single ('11830')) {
+    if (is_single ('11830') || is_single('12253')) {
         remove_filter('the_content', 'wptexturize');
         ?>
             <script type="text/javascript">
