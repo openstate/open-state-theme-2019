@@ -41,7 +41,7 @@
           $lang_text = 'NL/<b>EN</b>';
           $lang_search_text = 'Search';
           $lang_contact = 'Contact us';
-          if (get_bloginfo("language") == 'nl') {
+          if (get_bloginfo("language") == 'nl-NL') {
             $lang = 'en';
             $lang_text = '<b>NL</b>/EN';
             $lang_search_text = 'Zoeken';
