@@ -8,6 +8,10 @@ body {
   letter-spacing: 0.01em;
   line-height: 32px;
 
+  a {
+    text-decoration: none !important;
+  }
+
   a:hover {
     color: $paars;
     text-decoration: underline;
