@@ -46,6 +46,7 @@
       @include('partials.action-boxes')
 
       @if ($agenda_evenement)
+      @if ($agenda_inschrijfformulier_url)
       <a class="btn btn-paars inschrijf-button" href="{{ $agenda_inschrijfformulier_url }}">
         <? _e("
           <!--:nl-->
@@ -56,6 +57,7 @@
         ") ?>
         &nbsp;&nbsp;<i class="fas fa-arrow-right"></i>
       </a>
+      @endif
 
       <div class="info-box d-flex">
         <?
