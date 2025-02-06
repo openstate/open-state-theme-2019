@@ -210,22 +210,15 @@
             <div class="container">
               <div class="row">
                 <div class="col-12 col-md-6">
-                  <p>
-                    <a href="https://www.centric.eu/" target="_blank" rel="noopener">
-                      <img class="img-fluid" src="@asset('images/logo-centric.svg')" alt="Logo van Centric">
-                    </a>
-                  </p>
-                  <p><b>Centric</b></p>
-                  <? _e("
-                    <!--:nl-->
-                      <p>Centric is een ervaren en betrokken IT-partner voor gemeentelijke instellingen. Met onze applicaties en services ondersteunen we de decentrale overheid al meer dan 25 jaar in ieder beleidsveld.</p>
-                    <!--:--><!--:en-->
-                      <p>Centric is an experienced and committed IT partner for municipal institutions. With our applications and services, we have been supporting decentralized government in every policy area for more than 25 years.</p>
-                    <!--:-->
-                  ") ?>
-                  <p>
-                    <a href="https://www.centric.eu/" target="_blank" rel="noopener">centric.eu</a>
-                  </p>
+                  <i>
+                    <? _e("
+                      <!--:nl-->
+                        Wordt jouw bedrijf Open World-donateur? Dan tonen we hier jouw logo, bedrijfsnaam, beschrijving en link naar je website.
+                      <!--:--><!--:en-->
+                        Will your company become an Open World-donor? Then we will show your logo, company name, description and link to your website.
+                      <!--:-->
+                    ") ?>
+                  </i>
                 </div>
               </div>
             </div>
@@ -256,9 +249,9 @@
                   <i>
                     <? _e("
                       <!--:nl-->
-                        Wordt jouw bedrijf de eerste Open State-donateur? Dan tonen we hier jouw logo, bedrijfsnaam, beschrijving en link naar je website.
+                        Wordt jouw bedrijf Open State-donateur? Dan tonen we hier jouw logo, bedrijfsnaam, beschrijving en link naar je website.
                       <!--:--><!--:en-->
-                        Will your company be the first Open State-donor? Then we will show your logo, company name, description and link to your website.
+                        Will your company become an Open State-donor? Then we will show your logo, company name, description and link to your website.
                       <!--:-->
                     ") ?>
                   </i>
@@ -292,9 +285,9 @@
                   <i>
                     <? _e("
                       <!--:nl-->
-                        Wordt jouw bedrijf de eerste Open Street-donateur? Dan tonen we hier jouw bedrijfsnaam en een link naar je website.
+                        Wordt jouw bedrijf Open Street-donateur? Dan tonen we hier jouw bedrijfsnaam en een link naar je website.
                       <!--:--><!--:en-->
-                        Will your company be the first Open Street-donor? Then we will show your company name and a link to your website.
+                        Will your company become an Open Street-donor? Then we will show your company name and a link to your website.
                       <!--:-->
                     ") ?>
                   </i>
