@@ -216,6 +216,20 @@
               </div>
             </div>
           @endwhile
+        @else
+          <div class="row">
+            <div class="col-12 sidebar bg-grijs-10">
+              <p>
+                <? _e("
+                  <!--:nl-->
+                    Geen aanstaande events
+                  <!--:--><!--:en-->
+                    No upcoming events
+                  <!--:-->
+                ") ?>
+              </p>
+            </div>
+          </div>
         @endif
         <? wp_reset_query(); ?>
 
