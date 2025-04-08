@@ -9,6 +9,9 @@
     if($image && !is_front_page()) {
         echo '<meta property="og:image" content="' . esc_url($image) . '">';
         echo '<meta property="og:title" content="' . ltrim(wp_title('', false)) . '">' . "\r\n  ";
+    } elseif (strpos($_SERVER['REQUEST_URI'], 'civicrm/petition/sign') !== false && isset($_GET['sid']) && $_GET['sid'] == '2') {
+        echo '<meta property="og:image" content="https://openstate.eu/wp-content/uploads/sites/14/2025/03/Petitie-lobbyregister.webp">';
+        echo '<meta property="og:title" content="Petitie: Maak lobby transparant!">' . "\r\n  ";
     } else {
         echo '<meta property="og:image" content="https://openstate.eu/wp-content/themes/open-state-theme/dist/images/logo-open-state-foundation-og.png">';
         echo '<meta property="og:title" content="Open State Foundation">' . "\r\n  ";
