@@ -661,7 +661,7 @@
 
   /* Container around content */
   .tlcontainer {
-    padding: 10px 40px;
+    padding: 10px 10px;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -684,11 +684,13 @@
   /* Place the container to the left */
   .left {
     left: 0;
+    padding-right: 20px;
   }
 
   /* Place the container to the right */
   .right {
     left: 50%;
+    padding-left: 20px;
   }
 
   /* Add arrows to the left container (pointing right) */
@@ -699,7 +701,7 @@
     top: 22px;
     width: 0;
     z-index: 1;
-    right: 30px;
+    right: 10px;
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
@@ -713,7 +715,7 @@
     top: 22px;
     width: 0;
     z-index: 1;
-    left: 30px;
+    left: 10px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
@@ -726,7 +728,7 @@
 
   /* The actual content */
   .content {
-    padding: 20px 30px;
+    padding: 20px 10px;
     background-color: white;
     position: relative;
     border-radius: 6px;
@@ -742,13 +744,13 @@
     /* Full-width containers */
     .tlcontainer {
       width: 100%;
-      padding-left: 70px;
+      padding-left: 55px;
       padding-right: 25px;
     }
 
     /* Make sure that all arrows are pointing leftwards */
     .tlcontainer::before {
-      left: 60px;
+      left: 45px;
       border: medium solid white;
       border-width: 10px 10px 10px 0;
       border-color: transparent white transparent transparent;
