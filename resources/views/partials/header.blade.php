@@ -96,8 +96,8 @@
                         <a class="d-none d-md-block" href="https://mastodon.nl/@openstate" title="Mastodon" target="_blank" rel="noopener"><i class="fab fa-2x fa-mastodon"></i></a>
                       </div>
                       <div class="col-12 text-center menu-icon">
-                        <a class="d-md-none" href="https://twitter.com/openstateeu" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-                        <a class="d-none d-md-block" href="https://twitter.com/openstateeu" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-2x fa-twitter"></i></a>
+                        <a class="d-md-none" href="https://bsky.app/profile/openstate.eu" title="Bluesky" target="_blank" rel="noopener"><i class="fab fa-bluesky"></i></a>
+                        <a class="d-none d-md-block" href="https://bsky.app/profile/openstate.eu" title="Bluesky" target="_blank" rel="noopener"><i class="fab fa-2x fa-bluesky"></i></a>
                       </div>
                       <div class="col-12 text-center menu-icon">
                         <a class="d-md-none" href="https://www.linkedin.com/company/open-state-foundation/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
